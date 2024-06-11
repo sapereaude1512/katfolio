@@ -1,0 +1,7 @@
+@mixin button {
+    display: block;
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

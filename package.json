@@ -2,9 +2,9 @@
   "name": "portfolio-website",
   "version": "1.0.0",
   "description": "",
-  "main": "home.js",
+  "source": "./src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/sapereaude1512/portfolio-website/issues"
   },
-  "homepage": "https://github.com/sapereaude1512/portfolio-website#readme"
+  "homepage": "https://github.com/sapereaude1512/portfolio-website#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "parcel": "^2.12.0"
+  }
 }
