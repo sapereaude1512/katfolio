@@ -5,28 +5,579 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katfolio</title>
-    <!-- font -->
+    <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png"> <!-- add panda icon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.scss">
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>My journey</li>
-            <li>Projects</li>
-            <li>Clients</li>
-            <li>Referrals</li>
-            <li>Get in touch</li>
-        </ul>
-    </nav>
-    <section>Hero</section>
-    <section>About</section>
-    <section>Projects</section>
-    <section>Clients</section>
-    <section>CTA</section>
-    <section>Referrals</section>
-    <footer>Contact</footer>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#biography">Biography</a></li> <!-- apply "scroll-behavior: smooth;" to body tag -->
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#referrals">Referrals</a></li>
+                <li><button class="btn-nav">Get in touch</button></li> <!-- link to section with id: contact -->
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hey! I'm Katarina</h1>
+        <h5>Software developer with<br>3+ years of experience in UX/UI design</h5>
+        <button class="btn-primary">Go to projects</button>
+        <div>
+            <p class="p2">Scroll</p>
+            <!-- arrow icon -->
+        </div>
+    </section>
+
+    <section id="biography">
+        <div class="about">
+            <h3>From law practice<br>to design and code</h3>
+            <div class="row">
+                <!-- cap icon -->
+                <div>
+                    <p class="p1">LAW STUDENT since 2017</p>
+                    <p class="p1">As a law student at the University of Novi Sad, Faculty of Law, I developed strong critical and analytical thinking skills.<br>I excelled academically, achieving an average grade of 9.6 out of 10, passing around 20 exams, and writing several successful publications.<br>I was actively involved in various activities and societies, gaining valuable practical experience as a law practitioner in the Higher Court and Higher Prosecutor’s Office.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- paint icon -->
+                <div>
+                    <p class="p1">UX/UI DESIGNER since 2020</p>
+                    <p class="p1">In 2020, I made a significant career switch to UX/UI design, working both in a design studio and as a freelance designer. I focused on creating user interfaces that aligned with user needs, business goals, and brand guidelines.<br>By 2022, I was revolutionizing web design in the aviation industry, collaborating with various stakeholders to translate business requirements into intuitive user experiences.<br>I crafted comprehensive design strategies and mentored junior UX/UI designers, continuously driving design improvements to enhance user engagement and platform functionality.</p>
+                </div>
+            </div>
+            <div class="row">
+                <!-- code icon -->
+                <div>
+                    <p class="p1">SOFTWARE DEVELOPER since 2023</p>
+                    <p class="p1">In 2023, I transitioned to software development, gaining expertise across all phases of development from concept to launch.<br>I participated in hackathons like ETHBelgrade2023 and won a prize at ETHOnline2023.<br>Now, in 2024, I am dedicated to further growing my software development skills, with a passion for combining design and
+                    coding to create impactful digital solutions.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tech-stack">
+            <h5>My main tech stack</h5>
+            <div class="grid"> <!-- 18 icons --> </div>
+        </div>
+        <div class="principles">
+            <h5>Key principles I follow</h5>
+            <p class="p1">I believe that everything you can imagine is possible when you have<br>clearly defined goals, strong design, thought out strategy and assemble a passionate team.</p>
+            <div class="row">
+                <div class="column">
+                    <h2>1</h2>
+                    <p class="p1">People are the<br>biggest value</p>
+                    <!-- purple dot -->
+                    <p class="p1">Good communication<br>leads to success</p>
+                </div>
+                <div class="column">
+                    <h2>2</h2>
+                    <p class="p1">Different projects need<br>different methods</p>
+                    <!-- purple dot -->
+                    <p class="p1">Flexibility is a<br>superpower</p>
+                </div>
+                <div class="column">
+                    <h2>3</h2>
+                    <p class="p1">Do your best<br>or don’t start</p>
+                    <!-- purple dot -->
+                    <p class="p1">Finished is better<br>than perfect</p>
+                </div>
+                <div class="column">
+                    <h2>4</h2>
+                    <p class="p1">Design without thinking<br>is just decoration</p>
+                    <!-- purple dot -->
+                    <p class="p1">Subtlety is where<br>the magic lies</p>
+                </div>
+            </div>
+        </div>
+        <button class="btn-primary">Download my resume</button>
+    </section>
+
+    <div class="background-lines">
+        <!-- lines svg -->
+    </div>
+
+    <main id="projects">
+        <h3>Explore what I’ve been<br>working on recently</h3>
+        <div class="row">
+            <div class="selector" id="btn-sormac"> <!-- active, hover and selected state -->
+                <h5>Sormac</h5>
+            </div>
+            <div class="selector" id="btn-ink">
+                <h5>Ink</h5>
+            </div>
+            <div class="selector" id="btn-adora">
+                <h5>Adora</h5>
+            </div>
+            <div class="selector" id="btn-flipper">
+                <h5>Flipper</h5>
+            </div>
+            <div class="selector" id="btn-other">
+                <h5>Other</h5>
+            </div>
+        </div>
+        <div class="project-info" id="about-sormac">
+            <h5>Software solution for<br>cutting machine</h5>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Clients</p>
+                    <div>
+                        <a href="https://www.sormac.eu/en/" class="p2">Sormac</a> <!-- open links in new tab -->
+                        <p class="p2">;</p>
+                        <a href="https://www.foodcons.de/" class="p2">Foodcons</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="p1">Time frame</p>
+                    <p class="p2">2023-2024</p> <!-- p2 is in vertical center and have 100% height -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Tech stack</p>
+                    <!-- icons -->
+                </div>
+                <div class="column">
+                    <p class="p1">Team</p>
+                    <p class="p2">Management, software and hardware engineers, and me</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Overview</p>
+                    <p class="p2"><a href="https://www.foodcons.de/en/maschinen-typen/fs-3600-multisystem-slice-wedging-cutter">FS-3600 machine</a> allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of machine.</p>
+                </div>
+                <div class="column">
+                    <p class="p1">My role</p>
+                    <p class="p2">I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://www.sormac.eu/en/review-of-fruit-logistica-berlin-2024-successful-encounters-and-innovative-demonstrations/">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/">fair in Cologne</a>. It gained a great amount of positive feedback. In parallel with this, I developed a UI Kit with scalability in mind, which greatly impacted the speed of product development and shortened the time to market entry.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <!-- clock icon -->
+                    <p class="p2">Software for this machine I designed from scratch reduced 3 times the training time for factory workers</p>
+                </div>
+                <div class="column">
+                    <!-- handshake icon -->
+                    <p class="p2">Attracted significant attention at two major fairs in Germany and that leads to multiple potential clients</p>
+                </div>
+                <div class="column">
+                    <!-- speed icon -->
+                    <p class="p2">Designing and developing user interface for this machine sped up twice total the cutting time of fruits and vegetables</p>
+                </div>
+                <div class="column">
+                    <!-- monitor icon -->
+                    <p class="p2">Gathered and implemented feedback from users and clients, resulting in enhancements to 10+ features</p>
+                </div>
+                <div class="column">
+                    <!-- coding icon -->
+                    <p class="p2">By applying best practices in the code, I managed to achieve over 20% of reduction in development time</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-info" id="about-ink">
+            <h5>Reshaping the future<br>of aviation industry</h5>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Client</p>
+                    <a href="https://www.innovation.ink/" class="p2">Ink Innovation</a>
+                </div>
+                <div class="column">
+                    <p class="p1">Time frame</p>
+                    <p class="p2">2022-2023</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Tech stack</p>
+                    <!-- icons -->
+                </div>
+                <div class="column">
+                    <p class="p1">Team</p>
+                    <p class="p2">Software developers, product owners, project managers, QA team, customer support agents, web designers, and me</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Overview</p>
+                    <p class="p2">Ink Innovation has spread a unique ecosystem of software and hardware solutions in aviation industry.
+                    Ink created advanced cloud-hosted departure control system, with over 1000 functionalities. <a href="https://www.innovation.ink/ecosystem/ink-dcs">Ink DCS</a> is capable of running across a range of devices.
+                    <a href="//www.innovation.ink/ecosystem/ink-brs">Ink BRS</a> allows to efficiently track baggage throughout passenger journey and improves the accuracy of the reconciliation process. <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/">Ink Self-Service</a> devices (Kiosk, Bag Drop, Totem) reduce waiting times at the airports and allow travelers to perform the check-in process in seconds with minimal effort. Booking covid-19 tests with Ink has been fast and convenient. <a href="https://www.health.ink/">Ink Health</a> provided managed bookings with their network of labs, clinics and point-of-care providers.</p>
+                </div>
+                <div class="column">
+                    <p class="p1">My role</p>
+                    <p class="p2">As a digital product designer, I was engaged in 4 major projects and my role consisted of: translating business needs and requirements into intuitive and attractive user experiences, designing comprehensive UX/UI strategies, collaborating with the team to ensure successful design implementation, participating in re-branding, developing UI kit with scalability in mind, mentoring junior UX/UI designers, and providing design process in order to create optimal solutions for complex visual and interactive designs.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <!-- clock icon -->
+                    <p class="p2">BRS mobile app I designed from scratch reduced training time for airport agents from 4+ weeks to less than 3 hours</p>
+                </div>
+                <div class="column">
+                    <!-- handshake icon -->
+                    <p class="p2">Facilitated collaboration with 3 new clients through implementation of complex design strategy</p>
+                </div>
+                <div class="column">
+                    <!-- speed icon -->
+                    <p class="p2">Designing user interface for self-service devices sped up total check-in time to around 1 minute per device</p>
+                </div>
+                <div class="column">
+                    <!-- monitor icon -->
+                    <p class="p2">Implementing feedback from users and clients, resulted in enhancements to over
+                    100 features</p>
+                </div>
+                <div class="column">
+                    <!-- coding icon -->
+                    <p class="p2">Achieved over 15% of reduction in development time without compromising design quality</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-info" id="about-adora">
+            <h5>On-chain social media<br>marketplace</h5>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Client</p>
+                    <a href="https://github.com/AdoraPromo" class="p2">Adora Promo</a> <!-- underline link on hover -->
+                </div>
+                <div class="column">
+                    <p class="p1">Time frame</p>
+                    <p class="p2">2023-2024</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Tech stack</p>
+                    <!-- icons -->
+                </div>
+                <div class="column">
+                    <p class="p1">Team</p>
+                    <p class="p2">Software engineers, project manager and me</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Overview</p>
+                    <p class="p2">Adora Promo is on-chain social media marketplace that uses AI to verify sponsored content. Advertisers send offers to creators with natural language requirements. Creators are paid based on the engagement their post receives. This project was a price winner at ETHOnline2023 hackathon. We tested this idea by launching a startup, however, we pivoted to focus on other opportunities.</p>
+                </div>
+                <div class="column">
+                    <p class="p1">My role</p>
+                    <p class="p2">Collaborating as a frontend developer and designer included conducting comprehensive UX research, defining target market, creating a robust branding and design system. Seamless user experiences was ensured by producing wireframes, low-fidelity, and high-fidelity prototypes. I was continuously driving improvements in frontend code to enhance user engagement.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <!-- clock icon -->
+                    <p class="p2">The app reduced twice required time for matching between sponsors and influencers</p>
+                </div>
+                <div class="column">
+                    <!-- handshake icon -->
+                    <p class="p2">We facilitated collaboration with world-wide influencers through implementation of comprehensive strategy</p>
+                </div>
+                <div class="column">
+                    <!-- speed icon -->
+                    <p class="p2">Designing user interface sped up total post verification time to around 30 seconds per post</p>
+                </div>
+                <div class="column">
+                    <!-- monitor icon -->
+                    <p class="p2">Gathering and implementing feedback from stakeholders, resulted in re-branding and enhancements to 10+ features</p>
+                </div>
+                <div class="column">
+                    <!-- coding icon -->
+                    <p class="p2">I achieved over 40% of reduction in development time by using website builder for developing landing page</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-info" id="about-flipper">
+            <h5>Gamified<br>NFT dApp</h5>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Client</p>
+                    <a href="https://taikai.network/ethbelgrade/hackathons/hackathon-2023/projects/cliinujot00g9wn011g01mj7s/idea" class="p2">NFT Flipper</a> <!-- underline link on hover -->
+                </div>
+                <div class="column">
+                    <p class="p1">Time frame</p>
+                    <p class="p2">2023</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Tech stack</p>
+                    <!-- icons -->
+                </div>
+                <div class="column">
+                    <p class="p1">Team</p>
+                    <p class="p2">Software engineers, and me</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Overview</p>
+                    <p class="p2">NFT Flipper is NFT matchmaking gambling dApp built at ETHBelgrade2023 hackathon. It delivers an innovative solution to the problem of fragmented NFT utility and limited gameplay opportunities by providing a platform that combines staking, randomness, and winner-takes-all mechanics. Users stake their NFTs in matches, and the smart contract autonomously selects a random winner. The winner takes possession of all the staked NFTs, creating an exciting element of risk.</p>
+                </div>
+                <div class="column">
+                    <p class="p1">My role</p>
+                    <p class="p2">As a UX/UI designer, I conducted extensive UX research, defined target market, established branding and design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes, while continuously driving design enhancements to boost platform functionality. Additionally, I was integral in the creation and development of the product’s visual style and also worked closely with the development team to ensure optimal implementation.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <!-- clock icon -->
+                    <p class="p2">Made a MVP version of the app in just 3 days</p>
+                </div>
+                <div class="column">
+                    <!-- handshake icon -->
+                    <p class="p2">Connected with 2 potential investors and many colleagues</p>
+                </div>
+                <div class="column">
+                    <!-- speed icon -->
+                    <p class="p2">Pitched the app successfully in less than 10 minutes</p>
+                </div>
+                <div class="column">
+                    <!-- monitor icon -->
+                    <p class="p2">Crafted more than 30 screens with well thought out information architecture</p>
+                </div>
+                <div class="column">
+                    <!-- coding icon -->
+                    <p class="p2">Achieved a vast of reduction in development time by creating simple but unique design system</p>
+                </div>
+            </div>
+        </div>
+        <div class="project-info" id="about-other">
+            <h5>Mentoring juniors and<br>expanding my knowledge</h5>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Platforms</p>
+                    <div>
+                        <a href="https://adplist.org/" class="p2">ADPList</a>
+                        <p class="p2">;</p>
+                        <a href="http://www.interaction-design.org/" class="p2">IxDF</a>
+                    </div>
+                </div>
+                <div class="column">
+                    <p class="p1">Time frame</p>
+                    <p class="p2">2022-2024</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Tech stack</p>
+                    <!-- icons -->
+                </div>
+                <div class="column">
+                    <!-- empty -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p class="p1">Overview</p>
+                    <p class="p2">ADPList is a global community of mentors from 150 countries that offer <a href="https://adplist.org/mentors/katarina-popovic">1:1 expert guidance</a>. This knowledge-sharing platform is excellent for learning and connecting with colleagues, fostering a collaborative environment. Being part of such a diverse and supportive network enriches both personal and professional growth. Interaction Design Foundation or IxDF offers a comprehensive range of online UX design courses taught by experts, providing learners with valuable educational content. I’m grateful for all the <a href="https://drive.google.com/drive/folders/15G2dxj33D1k3MTmBJ0pwayBLE8BmylzB?usp=drive_link">industry-recognized certificates</a> I gained. This platform is an excellent resource for advancing your skills and staying updated with the latest trends in UX design.</p>
+                </div>
+                <div class="column">
+                    <p class="p1">My contribution</p>
+                    <p class="p2">As a mentor at ADPList, I thoroughly enjoyed sharing my personal experiences and knowledge with mentees while learning interesting insights from them. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the Interaction Design Foundation (IxDF), I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an <a href="https://www.linkedin.com/posts/the-interaction-design-foundation_katarina-finished-30-ixdf-courses-while-working-activity-7023342257634246656-Gwdg?utm_source=share&utm_medium=member_desktop">interview with the IxDF team</a> where I shared my journey to inspire others to keep learning.</p>
+                </div>
+            </div>
+            <div class="grid">
+                <div class="column">
+                    <!-- clock icon -->
+                    <p class="p2">Provided junior designers with 650+ minutes of mentorship</p>
+                </div>
+                <div class="column">
+                    <!-- handshake icon -->
+                    <p class="p2">Made strong connection with over 40 mentees and mentors</p>
+                </div>
+                <div class="column">
+                    <!-- speed icon -->
+                    <p class="p2">Ranked in top 10 female mentors in industrial design</p>
+                </div>
+                <div class="column">
+                    <!-- monitor icon -->
+                    <p class="p2">Gathered and implemented feedback from mentees, resulted in enhanced human skills</p>
+                </div>
+                <div class="column">
+                    <!-- coding icon -->
+                    <p class="p2">Completed over 30 courses in around 6 months while working a full-time job</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- line -->
+        </div>
+        <div class="certificates">
+            <p class="p1">Life-long learning is a principle I live by and so far my learning results<br>were awarded with <a href="https://drive.google.com/drive/folders/17D7E6jSoTwBM7fs50y8MwhzCqtKrEY-p?usp=drive_link">50+ professional certificates</a> on globally recognized platforms</p>
+            <!-- icons -->
+        </div>
+    </main>
+    
+    <section class="cta">
+        <h3>Want to learn more<br>about my work?</h3>
+        <button class="btn-primary">Book a meeting</button>
+    </section>
+
+    <section id="clients">
+        <h3>Strong collaborations<br>I’m proud of</h3>
+        <div class="grid">
+            <!-- icons -->
+        </div>
+        <div class="row">
+            <h5>Millions have encountered my designs and code, establishing them as a driving force in <strong>reshaping user experiences</strong> across various ventures</h5> <!-- strong is in primary-light color -->
+            <!-- illustration -->
+        </div>
+    </section>
+    
+    <section id="referrals">
+        <h3>Testimonials from colleagues</h3>
+        <div class="column">
+            <div class="row" id="slide 1">
+                <div class="column">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/dusan-bulatovic-236112199/ -->
+                        <div class="column">
+                            <p class="p1">Dusan Bulatovic</p> <!-- has fixed height -->
+                            <div class="column">
+                                <p class="p2">Frontend developer</p>
+                                <p class="p2">Worked on the same team at Groschopp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies such as HTML, CSS, JavaScript, and React. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/stefan-jovasevic/ -->
+                        <div class="column">
+                            <p class="p1">Stefan Jovasevic</p>
+                            <div class="column">
+                                <p class="p2">Frontend developer</p>
+                                <p class="p2">Worked on the same team at Ink Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I’d highly recommend her. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="slide 2">
+                <div class="column">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/ -->
+                        <div class="column">
+                            <p class="p1">Sebastian Brenninkmeijer</p>
+                            <div class="column">
+                                <p class="p2">Art Director</p>
+                                <p class="p2">Worked on the same team at Ink Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">Having managed Katarina for over a year I can say that she is a great asset for any company to have. She strives for perfection in everything she does and is always expanding her knowledge. I can say with great confidence that she is a true expert in her field with a lightning fast skill set. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/ -->
+                        <div class="column">
+                            <p class="p1">Marko Milosavljevic</p>
+                            <div class="column">
+                                <p class="p2">Product designer</p>
+                                <p class="p2">Worked on the same team at Brom Studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="slide 3">
+                <div class="column">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/imahmoudibrahim/ -->
+                        <div class="column">
+                            <p class="p1">Mahmoud Ibrahim</p>
+                            <div class="column">
+                                <p class="p2">Product design lead</p>
+                                <p class="p2">Cooperated at ADPList</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="row">
+                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/chris-cheng-hk/ -->
+                        <div class="column">
+                            <p class="p1">Chris Cheng</p>
+                            <div class="column">
+                                <p class="p2">Creative director</p>
+                                <p class="p2">Worked on the same team at Ink Innovation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- quotes icon -->
+                        <div> <!-- top and bottom padding -->
+                            <p class="p1">I had the pleasure of working with Katarina as a UX/UI designer and highly recommend her for her exceptional design skills. Katarina has the unique ability to design visually appealing and effective UX/UI for a variety of media, including apps and specific device screens. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- arrow left -->
+                <!-- arrow right -->
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <h2>Let's talk</h2>
+        <div class="column">
+            <div class="row">
+                <button class="btn-secondary">Send an email</button>
+                <button class="btn-primary">Book a meeting</button>
+            </div>
+            <div class="row">
+                <!-- LinkedIn icon -->
+                <!-- Github icon -->
+            </div>
+            <div class="row">
+                <p class="p2">Made with</p>
+                <!-- heart icon -->
+                <p class="p2">by Katarina</p>
+                <p class="p2">© 2024</p>
+            </div>
+        </div>
+    </footer>
+    
     <script type="module" src="./js/main.js"></script>
+
 </body>
 
 </html>
