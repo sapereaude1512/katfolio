@@ -1,20 +1,101 @@
-section, main {
-    padding: 100px;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+@mixin row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin row-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: start;
+}
+
+@mixin column {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .call-to-action {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 40px;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     background: url(../images/desktop/cta-background.svg) center/cover no-repeat;
     text-align: center;
     padding: 80px 0px;
 }
 
+strong {
+        @include title;
+}
+
 #biography {
+    @include column;
+    gap: 100px;
     position: static;
     margin-top: calc(100vh - 90px);
+    
+    h3, h5 {
+        text-align: center;
+    }
+
+    .row {
+        @include row;
+        gap: 60px;
+    }
+
+    .row-wrap {
+        @include row-wrap;
+        gap: 60px;
+    }
+
+    .column {
+        @include column;
+        gap: 60px;
+    }
+
+    .column-small {
+        @include column;
+        gap: 8px;
+
+        .p1 {
+            text-align: center;
+            text-wrap: nowrap;
+        }
+    }
+}
+
+#clients {
+    
+    @include column;
+    gap: 100px;
+
+    .row {
+        @include row;
+        justify-content: space-between;
+
+        img {
+            width: 50vw;
+        }
+    }
+
+    .row-wrap {
+        @include row-wrap;
+        gap: 80px 40px;
+    }
 }

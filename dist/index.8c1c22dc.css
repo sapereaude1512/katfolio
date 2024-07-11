@@ -17,7 +17,7 @@ h1, h2, .cta {
   color: #242424;
 }
 
-.number, h3, h4, h5, .p1, .p2, .b1, .b2 {
+.number, h3, h4, h5, .p1, .p2 {
   color: #fafafa;
 }
 
@@ -53,6 +53,10 @@ h5 {
   font-size: 16px;
 }
 
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,6 +78,40 @@ body:after {
   overflow: hidden;
 }
 
+section, main {
+  padding: 100px;
+}
+
+a.btn-primary {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  background-color: #974a8a;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: 360px;
+  height: 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  display: block;
+  position: relative;
+}
+
+a.btn-primary:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
+}
+
 header {
   z-index: 1000;
   background-color: #060606;
@@ -88,7 +126,7 @@ header {
 
 header nav {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -111,22 +149,45 @@ header nav a {
 }
 
 header nav a .b2 {
-  text-wrap: nowrap;
   color: #c68bbc;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
   transition: color .4s ease-in-out;
 }
 
 header nav a .b2:hover {
   color: #fafafa;
+  font-weight: 400;
 }
 
 header nav .btn-nav {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
   cursor: pointer;
   background-color: #974a8a;
   background-image: #0000;
   border: none;
   border-radius: 16px;
-  padding: 16px 30px;
+  align-content: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 16px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
   transition: background-image .8s ease-in-out;
   position: relative;
 }
@@ -134,18 +195,113 @@ header nav .btn-nav {
 header nav .btn-nav:hover {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
 }
 
-header nav .btn-nav .b2 {
-  text-transform: uppercase;
-  color: #fafafa;
+.call-to-action {
+  text-align: center;
+  background: url("cta-background.bfb0d7c8.svg") center / cover no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 0;
+  display: flex;
+}
+
+strong {
+  color: #c68bbc;
+}
+
+#biography {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  margin-top: calc(100vh - 90px);
+  display: flex;
+  position: static;
+}
+
+#biography h3, #biography h5 {
+  text-align: center;
+}
+
+#biography .row {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#biography .row-wrap {
+  flex-flow: wrap;
+  place-content: flex-start center;
+  align-items: start;
+  gap: 60px;
+  display: flex;
+  position: relative;
+}
+
+#biography .column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  display: flex;
+}
+
+#biography .column-small {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+#biography .column-small .p1 {
+  text-align: center;
   text-wrap: nowrap;
-  font-size: 18px;
-  font-weight: 500;
+}
+
+#clients {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  display: flex;
+}
+
+#clients .row {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+#clients .row img {
+  width: 50vw;
+}
+
+#clients .row-wrap {
+  flex-flow: wrap;
+  place-content: flex-start center;
+  align-items: start;
+  gap: 80px 40px;
+  display: flex;
+  position: relative;
 }
 
 .hero {
-  text-align: center;
   background: url("hero-bg.52557729.svg") center / cover no-repeat;
   border-bottom-left-radius: 100px;
   flex-direction: column;
@@ -165,10 +321,43 @@ header nav .btn-nav .b2 {
 
 .hero .hero-text {
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  width: 100%;
   padding-top: 90px;
   display: flex;
   position: relative;
+}
+
+.hero .hero-text .btn-primary {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  background-color: #974a8a;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: 360px;
+  height: 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  display: block;
+  position: relative;
+}
+
+.hero .hero-text .btn-primary:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
 }
 
 .hero img {
@@ -176,6 +365,12 @@ header nav .btn-nav .b2 {
   position: absolute;
   bottom: 0;
   right: 100px;
+}
+
+@media (width <= 1000px) {
+  .hero img {
+    display: none;
+  }
 }
 
 .hero div {
@@ -186,28 +381,7 @@ header nav .btn-nav .b2 {
   bottom: 20px;
 }
 
-section, main {
-  padding: 100px;
-}
-
-.call-to-action {
-  text-align: center;
-  background: url("cta-background.bfb0d7c8.svg") center / cover no-repeat;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 80px 0;
-  display: flex;
-}
-
-#biography {
-  margin-top: calc(100vh - 90px);
-  position: static;
-}
-
 footer {
-  text-align: center;
   background: url("footer-bg.3aa7fcbf.svg") center / cover no-repeat;
   border-top-right-radius: 80px;
   flex-direction: column;
@@ -225,9 +399,9 @@ footer .column {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  width: 100%;
   padding-bottom: 8px;
   display: flex;
-  position: relative;
 }
 
 footer .row {
@@ -235,8 +409,77 @@ footer .row {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  width: 100%;
   display: flex;
   position: relative;
+}
+
+footer .row .footer-img {
+  fill: #060606;
+  transition: fill .2s ease-in-out;
+}
+
+footer .row .footer-img:hover {
+  fill: #974a8a;
+}
+
+footer .row .btn-secondary {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  background-color: #060606;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: 360px;
+  height: 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  position: relative;
+}
+
+footer .row .btn-secondary:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
+}
+
+footer .row .btn-primary {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  text-align: center;
+  cursor: pointer;
+  background-color: #974a8a;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: 360px;
+  height: 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  display: block;
+  position: relative;
+}
+
+footer .row .btn-primary:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
 }
 
 footer .site-info {

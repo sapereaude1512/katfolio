@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 @use '../base/typography' as *;
+@use '../components/buttons' as *;
 
 header {
     position: sticky;
@@ -20,7 +21,7 @@ header {
         display: flex;
         flex-direction: row;
         padding: 0 40px;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         
         a {
@@ -36,7 +37,7 @@ header {
             cursor: pointer;
         
             .b2 {
-            text-wrap: nowrap;
+            @include button-text-small;
             color: $primary-light;
             transition: color 0.4s ease-in-out;
 
@@ -47,26 +48,7 @@ header {
         }
         
         .btn-nav {
-            position: relative;
-            padding: 16px 30px;
-            border: none;
-            border-radius: 16px;
-            cursor: pointer;
-            background-color: $primary-dark;
-            transition: background-color 0.8s ease-in-out;
-            background-image: $invisible;
-            transition: background-image 0.8s ease-in-out;
-
-            &:hover {
-                background-color: $invisible;
-                background-image: $line;
-            }
-            
-            .b2 {
-                @include button-text-small;
-                color: $white;
-                text-wrap: nowrap;
-            }
+            @include btn-nav;
         }
     }
 }

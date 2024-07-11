@@ -1,40 +1,8 @@
 @use '../abstracts/variables' as *;
 @use '../base/typography' as *;
 
-// layout
-
-@mixin row {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin column {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-// buttons
-
-@mixin button-text-small {
-    font-size: 18px;
-    font-weight: $font-weight-medium;
-    text-transform: uppercase;
-}
-
-@mixin button-text-big {
-    font-size: 24px;
-    font-weight: $font-weight-medium;
-    text-transform: uppercase;
-}
-
 //other
 
-@mixin important-text {
+@mixin title {
     color: $primary-light;
 }
