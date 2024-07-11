@@ -1,0 +1,44 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography' as *;
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/desktop/hero/hero-bg.svg) center/cover no-repeat;
+    text-align: center;
+    border-bottom-left-radius: 100px;
+
+    h1, h5, p {
+    color: $text;
+    }
+    
+    .hero-text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 90px;
+    }
+
+    img {
+        height: 30vh;
+        position: absolute;
+        bottom: 0;
+        right: 100px;
+    }
+
+    div {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 8px;
+    }
+}

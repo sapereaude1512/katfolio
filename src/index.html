@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katfolio</title>
-    <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png"> <!-- add panda icon -->
+    <link rel="icon" href="images/favicon.png" sizes="16x16" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -16,23 +16,28 @@
 
     <header>
         <nav>
-            <ul>
-                <li><a href="#biography">Biography</a></li> <!-- apply "scroll-behavior: smooth;" to body tag -->
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#referrals">Referrals</a></li>
-                <li><button class="btn-nav">Get in touch</button></li> <!-- link to section with id: contact -->
-            </ul>
+            <a href="#biography"><p class="b2">Biography</p></a>
+            <a href="#projects"><p class="b2">Projects</p></a>
+            <a href="#clients"><p class="b2">Clients</p></a>
+            <a href="#referrals"><p class="b2">Referrals</p></a>
+            <button class="btn-nav"><p class="b2">Get in touch</p></button> <!-- link to section with id: contact -->
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Hey! I'm Kat</h1>
-        <h5>Software developer with<br>3+ years of experience in UX/UI design</h5>
-        <button class="btn-primary">Go to projects</button>
+        <div class="hero-text">
+            <h1>Hey! I'm Kat</h1>
+            <h5>Software developer with<br>3+ years of experience in UX/UI design</h5>
+            <button class="btn-primary">Go to projects</button>
+        </div>
+        <img src="/src/images/desktop/hero/panda.png" alt="panda avatar">
         <div>
             <p class="p2">Scroll</p>
-            <!-- arrow icon -->
+            <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.375 9.375C17.375 8.87772 17.5726 8.40081 17.9242 8.04918C18.2758 7.69754 18.7527 7.5 19.25 7.5H41.75C42.2473 7.5 42.7242 7.69754 43.0758 8.04918C43.4275 8.40081 43.625 8.87772 43.625 9.375C43.625 9.87228 43.4275 10.3492 43.0758 10.7008C42.7242 11.0525 42.2473 11.25 41.75 11.25H19.25C18.7527 11.25 18.2758 11.0525 17.9242 10.7008C17.5726 10.3492 17.375 9.87228 17.375 9.375ZM54.732 31.1578C54.5902 30.8152 54.3499 30.5223 54.0416 30.3162C53.7333 30.1101 53.3709 30.0001 53 30H43.625V24.375C43.625 23.8777 43.4275 23.4008 43.0758 23.0492C42.7242 22.6975 42.2473 22.5 41.75 22.5H19.25C18.7527 22.5 18.2758 22.6975 17.9242 23.0492C17.5726 23.4008 17.375 23.8777 17.375 24.375V30H8.00001C7.62896 29.9997 7.26616 30.1095 6.95755 30.3155C6.64893 30.5215 6.40838 30.8145 6.26634 31.1573C6.12431 31.5001 6.08717 31.8773 6.15964 32.2412C6.23211 32.6051 6.41093 32.9393 6.67345 33.2016L29.1735 55.7016C29.3476 55.8759 29.5544 56.0142 29.782 56.1086C30.0096 56.2029 30.2536 56.2515 30.5 56.2515C30.7464 56.2515 30.9904 56.2029 31.218 56.1086C31.4456 56.0142 31.6524 55.8759 31.8266 55.7016L54.3266 33.2016C54.5887 32.9392 54.7672 32.605 54.8393 32.2412C54.9115 31.8774 54.8742 31.5004 54.732 31.1578ZM19.25 18.75H41.75C42.2473 18.75 42.7242 18.5525 43.0758 18.2008C43.4275 17.8492 43.625 17.3723 43.625 16.875C43.625 16.3777 43.4275 15.9008 43.0758 15.5492C42.7242 15.1975 42.2473 15 41.75 15H19.25C18.7527 15 18.2758 15.1975 17.9242 15.5492C17.5726 15.9008 17.375 16.3777 17.375 16.875C17.375 17.3723 17.5726 17.8492 17.9242 18.2008C18.2758 18.5525 18.7527 18.75 19.25 18.75Z"
+                    fill="#242424" />
+            </svg>
         </div>
     </section>
 
@@ -71,25 +76,25 @@
             <p class="p1">I believe that everything you can imagine is possible when you have<br>clearly defined goals, strong design, thought out strategy and assemble a passionate team.</p>
             <div class="row">
                 <div class="column">
-                    <h2>1</h2>
+                    <h2 class="number">1</h2>
                     <p class="p1">People are the<br>biggest value</p>
                     <!-- purple dot -->
                     <p class="p1">Good communication<br>leads to success</p>
                 </div>
                 <div class="column">
-                    <h2>2</h2>
+                    <h2 class="number">2</h2>
                     <p class="p1">Different projects need<br>different methods</p>
                     <!-- purple dot -->
                     <p class="p1">Flexibility is a<br>superpower</p>
                 </div>
                 <div class="column">
-                    <h2>3</h2>
+                    <h2 class="number">3</h2>
                     <p class="p1">Do your best<br>or don’t start</p>
                     <!-- purple dot -->
                     <p class="p1">Finished is better<br>than perfect</p>
                 </div>
                 <div class="column">
-                    <h2>4</h2>
+                    <h2 class="number">4</h2>
                     <p class="p1">Design without thinking<br>is just decoration</p>
                     <!-- purple dot -->
                     <p class="p1">Subtlety is where<br>the magic lies</p>
@@ -203,7 +208,8 @@
             </div>
             <div class="column">
                 <p class="p1">Overview</p>
-                <p class="p2">Ink Innovation has spread a unique ecosystem of software and hardware solutions in aviation industry. Ink created advanced cloud-hosted departure control system, with over 1000 functionalities. <a href="https://www.innovation.ink/ecosystem/ink-dcs">Ink DCS</a> is capable of running across a range of devices. <a href="//www.innovation.ink/ecosystem/ink-brs">Ink BRS</a> allows to efficiently track baggage throughout passenger journey and improves the accuracy of the reconciliation process. <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/">Ink Self-Service</a> devices (Kiosk, Bag Drop, Totem) reduce waiting times at the airports and allow travelers to perform the check-in process in seconds with minimal effort. Booking covid-19 tests with Ink has been fast and convenient. <a href="https://www.health.ink/">Ink Health</a> provided managed bookings with their network of labs, clinics and point-of-care providers.</p>
+                <p class="p2">Ink Innovation is a provider of a unique ecosystem of biometrics, mobile, and cloud systems for the travel industry and
+                other organisations to improve operational flow and transform passengers’ experiences and journeys worldwide. Ink created advanced cloud-hosted departure control system, with over 1000 functionalities. <a href="https://www.innovation.ink/ecosystem/ink-dcs">Ink DCS</a> is capable of running across a range of devices. <a href="//www.innovation.ink/ecosystem/ink-brs">Ink BRS</a> allows to efficiently track baggage throughout passenger journey and improves the accuracy of the reconciliation process. <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/">Ink Self-Service</a> devices (Kiosk, Bag Drop, Totem) reduce waiting times at the airports and allow travelers to perform the check-in process in seconds with minimal effort. Booking covid-19 tests with Ink has been fast and convenient. <a href="https://www.health.ink/">Ink Health</a> provided managed bookings with their network of labs, clinics and point-of-care providers.</p>
             </div>
             <div class="column">
                 <p class="p1">My role</p>
@@ -404,8 +410,8 @@
         </div>
     </main>
     
-    <section class="cta">
-        <h3>Want to learn more<br>about my work?</h3>
+    <section class="call-to-action">
+        <h3 class="cta">Want to learn more<br>about my work?</h3>
         <button class="btn-primary">Book a meeting</button>
     </section>
 
@@ -552,12 +558,23 @@
                 <button class="btn-primary">Book a meeting</button>
             </div>
             <div class="row">
-                <!-- LinkedIn icon -->
-                <!-- Github icon -->
+                <img id="li-footer" src="/src/images/desktop/footer/li-black.svg" alt="linkedin logo">
+                <img id="git-footer" src="/src/images/desktop/footer/git-black.svg" alt="github logo">
             </div>
-            <div class="row">
+            <div class="site-info">
                 <p class="p2">Made with</p>
-                <!-- heart icon -->
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.1875 3.75C15.2516 3.75 13.5566 4.5825 12.5 5.98969C11.4434 4.5825 9.74844 3.75 7.8125 3.75C6.27146 3.75174 4.79404 4.36468 3.70436 5.45436C2.61468 6.54404 2.00174 8.02146 2 9.5625C2 16.125 11.7303 21.4369 12.1447 21.6562C12.2539 21.715 12.376 21.7458 12.5 21.7458C12.624 21.7458 12.7461 21.715 12.8553 21.6562C13.2697 21.4369 23 16.125 23 9.5625C22.9983 8.02146 22.3853 6.54404 21.2956 5.45436C20.206 4.36468 18.7285 3.75174 17.1875 3.75ZM12.5 20.1375C10.7881 19.14 3.5 14.5959 3.5 9.5625C3.50149 8.41921 3.95632 7.32317 4.76475 6.51475C5.57317 5.70632 6.66921 5.25149 7.8125 5.25C9.63594 5.25 11.1669 6.22125 11.8062 7.78125C11.8628 7.91881 11.9589 8.03646 12.0824 8.11926C12.2059 8.20207 12.3513 8.24627 12.5 8.24627C12.6487 8.24627 12.7941 8.20207 12.9176 8.11926C13.0411 8.03646 13.1372 7.91881 13.1937 7.78125C13.8331 6.21844 15.3641 5.25 17.1875 5.25C18.3308 5.25149 19.4268 5.70632 20.2353 6.51475C21.0437 7.32317 21.4985 8.41921 21.5 9.5625C21.5 14.5884 14.21 19.1391 12.5 20.1375Z"
+                        fill="url(#paint0_linear_58_82)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_58_82" x1="1.99996" y1="12.7479" x2="22.9999" y2="12.7479"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#4A90E2" />
+                            <stop offset="1" stop-color="#974A8A" stop-opacity="0.9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
                 <p class="p2">by Katarina</p>
                 <p class="p2">© 2024</p>
             </div>

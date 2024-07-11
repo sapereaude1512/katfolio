@@ -1,23 +1,67 @@
-$font-family: 'IBM Plex Mono', 'Montserrat', monospace;
+@use '../abstracts/variables' as *;
+
+$font-family: 'IBM Plex Mono', monospace;
 $font-style: normal;
+$line-height: 120%;
+// $font-weight-thin: 100;
+// $font-weight-extralight: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+// $font-weight-semibold: 600;
+$font-weight-bold: 700;
 
-// .ibm-plex-mono-thin {
-//   font-weight: 100;
+h1, h2, h3, h4, h5, p {
+    font-family: $font-family;
+    font-style: $font-style;
+    line-height: $line-height;
+}
 
-// .ibm-plex-mono-extralight {
-//   font-weight: 200;
+h1 {
+    font-weight: $font-weight-bold;
+    font-size: 80px;
+}
 
-// .ibm-plex-mono-light {
-//   font-weight: 300;
+h1, h2, .cta {
+    color: $text;
+}
 
-// .ibm-plex-mono-regular {
-//   font-weight: 400;
+.hero .p2, footer .p2 {
+    color: $black;
+}
 
-// .ibm-plex-mono-medium {
-//   font-weight: 500;
+.number, h3, h4, h5, .p1, .p2, .b1, .b2 {
+    color: $white;
+}
 
-// .ibm-plex-mono-semibold {
-//   font-weight: 600;
+h2, h3, h4 {
+    font-weight: $font-weight-light;
+}
 
-// .ibm-plex-mono-bold {
-//   font-weight: 700;
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h5, .p1, .p2 {
+    font-weight: $font-weight-regular;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+.p1 {
+    font-size: 20px;
+}
+
+.p2 {
+    font-size: 16px;
+}

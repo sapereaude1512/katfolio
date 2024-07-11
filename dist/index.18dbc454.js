@@ -584,7 +584,18 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"1SICI":[function(require,module,exports) {
+// sticky header
+let lastScrollTop = 0;
+const header = document.querySelector("header");
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) // Scroll down - hide header
+    header.style.top = "-90px"; // Adjust based on header height
+    else // Scroll up - show header
+    header.style.top = "0";
+    lastScrollTop = scrollTop;
+});
 
-},{}]},["j2YDk","1SICI"], "1SICI", "parcelRequiree1fe")
+},{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire13c7")
 
 //# sourceMappingURL=index.18dbc454.js.map

@@ -1,8 +1,10 @@
 // colors
 $primary-dark:#974A8A;
 $primary-light:#C68BBC;
+$secondary-color:#71B7FB;
 $white:#FAFAFA;
 $grey:#CBCBCB;
 $black: #242424;
 $text:#060606;
-$blue:#71B7FB;
+$line: linear-gradient(90deg, #4A90E2 0%, $primary-dark 100%);
+$invisible: rgba(0,0,0,0%)
