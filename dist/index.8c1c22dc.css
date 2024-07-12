@@ -83,7 +83,7 @@ body:after {
 }
 
 section, main {
-  padding: 100px;
+  padding: 8%;
 }
 
 a.btn-primary {
@@ -137,6 +137,12 @@ header nav {
   padding: 0 40px;
   display: flex;
   position: relative;
+}
+
+@media (width <= 1200px) {
+  header nav {
+    padding: 0 20px;
+  }
 }
 
 header nav a {
@@ -244,29 +250,6 @@ strong {
   text-align: center;
 }
 
-#biography .row {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-#biography .row-wrap {
-  flex-flow: wrap;
-  place-content: flex-start center;
-  align-items: center;
-  gap: 40px 100px;
-  display: flex;
-  position: relative;
-}
-
-#biography .row-wrap div {
-  max-width: 80%;
-}
-
 #biography .column {
   flex-direction: column;
   justify-content: center;
@@ -276,7 +259,44 @@ strong {
   display: flex;
 }
 
-#biography .column-small {
+#biography .column .row {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+@media (width <= 800px) {
+  #biography .column .row {
+    flex-wrap: wrap;
+    place-content: flex-start center;
+    align-items: start;
+    gap: 40px;
+  }
+}
+
+#biography .column .row-wrap {
+  flex-flow: wrap;
+  place-content: flex-start center;
+  align-items: center;
+  gap: 40px 100px;
+  display: flex;
+  position: relative;
+}
+
+#biography .column .row-wrap .column-text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  display: flex;
+}
+
+#biography .column .row-wrap .column-small {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -285,7 +305,7 @@ strong {
   display: flex;
 }
 
-#biography .column-small .p1 {
+#biography .column .row-wrap .column-small .p1 {
   text-align: center;
   text-wrap: nowrap;
 }
@@ -396,6 +416,7 @@ strong {
 
 .hero div {
   flex-direction: column;
+  align-items: center;
   column-gap: 8px;
   display: flex;
   position: absolute;

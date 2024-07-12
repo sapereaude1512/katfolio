@@ -54,27 +54,36 @@ strong {
         text-align: center;
     }
 
-    .row {
-        @include row;
-        gap: 60px;
-    }
-
-    .row-wrap {
-        @include row-wrap;
-        gap: 40px 100px;
-        align-items: center;
-
-        div {
-            max-width: 80%;
-        }
-    }
-
     .column {
-        @include column;
-        gap: 60px;
-    }
+            @include column;
+            gap: 60px;
+        
+        .row {
+            @include row;
+            gap: 60px;
 
-    .column-small {
+            @media (max-width: 800px) {
+                flex-wrap: wrap;
+                align-content: flex-start;
+                justify-content: center;
+                align-items: start;
+                gap: 40px;
+            }
+        }
+
+        .row-wrap {
+            @include row-wrap;
+            gap: 40px 100px;
+            align-items: center;
+
+            .column-text {
+            @include column;
+            gap: 4px;
+            width: 100%;
+            align-items: flex-start;
+            }
+
+        .column-small {
         @include column;
         gap: 8px;
         width: fit-content;
@@ -82,6 +91,8 @@ strong {
         .p1 {
             text-align: center;
             text-wrap: nowrap;
+        }
+        }
         }
     }
 }
