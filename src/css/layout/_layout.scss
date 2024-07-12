@@ -61,7 +61,7 @@ strong {
 
     .row-wrap {
         @include row-wrap;
-        gap: 60px;
+        gap: 40px 100px;
     }
 
     .column {
@@ -87,15 +87,20 @@ strong {
 
     .row {
         @include row;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 60px;
 
+        h5 {
+            width: 30%;
+        }
+        
         img {
-            width: 50vw;
+            height: 50vh;
         }
     }
 
     .row-wrap {
         @include row-wrap;
-        gap: 80px 40px;
+        gap: 40px 100px;
     }
 }

@@ -137,15 +137,27 @@ header nav {
 
 header nav a {
   text-align: center;
-  color: #c68bbc;
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
   text-transform: uppercase;
   cursor: pointer;
-  justify-content: center;
+  place-content: center;
   align-items: center;
   width: 100%;
-  height: 60px;
+  height: 100%;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
   text-decoration: none;
+  transition: font-weight .6s ease-in-out;
   display: flex;
+}
+
+header nav a:hover {
+  font-weight: 400;
 }
 
 header nav a .b2 {
@@ -242,7 +254,7 @@ strong {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: start;
-  gap: 60px;
+  gap: 40px 100px;
   display: flex;
   position: relative;
 }
@@ -281,22 +293,27 @@ strong {
 
 #clients .row {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 60px;
   width: 100%;
   display: flex;
   position: relative;
 }
 
+#clients .row h5 {
+  width: 30%;
+}
+
 #clients .row img {
-  width: 50vw;
+  height: 50vh;
 }
 
 #clients .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: start;
-  gap: 80px 40px;
+  gap: 40px 100px;
   display: flex;
   position: relative;
 }
@@ -323,7 +340,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   width: 100%;
   padding-top: 90px;
   display: flex;

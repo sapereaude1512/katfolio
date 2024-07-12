@@ -31,7 +31,8 @@ header {
             text-align: center;
             align-items: center;
             justify-content: center;
-            color: $primary-light;
+            @include button-text-small;
+            color: $white;
             text-decoration: none;
             text-transform: uppercase;
             cursor: pointer;
