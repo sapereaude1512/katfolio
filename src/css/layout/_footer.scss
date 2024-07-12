@@ -20,6 +20,19 @@ footer {
         @include column;
         gap: 40px;
         padding-bottom: 8px;
+
+        .row-wrap {
+            @include row-wrap;
+            gap: 20px;
+
+            .btn-secondary {
+            @include btn-secondary;
+            }
+
+            .btn-primary {
+                @include btn-primary;
+            }
+        }
     }
 
     .row {
@@ -33,14 +46,6 @@ footer {
             &:hover {
             fill: $primary-dark;
             }
-        }
-
-        .btn-secondary {
-            @include btn-secondary;
-        }
-
-        .btn-primary {
-            @include btn-primary;
         }
     }
 

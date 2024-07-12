@@ -4,9 +4,45 @@ h1, h2, h3, h4, h5, p {
   line-height: 120%;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 h1 {
-  font-size: 80px;
+  font-size: 8rem;
   font-weight: 700;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 30rem;
+}
+
+h5 {
+  font-size: 2.4rem;
+}
+
+.p1 {
+  font-size: 2rem;
+}
+
+.p2 {
+  font-size: 1.6rem;
+}
+
+h2, h3, h4 {
+  font-weight: 300;
+}
+
+h5, .p1, .p2 {
+  font-weight: 400;
 }
 
 h1, h2, .cta {
@@ -19,38 +55,6 @@ h1, h2, .cta {
 
 .number, h3, h4, h5, .p1, .p2 {
   color: #fafafa;
-}
-
-h2, h3, h4 {
-  font-weight: 300;
-}
-
-h2 {
-  font-size: 60px;
-}
-
-h3 {
-  font-size: 40px;
-}
-
-h4 {
-  font-size: 30px;
-}
-
-h5, .p1, .p2 {
-  font-weight: 400;
-}
-
-h5 {
-  font-size: 24px;
-}
-
-.p1 {
-  font-size: 20px;
-}
-
-.p2 {
-  font-size: 16px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -253,10 +257,14 @@ strong {
 #biography .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
-  align-items: start;
+  align-items: center;
   gap: 40px 100px;
   display: flex;
   position: relative;
+}
+
+#biography .row-wrap div {
+  max-width: 80%;
 }
 
 #biography .column {
@@ -273,13 +281,23 @@ strong {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  width: 100%;
+  width: fit-content;
   display: flex;
 }
 
 #biography .column-small .p1 {
   text-align: center;
   text-wrap: nowrap;
+}
+
+.bg-lines {
+  width: 100%;
+  display: flex;
+}
+
+.bg-lines img {
+  align-self: center;
+  width: 100%;
 }
 
 #clients {
@@ -291,31 +309,17 @@ strong {
   display: flex;
 }
 
-#clients .row {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-#clients .row h5 {
-  width: 30%;
-}
-
-#clients .row img {
-  height: 50vh;
-}
-
 #clients .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
-  align-items: start;
+  align-items: center;
   gap: 40px 100px;
   display: flex;
   position: relative;
+}
+
+#clients .row-wrap img.clients {
+  height: 50vh;
 }
 
 .hero {
@@ -421,26 +425,16 @@ footer .column {
   display: flex;
 }
 
-footer .row {
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  width: 100%;
+footer .column .row-wrap {
+  flex-flow: wrap;
+  place-content: flex-start center;
+  align-items: start;
+  gap: 20px;
   display: flex;
   position: relative;
 }
 
-footer .row .footer-img {
-  fill: #060606;
-  transition: fill .2s ease-in-out;
-}
-
-footer .row .footer-img:hover {
-  fill: #974a8a;
-}
-
-footer .row .btn-secondary {
+footer .column .row-wrap .btn-secondary {
   color: #fafafa;
   text-transform: uppercase;
   text-wrap: nowrap;
@@ -463,13 +457,13 @@ footer .row .btn-secondary {
   position: relative;
 }
 
-footer .row .btn-secondary:hover {
+footer .column .row-wrap .btn-secondary:hover {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
   font-weight: 400;
 }
 
-footer .row .btn-primary {
+footer .column .row-wrap .btn-primary {
   color: #fafafa;
   text-transform: uppercase;
   text-wrap: nowrap;
@@ -493,10 +487,29 @@ footer .row .btn-primary {
   position: relative;
 }
 
-footer .row .btn-primary:hover {
+footer .column .row-wrap .btn-primary:hover {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
   font-weight: 400;
+}
+
+footer .row {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+footer .row .footer-img {
+  fill: #060606;
+  transition: fill .2s ease-in-out;
+}
+
+footer .row .footer-img:hover {
+  fill: #974a8a;
 }
 
 footer .site-info {

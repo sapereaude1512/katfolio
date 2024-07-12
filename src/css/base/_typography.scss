@@ -17,10 +17,50 @@ h1, h2, h3, h4, h5, p {
     line-height: $line-height;
 }
 
+// sizes and weight
+
+html {
+    font-size: 62.5%; //10px
+}
+
 h1 {
     font-weight: $font-weight-bold;
-    font-size: 80px;
+    font-size: 8rem;
 }
+
+h2 {
+    font-size: 6rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 30rem;
+}
+
+h5 {
+    font-size: 2.4rem;
+}
+
+.p1 {
+    font-size: 2rem;
+}
+
+.p2 {
+    font-size: 1.6rem;
+}
+
+h2, h3, h4 {
+    font-weight: $font-weight-light;
+}
+
+h5, .p1, .p2 {
+    font-weight: $font-weight-regular;
+}
+
+// colors
 
 h1, h2, .cta {
     color: $text;
@@ -34,37 +74,7 @@ h1, h2, .cta {
     color: $white;
 }
 
-h2, h3, h4 {
-    font-weight: $font-weight-light;
-}
-
-h2 {
-    font-size: 60px;
-}
-
-h3 {
-    font-size: 40px;
-}
-
-h4 {
-    font-size: 30px;
-}
-
-h5, .p1, .p2 {
-    font-weight: $font-weight-regular;
-}
-
-h5 {
-    font-size: 24px;
-}
-
-.p1 {
-    font-size: 20px;
-}
-
-.p2 {
-    font-size: 16px;
-}
+// text alignment
 
 h1, h2, h3, h4, h5 {
     text-align: center;
