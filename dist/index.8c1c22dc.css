@@ -22,7 +22,7 @@ h3 {
 }
 
 h4 {
-  font-size: 30rem;
+  font-size: 3rem;
 }
 
 h5 {
@@ -83,7 +83,7 @@ body:after {
 }
 
 section, main {
-  padding: 8%;
+  padding: 8rem;
 }
 
 a.btn-primary {
@@ -139,7 +139,7 @@ header nav {
   position: relative;
 }
 
-@media (width <= 1200px) {
+@media only screen and (width <= 1200px) {
   header nav {
     padding: 0 20px;
   }
@@ -269,7 +269,7 @@ strong {
   position: relative;
 }
 
-@media (width <= 800px) {
+@media only screen and (width <= 800px) {
   #biography .column .row {
     flex-wrap: wrap;
     place-content: flex-start center;
@@ -408,7 +408,7 @@ strong {
   right: 100px;
 }
 
-@media (width <= 1000px) {
+@media only screen and (width <= 1000px) {
   .hero img {
     display: none;
   }
@@ -539,16 +539,5 @@ footer .site-info {
   align-items: center;
   gap: 8px;
   display: flex;
-}
-
-@media (width <= 600px) {
-  .navbar {
-    flex-direction: column;
-  }
-
-  .button {
-    padding: .5rem 1rem;
-    font-size: .875rem;
-  }
 }
 /*# sourceMappingURL=index.8c1c22dc.css.map */
