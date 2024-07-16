@@ -13,3 +13,42 @@ let lastScrollTop = 0;
         }
         lastScrollTop = scrollTop;
     });
+
+// mobile nav
+
+let navClosedBtn = document.getElementById('nav-closed');
+let navOpenedBtn = document.getElementById('nav-opened');
+let navMobileLinks = document.getElementById('nav-mobile-links');
+let navOpened = false;
+
+function setNavState() {
+    if (navOpened) {
+        navClosedBtn.style.display = 'none';
+        navOpenedBtn.style.display = 'flex';
+        navMobileLinks.classList.add('open');
+    } else {
+        navClosedBtn.style.display = 'flex';
+        navOpenedBtn.style.display = 'none';
+        navMobileLinks.classList.remove('open');
+    }
+}
+
+setNavState(); // initial state
+
+navClosedBtn.onclick = function () {
+    navOpened = true;
+    setNavState();
+};
+
+navOpenedBtn.onclick = function () {
+    navOpened = false;
+    setNavState();
+};
+
+navMobileLinks.querySelectorAll('a').forEach(link => {
+        link.onclick = function() {
+            navOpened = false;
+            setNavState();
+        }
+    }
+);

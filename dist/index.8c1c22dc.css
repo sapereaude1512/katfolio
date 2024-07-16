@@ -116,113 +116,9 @@ a.btn-primary:hover {
   font-weight: 400;
 }
 
-header {
-  z-index: 1000;
-  background-color: #060606;
-  border-radius: 0 0 24px 24px;
-  width: 90vw;
-  height: 90px;
-  margin: 0 auto;
-  transition: top .4s;
-  position: sticky;
-  top: 0;
-}
-
-header nav {
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 40px;
-  display: flex;
-  position: relative;
-}
-
-@media only screen and (width <= 1200px) {
-  header nav {
-    padding: 0 20px;
-  }
-}
-
-header nav a {
-  text-align: center;
-  color: #fafafa;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  text-transform: uppercase;
-  cursor: pointer;
-  place-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
-  text-decoration: none;
-  transition: font-weight .6s ease-in-out;
-  display: flex;
-}
-
-header nav a:hover {
-  font-weight: 400;
-}
-
-header nav a .b2 {
-  color: #c68bbc;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  align-content: center;
-  width: 100%;
-  height: 100%;
-  font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
-  text-decoration: none;
-  transition: color .4s ease-in-out;
-}
-
-header nav a .b2:hover {
-  color: #fafafa;
-  font-weight: 400;
-}
-
-header nav .btn-nav {
-  color: #fafafa;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  cursor: pointer;
-  background-color: #974a8a;
-  background-image: #0000;
-  border: none;
-  border-radius: 16px;
-  align-content: center;
-  width: 100%;
-  height: 60px;
-  padding: 0 16px;
-  font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 120%;
-  text-decoration: none;
-  transition: background-image .8s ease-in-out;
-  position: relative;
-}
-
-header nav .btn-nav:hover {
-  background-color: #0000;
-  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
-  font-weight: 400;
-}
-
 .call-to-action {
   text-align: center;
-  background: url("cta-background.bfb0d7c8.svg") center / cover no-repeat;
+  background: url("cta-background.536cd8d5.svg") center / cover no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -338,12 +234,241 @@ strong {
   position: relative;
 }
 
+#clients .row-wrap h5 {
+  font-weight: 300;
+}
+
 #clients .row-wrap img.clients {
   height: 50vh;
 }
 
+header {
+  z-index: 1000;
+  width: 100%;
+  transition: top .4s;
+  position: sticky;
+  top: 0;
+}
+
+header nav.desktop {
+  background-color: #060606;
+  border-radius: 0 0 24px 24px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90vw;
+  height: 90px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+}
+
+@media only screen and (width <= 1200px) {
+  header nav.desktop {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (width <= 1000px) {
+  header nav.desktop {
+    display: none;
+  }
+}
+
+header nav.desktop a {
+  text-align: center;
+  color: #fafafa;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  text-decoration: none;
+  display: flex;
+}
+
+header nav.desktop a .b2 {
+  color: #c68bbc;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: color .4s ease-in-out;
+}
+
+header nav.desktop a .b2:hover {
+  color: #fafafa;
+  font-weight: 400;
+}
+
+header nav.desktop .btn-nav {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  cursor: pointer;
+  background-color: #974a8a;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: fit-content;
+  height: 60px;
+  padding: 0 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  position: relative;
+}
+
+header nav.desktop .btn-nav:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
+}
+
+header nav.mobile {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+@media only screen and (width >= 1000px) {
+  header nav.mobile {
+    display: none;
+  }
+}
+
+header nav.mobile .row {
+  background-color: #060606;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 0 4rem;
+  display: flex;
+  position: absolute;
+  top: 0;
+}
+
+header nav.mobile .row .nav-mobile-menu-btn {
+  cursor: pointer;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 14px;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+}
+
+header nav.mobile .row #nav-opened {
+  display: none;
+}
+
+header nav.mobile .row .btn-nav {
+  color: #fafafa;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  cursor: pointer;
+  background-color: #974a8a;
+  background-image: #0000;
+  border: none;
+  border-radius: 16px;
+  align-content: center;
+  width: fit-content;
+  height: 60px;
+  padding: 0 60px;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: background-image .8s ease-in-out;
+  position: relative;
+}
+
+header nav.mobile .row .btn-nav:hover {
+  background-color: #0000;
+  background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
+  font-weight: 400;
+}
+
+header nav.mobile #nav-mobile-links {
+  opacity: 0;
+  background-color: #242424;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  height: 0;
+  margin-top: 90px;
+  transition: height .4s ease-in-out, opacity .4s ease-in-out;
+  display: flex;
+  overflow: hidden;
+}
+
+header nav.mobile #nav-mobile-links.open {
+  opacity: 1;
+  height: calc(100vh - 90px);
+  display: flex;
+}
+
+header nav.mobile #nav-mobile-links a {
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  text-decoration: none;
+}
+
+header nav.mobile #nav-mobile-links a .b1 {
+  color: #c68bbc;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: IBM Plex Mono, monospace;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 120%;
+  text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+header nav.mobile #nav-mobile-links a .b1:hover {
+  font-weight: 400;
+}
+
+header nav.mobile #nav-mobile-links a .b1:active {
+  color: #fafafa;
+}
+
 .hero {
-  background: url("hero-bg.52557729.svg") center / cover no-repeat;
+  background: url("hero-bg.5f582d40.svg") center / cover no-repeat;
   border-bottom-left-radius: 100px;
   flex-direction: column;
   justify-content: center;
@@ -424,7 +549,7 @@ strong {
 }
 
 footer {
-  background: url("footer-bg.3aa7fcbf.svg") center / cover no-repeat;
+  background: url("footer-bg.2252ad92.svg") center / cover no-repeat;
   border-top-right-radius: 80px;
   flex-direction: column;
   justify-content: center;

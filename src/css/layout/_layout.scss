@@ -1,5 +1,6 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
+@use '../base/typography' as *;
 
 @mixin row {
     position: relative;
@@ -35,7 +36,7 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    background: url(../images/desktop/cta-background.svg) center/cover no-repeat;
+    background: url(../images/cta-background.svg) center/cover no-repeat;
     text-align: center;
     padding: 80px 0px;
 }
@@ -117,6 +118,10 @@ strong {
         align-items: center;
         justify-content: center;
         gap: 40px 100px;
+
+        h5 {
+            font-weight: $font-weight-light;
+        }
         
         img.clients {
             height: 50vh;
