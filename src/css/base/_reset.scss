@@ -25,4 +25,8 @@ body:after {
 
 section, main {
     padding: 8rem;
+
+    @media only screen and (max-width: 600px) {
+            padding: 8rem 2rem;
+        }
 }

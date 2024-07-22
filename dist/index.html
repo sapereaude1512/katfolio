@@ -31,7 +31,7 @@
                 <div class="nav-mobile-menu-btn" id="nav-opened">
                     <img src="/x-icon.5f54ea38.svg" alt="x icon for closing menu">
                 </div>
-                <a class="btn-nav" href="#contact">Let's talk</a>
+                <a class="btn-nav" href="#contact" id="mobile-cta">Let's talk</a>
             </div>
         
             <div class="column" id="nav-mobile-links">
@@ -79,14 +79,14 @@
                 <img src="/coding-monitor.f1bb0a61.svg" alt="desktop with code">
                 <div class="column-text">
                     <p class="p1"><strong>SOFTWARE DEVELOPER since 2023</strong></p>
-                    <p class="p1">In 2023, I transitioned to software development, gaining expertise across all phases of development from concept to launch.<br>I participated in hackathons like ETHBelgrade2023 and won a prize at ETHOnline2023.<br>Now, in 2024, I am dedicated to further growing my software development skills, with a passion for combining design and
+                    <p class="p1">In 2023, I transitioned to software development, gaining expertise across all phases of development - from concept to launch.<br>I participated in hackathons like ETHBelgrade2023 and won a prize at ETHOnline2023.<br>Now, in 2024, I am dedicated to further growing my software development skills, with a passion for combining design and
                     coding to create impactful digital solutions.</p>
                 </div>
             </div>
         </div>
         <div class="column">
             <h5>My main tech stack</h5>
-            <div class="row-wrap">
+            <div class="row-wrap-logos">
                 <img src="/js.02d8de82.svg" alt="javascript">
                 <img src="/react.7000f28c.svg" alt="react">
                 <img src="/html5.528f1d69.svg" alt="html5">
@@ -140,13 +140,11 @@
         <a class="btn-primary" href="/files/Resume-KatarinaMaric.pdf" download="Resume-KatarinaMaric.pdf">Download my resume</a>
     </section>
 
-    <div class="bg-lines">
-        <img src="/separator-lines.42d1c699.svg" alt="separator lines background">
-    </div>
+    <div class="bg-lines"></div>
 
     <main id="projects">
         <h3>Explore what I’ve been<br>working on recently</h3>
-        <div class="row">
+        <div class="row-wrap"> <!-- project buttons -->
             <div class="selector" id="btn-sormac"> <!-- active, hover and selected state -->
                 <h5>Sormac</h5>
             </div>
@@ -163,15 +161,16 @@
                 <h5>Other</h5>
             </div>
         </div>
+        <!-- switch content on button click -->
         <div class="project-info" id="about-sormac">
             <h5>Software solution for<br>cutting machine</h5>
             <div class="row">
                 <div class="column">
                     <p class="p1">Clients</p>
                     <div>
-                        <a href="https://www.sormac.eu/en/" class="p2">Sormac</a> <!-- open links in new tab -->
+                        <a href="https://www.sormac.eu/en/" class="p2" target="_blank">Sormac</a> <!-- open links in new tab -->
                         <p class="p2">;</p>
-                        <a href="https://www.foodcons.de/" class="p2">Foodcons</a>
+                        <a href="https://www.foodcons.de/" class="p2" target="_blank">Foodcons</a>
                     </div>
                 </div>
                 <div class="column">
@@ -191,13 +190,13 @@
             </div>
             <div class="column">
                 <p class="p1">Overview</p>
-                <p class="p2"><a href="https://www.foodcons.de/en/maschinen-typen/fs-3600-multisystem-slice-wedging-cutter">FS-3600 machine</a> allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of machine.</p>
+                <p class="p2"><a href="https://www.foodcons.de/en/maschinen-typen/fs-3600-multisystem-slice-wedging-cutter" target="_blank">FS-3600 machine</a> allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of machine.</p>
             </div>
             <div class="column">
                 <p class="p1">My role</p>
-                <p class="p2">I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://www.sormac.eu/en/review-of-fruit-logistica-berlin-2024-successful-encounters-and-innovative-demonstrations/">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/">fair in Cologne</a>. It gained a great amount of positive feedback. In parallel with this, I developed a UI Kit with scalability in mind, which greatly impacted the speed of product development and shortened the time to market entry.</p>
+                <p class="p2">I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://www.sormac.eu/en/review-of-fruit-logistica-berlin-2024-successful-encounters-and-innovative-demonstrations/" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In parallel with this, I developed a UI Kit with scalability in mind, which greatly impacted the speed of product development and shortened the time to market entry.</p>
             </div>
-            <div class="grid">
+            <div class="row-wrap">
                 <div class="column">
                     <!-- clock icon -->
                     <p class="p2">Software for this machine I designed from scratch reduced 3 times the training time for factory workers</p>
@@ -225,7 +224,7 @@
             <div class="row">
                 <div class="column">
                     <p class="p1">Client</p>
-                    <a href="https://www.innovation.ink/" class="p2">Ink Innovation</a>
+                    <a href="https://www.innovation.ink/" class="p2" target="_blank">Ink Innovation</a>
                 </div>
                 <div class="column">
                     <p class="p1">Time frame</p>
@@ -245,13 +244,13 @@
             <div class="column">
                 <p class="p1">Overview</p>
                 <p class="p2">Ink Innovation is a provider of a unique ecosystem of biometrics, mobile, and cloud systems for the travel industry and
-                other organisations to improve operational flow and transform passengers’ experiences and journeys worldwide. Ink created advanced cloud-hosted departure control system, with over 1000 functionalities. <a href="https://www.innovation.ink/ecosystem/ink-dcs">Ink DCS</a> is capable of running across a range of devices. <a href="//www.innovation.ink/ecosystem/ink-brs">Ink BRS</a> allows to efficiently track baggage throughout passenger journey and improves the accuracy of the reconciliation process. <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/">Ink Self-Service</a> devices (Kiosk, Bag Drop, Totem) reduce waiting times at the airports and allow travelers to perform the check-in process in seconds with minimal effort. Booking covid-19 tests with Ink has been fast and convenient. <a href="https://www.health.ink/">Ink Health</a> provided managed bookings with their network of labs, clinics and point-of-care providers.</p>
+                other organisations to improve operational flow and transform passengers’ experiences and journeys worldwide. Ink created advanced cloud-hosted departure control system, with over 1000 functionalities. <a href="https://www.innovation.ink/ecosystem/ink-dcs" target="_blank">Ink DCS</a> is capable of running across a range of devices. <a href="https://dcs.aero/product/baggage-reconciliation-system-brs-ink-innovation/" target="_blank">Ink BRS</a> allows to efficiently track baggage throughout passenger journey and improves the accuracy of the reconciliation process. <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/" target="_blank">Ink Self-Service</a> devices (Kiosk, Bag Drop, Totem) reduce waiting times at the airports and allow travelers to perform the check-in process in seconds with minimal effort. Booking covid-19 tests with Ink has been fast and convenient. <a href="https://www.health.ink/" target="_blank">Ink Health</a> provided managed bookings with their network of labs, clinics and point-of-care providers.</p>
             </div>
             <div class="column">
                 <p class="p1">My role</p>
                 <p class="p2">As a digital product designer, I was engaged in 4 major projects and my role consisted of: translating business needs and requirements into intuitive and attractive user experiences, designing comprehensive UX/UI strategies, collaborating with the team to ensure successful design implementation, participating in re-branding, developing UI kit with scalability in mind, mentoring junior UX/UI designers, and providing design process in order to create optimal solutions for complex visual and interactive designs.</p>
             </div>
-            <div class="grid">
+            <div class="row-wrap">
                 <div class="column">
                     <!-- clock icon -->
                     <p class="p2">BRS mobile app I designed from scratch reduced training time for airport agents from 4+ weeks to less than 3 hours</p>
@@ -280,7 +279,7 @@
             <div class="row">
                 <div class="column">
                     <p class="p1">Client</p>
-                    <a href="https://github.com/AdoraPromo" class="p2">Adora Promo</a> <!-- underline link on hover -->
+                    <a href="https://github.com/AdoraPromo" class="p2" target="_blank">Adora Promo</a> <!-- underline link on hover -->
                 </div>
                 <div class="column">
                     <p class="p1">Time frame</p>
@@ -305,7 +304,7 @@
                 <p class="p1">My role</p>
                 <p class="p2">Collaborating as a frontend developer and designer included conducting comprehensive UX research, defining target market, creating a robust branding and design system. Seamless user experiences was ensured by producing wireframes, low-fidelity, and high-fidelity prototypes. I was continuously driving improvements in frontend code to enhance user engagement.</p>
             </div>
-            <div class="grid">
+            <div class="row-wrap">
                 <div class="column">
                     <!-- clock icon -->
                     <p class="p2">The app reduced twice required time for matching between sponsors and influencers</p>
@@ -333,7 +332,7 @@
             <div class="row">
                 <div class="column">
                     <p class="p1">Client</p>
-                    <a href="https://taikai.network/ethbelgrade/hackathons/hackathon-2023/projects/cliinujot00g9wn011g01mj7s/idea" class="p2">NFT Flipper</a> <!-- underline link on hover -->
+                    <a href="https://taikai.network/ethbelgrade/hackathons/hackathon-2023/projects/cliinujot00g9wn011g01mj7s/idea" class="p2" target="_blank">NFT Flipper</a> <!-- underline link on hover -->
                 </div>
                 <div class="column">
                     <p class="p1">Time frame</p>
@@ -358,7 +357,7 @@
                 <p class="p1">My role</p>
                 <p class="p2">As a UX/UI designer, I conducted extensive UX research, defined target market, established branding and design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes, while continuously driving design enhancements to boost platform functionality. Additionally, I was integral in the creation and development of the product’s visual style and also worked closely with the development team to ensure optimal implementation.</p>
             </div>
-            <div class="grid">
+            <div class="row-wrap">
                 <div class="column">
                     <!-- clock icon -->
                     <p class="p2">Made a MVP version of the app in just 3 days</p>
@@ -387,9 +386,9 @@
                 <div class="column">
                     <p class="p1">Platforms</p>
                     <div>
-                        <a href="https://adplist.org/" class="p2">ADPList</a>
+                        <a href="https://adplist.org/" class="p2" target="_blank">ADPList</a>
                         <p class="p2">;</p>
-                        <a href="http://www.interaction-design.org/" class="p2">IxDF</a>
+                        <a href="http://www.interaction-design.org/" class="p2" target="_blank">IxDF</a>
                     </div>
                 </div>
                 <div class="column">
@@ -408,13 +407,13 @@
             </div>
             <div class="column">
                 <p class="p1">Overview</p>
-                <p class="p2">ADPList is a global community of mentors from 150 countries that offer <a href="https://adplist.org/mentors/katarina-popovic">1:1 expert guidance</a>. This knowledge-sharing platform is excellent for learning and connecting with colleagues, fostering a collaborative environment. Being part of such a diverse and supportive network enriches both personal and professional growth. Interaction Design Foundation or IxDF offers a comprehensive range of online UX design courses taught by experts, providing learners with valuable educational content. I’m grateful for all the <a href="https://drive.google.com/drive/folders/15G2dxj33D1k3MTmBJ0pwayBLE8BmylzB?usp=drive_link">industry-recognized certificates</a> I gained. This platform is an excellent resource for advancing your skills and staying updated with the latest trends in UX design.</p>
+                <p class="p2">ADPList is a global community of mentors from 150 countries that offer <a href="https://adplist.org/mentors/katarina-popovic" target="_blank">1:1 expert guidance</a>. This knowledge-sharing platform is excellent for learning and connecting with colleagues, fostering a collaborative environment. Being part of such a diverse and supportive network enriches both personal and professional growth. Interaction Design Foundation or IxDF offers a comprehensive range of online UX design courses taught by experts, providing learners with valuable educational content. I’m grateful for all the <a href="https://drive.google.com/drive/folders/15G2dxj33D1k3MTmBJ0pwayBLE8BmylzB?usp=drive_link" target="_blank">industry-recognized certificates</a> I gained. This platform is an excellent resource for advancing your skills and staying updated with the latest trends in UX design.</p>
             </div>
             <div class="column">
                 <p class="p1">My contribution</p>
-                <p class="p2">As a mentor at ADPList, I thoroughly enjoyed sharing my personal experiences and knowledge with mentees while learning interesting insights from them. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the Interaction Design Foundation (IxDF), I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an <a href="https://www.linkedin.com/posts/the-interaction-design-foundation_katarina-finished-30-ixdf-courses-while-working-activity-7023342257634246656-Gwdg?utm_source=share&utm_medium=member_desktop">interview with the IxDF team</a> where I shared my journey to inspire others to keep learning.</p>
+                <p class="p2">As a mentor at ADPList, I thoroughly enjoyed sharing my personal experiences and knowledge with mentees while learning interesting insights from them. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the Interaction Design Foundation (IxDF), I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an <a href="https://www.linkedin.com/posts/the-interaction-design-foundation_katarina-finished-30-ixdf-courses-while-working-activity-7023342257634246656-Gwdg?utm_source=share&utm_medium=member_desktop" target="_blank">interview with the IxDF team</a> where I shared my journey to inspire others to keep learning.</p>
             </div>
-            <div class="grid">
+            <div class="row-wrap">
                 <div class="column">
                     <!-- clock icon -->
                     <p class="p2">Provided junior designers with 650+ minutes of mentorship</p>
@@ -441,8 +440,14 @@
             <!-- line -->
         </div>
         <div class="certificates">
-            <p class="p1">Life-long learning is a principle I live by and so far my learning results<br>were awarded with <a href="https://drive.google.com/drive/folders/17D7E6jSoTwBM7fs50y8MwhzCqtKrEY-p?usp=drive_link">50+ professional certificates</a> on globally recognized platforms</p>
-            <!-- icons -->
+            <p class="p1">Life-long learning is a principle I live by and so far my learning results<br>were awarded with <a href="https://drive.google.com/drive/folders/17D7E6jSoTwBM7fs50y8MwhzCqtKrEY-p?usp=drive_link" target="_blank">50+ professional certificates</a> on globally recognized platforms</p>
+            <div class="row-wrap">
+                <img src="/udemy.5c1e23c9.svg" alt="udemy logo">
+                <img src="/codeacademy.e8be530f.png" alt="codeacademy logo">
+                <img src="/coursera.65a36507.svg" alt="coursera logo">
+                <img src="/ixdf.a1b202c2.svg" alt="the interaction design foundation logo">
+                <img src="/sololearn.dd7211b4.svg" alt="sololearn logo">
+            </div>
         </div>
     </main>
     
@@ -476,9 +481,10 @@
     <section id="referrals">
         <h3>Testimonials from colleagues</h3>
         <div class="column">
+            <!-- for mobile version show only 1 testimonial and switch testimonials on arrow click (s1 t1 -> s1 t2 -> s2 t3 -> s2 t4 -> s3 t5 -> s3 t6) -->
             <div class="row" id="slide-1">
-                <div class="column">
-                    <div class="row">
+                <div class="column" id="testimonial-1"> <!-- Dusan -->
+                    <div class="row"> 
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/dusan-bulatovic-236112199/ -->
                         <div class="column">
                             <p class="p1">Dusan Bulatovic</p> <!-- has fixed height -->
@@ -495,7 +501,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="">
+                <div class="column" id="testimonial-2"> <!-- Stefan -->
                     <div class="row">
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/stefan-jovasevic/ -->
                         <div class="column">
@@ -515,7 +521,7 @@
                 </div>
             </div>
             <div class="row" id="slide-2">
-                <div class="column">
+                <div class="column" id="testimonial--3"> <!-- Sebastian -->
                     <div class="row">
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/ -->
                         <div class="column">
@@ -533,7 +539,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column" id="testimonial-4"> <!-- Marko -->
                     <div class="row">
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/ -->
                         <div class="column">
@@ -553,7 +559,7 @@
                 </div>
             </div>
             <div class="row" id="slide-3">
-                <div class="column">
+                <div class="column" id="testimonial-5"> <!-- Mahmoud -->
                     <div class="row">
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/imahmoudibrahim/ -->
                         <div class="column">
@@ -571,7 +577,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column" id="testimonial-6"> <!-- Chris -->
                     <div class="row">
                         <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/chris-cheng-hk/ -->
                         <div class="column">

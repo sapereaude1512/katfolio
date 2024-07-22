@@ -13,28 +13,70 @@ h1 {
   font-weight: 700;
 }
 
+@media only screen and (width <= 480px) {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
 h2 {
   font-size: 6rem;
+}
+
+@media only screen and (width <= 480px) {
+  h2 {
+    font-size: 5rem;
+  }
 }
 
 h3 {
   font-size: 4rem;
 }
 
+@media only screen and (width <= 480px) {
+  h3 {
+    font-size: 3rem;
+  }
+}
+
 h4 {
   font-size: 3rem;
+}
+
+@media only screen and (width <= 480px) {
+  h4 {
+    font-size: 2.4rem;
+  }
 }
 
 h5 {
   font-size: 2.4rem;
 }
 
+@media only screen and (width <= 480px) {
+  h5 {
+    font-size: 2rem;
+  }
+}
+
 .p1 {
   font-size: 2rem;
 }
 
+@media only screen and (width <= 480px) {
+  .p1 {
+    font-size: 1.7rem;
+  }
+}
+
 .p2 {
   font-size: 1.6rem;
+}
+
+@media only screen and (width <= 480px) {
+  .p2 {
+    font-size: 1.4rem;
+  }
 }
 
 h2, h3, h4 {
@@ -86,6 +128,12 @@ section, main {
   padding: 8rem;
 }
 
+@media only screen and (width <= 600px) {
+  section, main {
+    padding: 8rem 2rem;
+  }
+}
+
 a.btn-primary {
   color: #fafafa;
   text-transform: uppercase;
@@ -116,6 +164,28 @@ a.btn-primary:hover {
   font-weight: 400;
 }
 
+strong {
+  color: #c68bbc;
+}
+
+.bg-lines {
+  background: url("bg-lines-l.e8c5d345.svg") center / cover no-repeat;
+  width: 100%;
+  height: 4svh;
+}
+
+@media only screen and (width <= 500px) {
+  .bg-lines {
+    background: url("bg-lines-s.15bf058d.svg") center / cover no-repeat;
+  }
+}
+
+@media only screen and (width <= 900px) {
+  .bg-lines {
+    background: url("bg-lines-m.021ceb0e.svg") center / cover no-repeat;
+  }
+}
+
 .call-to-action {
   text-align: center;
   background: url("cta-background.536cd8d5.svg") center / cover no-repeat;
@@ -125,10 +195,6 @@ a.btn-primary:hover {
   gap: 40px;
   padding: 80px 0;
   display: flex;
-}
-
-strong {
-  color: #c68bbc;
 }
 
 #biography {
@@ -157,7 +223,7 @@ strong {
 
 #biography .column .row {
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 60px;
   width: 100%;
@@ -174,7 +240,7 @@ strong {
   }
 }
 
-#biography .column .row-wrap {
+#biography .row-wrap-logos, #biography .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: center;
@@ -183,7 +249,7 @@ strong {
   position: relative;
 }
 
-#biography .column .row-wrap .column-text {
+#biography .row-wrap .column-text {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -192,7 +258,25 @@ strong {
   display: flex;
 }
 
-#biography .column .row-wrap .column-small {
+@media only screen and (width <= 1480px) {
+  #biography .row-wrap {
+    gap: 40px 80px;
+  }
+}
+
+@media only screen and (width >= 1300px) and (width <= 1400px) {
+  #biography .row-wrap {
+    gap: 40px 50px;
+  }
+}
+
+@media only screen and (width <= 1300px) {
+  #biography .row-wrap {
+    gap: 40px 220px;
+  }
+}
+
+#biography .row-wrap .column-small {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -201,19 +285,9 @@ strong {
   display: flex;
 }
 
-#biography .column .row-wrap .column-small .p1 {
+#biography .row-wrap .column-small .p1 {
   text-align: center;
   text-wrap: nowrap;
-}
-
-.bg-lines {
-  width: 100%;
-  display: flex;
-}
-
-.bg-lines img {
-  align-self: center;
-  width: 100%;
 }
 
 #clients {
@@ -238,7 +312,12 @@ strong {
   font-weight: 300;
 }
 
+#clients .row-wrap img {
+  height: 60px;
+}
+
 #clients .row-wrap img.clients {
+  width: 50vh;
   height: 50vh;
 }
 
@@ -474,7 +553,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   position: absolute;
   top: 0;
@@ -651,7 +730,7 @@ footer .row {
 
 footer .row .footer-img {
   fill: #060606;
-  transition: fill .2s ease-in-out;
+  transition: fill .1s ease-in-out;
 }
 
 footer .row .footer-img:hover {
