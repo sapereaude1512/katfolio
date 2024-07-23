@@ -223,7 +223,7 @@ strong {
 
 #biography .column .row {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   gap: 60px;
   width: 100%;
@@ -280,7 +280,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 16px;
   width: fit-content;
   display: flex;
 }
@@ -316,8 +316,22 @@ strong {
   height: 60px;
 }
 
-#clients .row-wrap img.clients {
-  width: 50vh;
+@media only screen and (width >= 1600px) {
+  #clients .row-wrap img {
+    height: 80px;
+  }
+}
+
+#clients .column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  display: flex;
+}
+
+#clients .column img.clients {
   height: 50vh;
 }
 
@@ -606,13 +620,14 @@ header nav.mobile #nav-mobile-links a .b1:active {
 }
 
 .hero img {
-  height: 30vh;
+  width: 20vw;
+  max-width: 16%;
   position: absolute;
   bottom: 0;
-  right: 100px;
+  right: 8rem;
 }
 
-@media only screen and (width <= 1000px) {
+@media only screen and (width <= 1200px) {
   .hero img {
     display: none;
   }
@@ -654,7 +669,7 @@ footer .column .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: start;
-  gap: 20px;
+  gap: 40px;
   display: flex;
   position: relative;
 }

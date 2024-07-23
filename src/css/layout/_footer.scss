@@ -23,7 +23,7 @@ footer {
 
         .row-wrap {
             @include row-wrap;
-            gap: 20px;
+            gap: 40px;
 
             .btn-secondary {
             @include btn-secondary;
