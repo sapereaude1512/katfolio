@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sapereaude1512/portfolio-website.git"
+    "url": "git+https://github.com/sapereaude1512/katfolio.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sapereaude1512/portfolio-website/issues"
+    "url": "https://github.com/sapereaude1512/katfolio/issues"
   },
-  "homepage": "https://github.com/sapereaude1512/portfolio-website#readme",
+  "homepage": "https://github.com/sapereaude1512/katfolio#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0"
