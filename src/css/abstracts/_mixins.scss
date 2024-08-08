@@ -1,0 +1,8 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography' as *;
+
+//other
+
+@mixin title {
+    color: $primary-light;
+}
