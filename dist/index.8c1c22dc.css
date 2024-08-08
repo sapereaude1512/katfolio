@@ -15,7 +15,7 @@ h1 {
 
 @media only screen and (width <= 480px) {
   h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 }
 
@@ -25,7 +25,7 @@ h2 {
 
 @media only screen and (width <= 480px) {
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 
@@ -55,7 +55,7 @@ h5 {
 
 @media only screen and (width <= 480px) {
   h5 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -104,27 +104,32 @@ h1, h2, h3, h4, h5 {
 }
 
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+img, iframe, object, embed {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
-  scroll-behavior: smooth;
+  box-sizing: border-box;
   background-color: #242424;
-  margin: 0;
-  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 body:after {
   z-index: -100;
-  width: 0;
-  height: 0;
-  position: absolute;
-  overflow: hidden;
 }
 
 section, main {
+  max-width: 100%;
   padding: 8rem;
 }
 
@@ -143,12 +148,12 @@ a.btn-primary {
   background-color: #974a8a;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
-  width: 360px;
-  height: 60px;
+  width: 36rem;
+  height: 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -162,6 +167,12 @@ a.btn-primary:hover {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
   font-weight: 400;
+}
+
+@media only screen and (width <= 600px) {
+  a.btn-primary {
+    width: 80svw;
+  }
 }
 
 strong {
@@ -192,8 +203,8 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  padding: 80px 0;
+  gap: 4rem;
+  padding: 8rem 2rem;
   display: flex;
 }
 
@@ -201,9 +212,8 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  width: 100%;
-  margin-top: calc(100vh - 90px);
+  gap: 10rem;
+  margin-top: calc(100vh - 9rem);
   display: flex;
   position: static;
 }
@@ -216,8 +226,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  width: 100%;
+  gap: 6rem;
   display: flex;
 }
 
@@ -225,8 +234,7 @@ strong {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 60px;
-  width: 100%;
+  gap: 6rem;
   display: flex;
   position: relative;
 }
@@ -236,7 +244,7 @@ strong {
     flex-wrap: wrap;
     place-content: flex-start center;
     align-items: start;
-    gap: 40px;
+    gap: 4rem;
   }
 }
 
@@ -244,7 +252,7 @@ strong {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: center;
-  gap: 40px 100px;
+  gap: 4rem 10rem;
   display: flex;
   position: relative;
 }
@@ -253,26 +261,26 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 4px;
+  gap: .4rem;
   width: 100%;
   display: flex;
 }
 
 @media only screen and (width <= 1480px) {
   #biography .row-wrap {
-    gap: 40px 80px;
+    gap: 4rem 8rem;
   }
 }
 
 @media only screen and (width >= 1300px) and (width <= 1400px) {
   #biography .row-wrap {
-    gap: 40px 50px;
+    gap: 4rem 5rem;
   }
 }
 
 @media only screen and (width <= 1300px) {
   #biography .row-wrap {
-    gap: 40px 220px;
+    gap: 4rem 22rem;
   }
 }
 
@@ -280,7 +288,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1.6rem;
   width: fit-content;
   display: flex;
 }
@@ -294,8 +302,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 100px;
-  width: 100%;
+  gap: 10rem;
   display: flex;
 }
 
@@ -303,7 +310,7 @@ strong {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: center;
-  gap: 40px 100px;
+  gap: 4rem 10rem;
   display: flex;
   position: relative;
 }
@@ -313,12 +320,12 @@ strong {
 }
 
 #clients .row-wrap img {
-  height: 60px;
+  height: 6rem;
 }
 
 @media only screen and (width >= 1600px) {
   #clients .row-wrap img {
-    height: 80px;
+    height: 8rem;
   }
 }
 
@@ -326,8 +333,7 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  width: 100%;
+  gap: 6rem;
   display: flex;
 }
 
@@ -337,8 +343,8 @@ strong {
 
 header {
   z-index: 1000;
-  width: 100%;
-  transition: top .4s;
+  width: 100svw;
+  transition: top .4s ease-in;
   position: sticky;
   top: 0;
 }
@@ -350,7 +356,7 @@ header nav.desktop {
   justify-content: space-evenly;
   align-items: center;
   width: 90vw;
-  height: 90px;
+  height: 9rem;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -389,7 +395,7 @@ header nav.desktop a .b2 {
   width: 100%;
   height: 100%;
   font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -410,13 +416,13 @@ header nav.desktop .btn-nav {
   background-color: #974a8a;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
   width: fit-content;
-  height: 60px;
-  padding: 0 60px;
+  height: 6rem;
+  padding: 0 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -435,7 +441,7 @@ header nav.mobile {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  height: 9rem;
   display: flex;
   overflow: hidden;
 }
@@ -452,7 +458,7 @@ header nav.mobile .row {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 9rem;
   padding: 0 4rem;
   display: flex;
   position: absolute;
@@ -463,11 +469,11 @@ header nav.mobile .row .nav-mobile-menu-btn {
   cursor: pointer;
   background-color: #fafafa;
   border: none;
-  border-radius: 14px;
+  border-radius: 1.4rem;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   display: flex;
 }
 
@@ -483,13 +489,13 @@ header nav.mobile .row .btn-nav {
   background-color: #974a8a;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
   width: fit-content;
-  height: 60px;
-  padding: 0 60px;
+  height: 6rem;
+  padding: 0 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -506,23 +512,23 @@ header nav.mobile .row .btn-nav:hover {
 
 header nav.mobile #nav-mobile-links {
   opacity: 0;
-  background-color: #242424;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  width: 100%;
   height: 0;
-  margin-top: 90px;
   transition: height .4s ease-in-out, opacity .4s ease-in-out;
-  display: flex;
+  display: none;
   overflow: hidden;
 }
 
 header nav.mobile #nav-mobile-links.open {
   opacity: 1;
-  height: calc(100vh - 90px);
+  background-color: #242424;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  width: calc(100svw + 4rem);
+  height: calc(100svh + 6rem);
   display: flex;
+  overflow: hidden;
 }
 
 header nav.mobile #nav-mobile-links a {
@@ -531,8 +537,8 @@ header nav.mobile #nav-mobile-links a {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 60px;
+  width: 20rem;
+  height: 6rem;
   text-decoration: none;
 }
 
@@ -544,7 +550,7 @@ header nav.mobile #nav-mobile-links a .b1 {
   width: 100%;
   height: 100%;
   font-family: IBM Plex Mono, monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -562,16 +568,22 @@ header nav.mobile #nav-mobile-links a .b1:active {
 
 .hero {
   background: url("hero-bg.5f582d40.svg") center / cover no-repeat;
-  border-bottom-left-radius: 100px;
+  border-bottom-left-radius: 10rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100svw;
   height: 100svh;
   display: flex;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+@media only screen and (width <= 600px) {
+  .hero {
+    border-bottom-left-radius: 0;
+  }
 }
 
 .hero h1, .hero h5, .hero p {
@@ -583,7 +595,6 @@ header nav.mobile #nav-mobile-links a .b1:active {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  width: 100%;
   padding-top: 90px;
   display: flex;
   position: relative;
@@ -598,12 +609,12 @@ header nav.mobile #nav-mobile-links a .b1:active {
   background-color: #974a8a;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
-  width: 360px;
-  height: 60px;
+  width: 36rem;
+  height: 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -617,6 +628,12 @@ header nav.mobile #nav-mobile-links a .b1:active {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
   font-weight: 400;
+}
+
+@media only screen and (width <= 600px) {
+  .hero .hero-text .btn-primary {
+    width: 80svw;
+  }
 }
 
 .hero img {
@@ -636,32 +653,38 @@ header nav.mobile #nav-mobile-links a .b1:active {
 .hero div {
   flex-direction: column;
   align-items: center;
-  column-gap: 8px;
+  column-gap: .8rem;
   display: flex;
   position: absolute;
-  bottom: 20px;
+  bottom: 2rem;
 }
 
 footer {
   background: url("footer-bg.2252ad92.svg") center / cover no-repeat;
-  border-top-right-radius: 80px;
+  border-top-right-radius: 8rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 60px;
-  width: 100%;
-  padding-top: 60px;
+  gap: 6rem;
+  padding-top: 6rem;
   display: flex;
   position: relative;
+}
+
+@media only screen and (width <= 600px) {
+  footer {
+    border-top-right-radius: 0;
+    width: 100svw;
+    height: 100svh;
+  }
 }
 
 footer .column {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  width: 100%;
-  padding-bottom: 8px;
+  gap: 4rem;
+  padding-bottom: .8rem;
   display: flex;
 }
 
@@ -669,7 +692,7 @@ footer .column .row-wrap {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: start;
-  gap: 40px;
+  gap: 4rem;
   display: flex;
   position: relative;
 }
@@ -683,12 +706,12 @@ footer .column .row-wrap .btn-secondary {
   background-color: #060606;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
-  width: 360px;
-  height: 60px;
+  width: 36rem;
+  height: 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -703,6 +726,12 @@ footer .column .row-wrap .btn-secondary:hover {
   font-weight: 400;
 }
 
+@media only screen and (width <= 600px) {
+  footer .column .row-wrap .btn-secondary {
+    width: 80svw;
+  }
+}
+
 footer .column .row-wrap .btn-primary {
   color: #fafafa;
   text-transform: uppercase;
@@ -712,12 +741,12 @@ footer .column .row-wrap .btn-primary {
   background-color: #974a8a;
   background-image: #0000;
   border: none;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   align-content: center;
-  width: 360px;
-  height: 60px;
+  width: 36rem;
+  height: 6rem;
   font-family: IBM Plex Mono, monospace;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
   line-height: 120%;
@@ -733,12 +762,17 @@ footer .column .row-wrap .btn-primary:hover {
   font-weight: 400;
 }
 
+@media only screen and (width <= 600px) {
+  footer .column .row-wrap .btn-primary {
+    width: 80svw;
+  }
+}
+
 footer .row {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 40px;
-  width: 100%;
+  gap: 4rem;
   display: flex;
   position: relative;
 }
@@ -756,7 +790,8 @@ footer .site-info {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: .8rem;
   display: flex;
+  position: relative;
 }
 /*# sourceMappingURL=index.8c1c22dc.css.map */

@@ -7,11 +7,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100svw;
     height: 100svh; // might change this later
     @include column;
     background: url(../images/hero/hero-bg.svg) center/cover no-repeat;
-    border-bottom-left-radius: 100px;
+    border-bottom-left-radius: 10rem;
+
+    @media only screen and (max-width: 600px) {
+        border-bottom-left-radius: 0rem;
+    }
 
     h1, h5, p {
     color: $text;
@@ -42,10 +46,10 @@
 
     div {
         position: absolute;
-        bottom: 20px;
+        bottom: 2rem;
         display: flex;
         flex-direction: column;
-        column-gap: 8px;
+        column-gap: 0.8rem;
         align-items: center;
     }
 }

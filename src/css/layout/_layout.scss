@@ -6,7 +6,7 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    // width: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -23,7 +23,7 @@
 
 @mixin column {
     display: flex;
-    width: 100%;
+    // width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -48,22 +48,18 @@ strong {
 }
 
 .call-to-action {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    @include column;
+    gap: 4rem;
     background: url(../images/cta-background.svg) center/cover no-repeat;
     text-align: center;
-    padding: 80px 0px;
+    padding: 8rem 2rem;
 }
 
 #biography {
     @include column;
-    gap: 100px;
+    gap: 10rem;
     position: static;
-    margin-top: calc(100vh - 90px);
+    margin-top: calc(100vh - 9rem);
     
     h3, h5 {
         text-align: center;
@@ -71,11 +67,11 @@ strong {
 
     .column {
             @include column;
-            gap: 60px;
+            gap: 6rem;
         
         .row {
             @include row;
-            gap: 60px;
+            gap: 6rem;
             justify-content: flex-start;
 
             @media only screen and (max-width: 800px) {
@@ -83,44 +79,44 @@ strong {
                 align-content: flex-start;
                 justify-content: center;
                 align-items: start;
-                gap: 40px;
+                gap: 4rem;
             }
         }
         }
 
         .row-wrap-logos {
             @include row-wrap;
-            gap: 40px 100px;
+            gap: 4rem 10rem;
             align-items: center;
         }
 
         .row-wrap {
             @include row-wrap;
-            gap: 40px 100px;
+            gap: 4rem 10rem;
             align-items: center;
 
             .column-text {
             @include column;
-            gap: 4px;
+            gap: 0.4rem;
             width: 100%;
             align-items: flex-start;
             }
 
             @media only screen and (max-width: 1480px) {
-                gap: 40px 80px;
+                gap: 4rem 8rem;;
             }
 
             @media only screen and (min-width: 1300px) and (max-width: 1400px) {
-                gap: 40px 50px;
+                gap: 4rem 5rem;;
             }
 
             @media only screen and (max-width: 1300px) {
-                gap: 40px 220px;
+                gap: 4rem 22rem;;
             }
 
         .column-small {
         @include column;
-        gap: 16px;
+        gap: 1.6rem;
         width: fit-content;
 
         .p1 {
@@ -133,30 +129,30 @@ strong {
 
 #clients {
     @include column;
-    gap: 100px;
+    gap: 10rem;
 
     .row-wrap {
         @include row-wrap;
         align-items: center;
         justify-content: center;
-        gap: 40px 100px;
+        gap: 4rem 10rem;
 
         h5 {
             font-weight: $font-weight-light;
         }
 
         img {
-            height: 60px;
+            height: 6rem;
 
             @media only screen and (min-width: 1600px) {
-                height: 80px;
+                height: 8rem;
             }
         }
     }
 
     .column {
         @include column;
-        gap: 60px;
+        gap: 6rem;
 
         img.clients {
             height: 50vh;

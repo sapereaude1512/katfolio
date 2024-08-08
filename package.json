@@ -1,28 +1,32 @@
 {
   "name": "katfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Personal Portfolio Website",
   "source": "./src/index.html",
   "scripts": {
-    "dev": "parcel"
+    "dev": "parcel",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sapereaude1512/katfolio.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Katarina Marić",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sapereaude1512/katfolio/issues"
   },
-  "homepage": "https://github.com/sapereaude1512/katfolio#readme",
+  "homepage": "https://sapereaude1512.github.io/katfolio",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.12.0",
     "parcel": "^2.12.0"
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.1.1",
     "postcss-cli": "^11.0.0"
   }
 }

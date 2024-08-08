@@ -6,24 +6,26 @@
 
 footer {
     position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-    padding-top: 60px;
+    @include column;
+    gap: 6rem;
+    padding-top: 6rem;
     background: url(/src/images/footer/footer-bg.svg) center/cover no-repeat;
-    border-top-right-radius: 80px;
+    border-top-right-radius: 8rem;
+
+    @media only screen and (max-width: 600px) {
+        height: 100svh;
+        width: 100svw;
+        border-top-right-radius: 0rem;
+    }
 
     .column {
         @include column;
-        gap: 40px;
-        padding-bottom: 8px;
+        gap: 4rem;
+        padding-bottom: 0.8rem;
 
         .row-wrap {
             @include row-wrap;
-            gap: 40px;
+            gap: 4rem;
 
             .btn-secondary {
             @include btn-secondary;
@@ -37,7 +39,7 @@ footer {
 
     .row {
         @include row;
-        gap: 40px;
+        gap: 4rem;
 
         .footer-img {
             fill: $text;
@@ -50,10 +52,7 @@ footer {
     }
 
     .site-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
+        @include row;
+        gap: 0.8rem;
     }
 }
