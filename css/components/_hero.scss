@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+@use '../base/typography' as *;
+@use '../layout/layout' as *;
+@use '../components/buttons' as *;
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh; // might change this later
+    @include column;
+    background: url(../images/hero/hero-bg.svg) center/cover no-repeat;
+    border-bottom-left-radius: 100px;
+
+    h1, h5, p {
+    color: $text;
+    }
+    
+    .hero-text {
+        position: relative;
+        @include column;
+        gap: 40px;
+        padding-top: 90px;
+
+        .btn-primary {
+            @include btn-primary;
+        }
+    }
+
+    img {
+        width: 20vw;
+        max-width: 16%;
+        position: absolute;
+        bottom: 0;
+        right: 8rem;
+
+        @media only screen and (max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    div {
+        position: absolute;
+        bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        column-gap: 8px;
+        align-items: center;
+    }
+}
