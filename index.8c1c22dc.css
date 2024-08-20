@@ -218,6 +218,12 @@ strong {
   position: static;
 }
 
+@media only screen and (width <= 1000px) {
+  #biography {
+    margin-top: calc(100vh + 6rem);
+  }
+}
+
 #biography h3, #biography h5 {
   text-align: center;
 }
@@ -227,7 +233,12 @@ strong {
   justify-content: center;
   align-items: center;
   gap: 6rem;
+  width: 100%;
   display: flex;
+}
+
+#biography .column .p1 {
+  text-align: left;
 }
 
 #biography .column .row {
@@ -235,6 +246,7 @@ strong {
   justify-content: flex-start;
   align-items: center;
   gap: 6rem;
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -248,11 +260,21 @@ strong {
   }
 }
 
-#biography .row-wrap-logos, #biography .row-wrap {
+#biography .row-wrap-logos {
   flex-flow: wrap;
   place-content: flex-start center;
   align-items: center;
   gap: 4rem 10rem;
+  display: flex;
+  position: relative;
+}
+
+#biography .row-wrap {
+  flex-flow: wrap;
+  place-content: flex-start center;
+  align-items: center;
+  gap: 4rem 10rem;
+  width: 100%;
   display: flex;
   position: relative;
 }
@@ -285,17 +307,27 @@ strong {
 }
 
 #biography .row-wrap .column-small {
+  background-color: #fafafa14;
+  border-radius: 1.6rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
-  width: fit-content;
+  width: 100%;
+  max-width: 26rem;
+  padding: .8rem 0 1.6rem;
   display: flex;
+}
+
+#biography .row-wrap .column-small h2 {
+  color: #cbcbcb;
 }
 
 #biography .row-wrap .column-small .p1 {
   text-align: center;
   text-wrap: nowrap;
+  color: #fafafa;
+  max-width: 60vw;
 }
 
 #clients {
@@ -339,6 +371,16 @@ strong {
 
 #clients .column img.clients {
   height: 50vh;
+}
+
+#clients .column h5 {
+  max-width: 60vw;
+}
+
+@media only screen and (width <= 600px) {
+  #clients .column h5 {
+    max-width: 80vw;
+  }
 }
 
 header {
@@ -441,7 +483,6 @@ header nav.mobile {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 9rem;
   display: flex;
   overflow: hidden;
 }
