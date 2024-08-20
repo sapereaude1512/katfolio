@@ -440,8 +440,21 @@ strong {
   align-items: center;
   gap: 2.4rem;
   width: 100%;
-  min-height: 30rem;
+  height: 30rem;
+  transition: all .1s ease-in-out;
   display: flex;
+}
+
+@media only screen and (width >= 700px) and (width <= 1000px) {
+  #referrals .column .slide.active {
+    height: 40rem;
+  }
+}
+
+@media only screen and (width <= 699px) {
+  #referrals .column .slide.active {
+    height: 50rem;
+  }
 }
 
 #referrals .column .slide.active .row {
@@ -514,7 +527,7 @@ strong {
   transition: fill .1s ease-in-out;
 }
 
-#referrals .column .arrows svg:hover path {
+#referrals .column .arrows svg:hover path, #referrals .column .arrows svg:active path {
   fill: #71b7fb;
 }
 

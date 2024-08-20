@@ -234,9 +234,18 @@ strong {
         .slide.active {
             @include column;
             width: 100%;
-            min-height: 30rem;
+            height: 30rem; // adjust with media-queries
             justify-content: flex-start;
             gap: 2.4rem;
+            transition: all .1s ease-in-out;
+
+            @media only screen and (min-width: 700px) and (max-width: 1000px) {
+                height: 40rem;
+            }
+
+            @media only screen and (max-width: 699px) {
+                height: 50rem;
+            }
 
             .row {
                 @include row;
@@ -298,6 +307,10 @@ strong {
             }
 
             svg:hover path {
+                fill: $secondary-color;
+            }
+
+            svg:active path {
                 fill: $secondary-color;
             }
         }
