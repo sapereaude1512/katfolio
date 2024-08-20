@@ -52,3 +52,41 @@ navMobileLinks.querySelectorAll('a').forEach(link => {
         }
     }
 );
+
+// referrals slider
+
+function referralSlider() {
+    const slides = ["slide1", "slide2", "slide3", "slide4", "slide5", "slide6"];
+    let currentSlideIndex = 0;
+    const showSlide = (index) => {
+        slides.forEach((slideId, idx) => {
+            const slide = document.getElementById(slideId);
+            if (slide) {
+                if (idx === index) {
+                    slide.classList.add("active");
+                } else {
+                    slide.classList.remove("active");
+                }
+            }
+        });
+    };
+    
+    const caretLeft = document.getElementById("caretLeft");
+    const caretRight = document.getElementById("caretRight");
+    if (caretLeft) {
+        caretLeft.addEventListener("click", () => {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+    }
+    if (caretRight) {
+        caretRight.addEventListener("click", () => {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        });
+    }
+    // Initial call to display the first slide
+    showSlide(currentSlideIndex);
+};
+
+referralSlider();

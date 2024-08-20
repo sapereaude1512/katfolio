@@ -28,7 +28,7 @@ footer {
             gap: 4rem;
 
             .btn-secondary {
-            @include btn-secondary;
+                @include btn-secondary;
             }
 
             .btn-primary {

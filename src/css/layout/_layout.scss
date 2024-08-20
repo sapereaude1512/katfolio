@@ -36,14 +36,14 @@ strong {
 .bg-lines {
     width: 100%;
     height: 4svh;
-    background: url(../images/bg-lines-l.svg) center/cover no-repeat;
+    background: url(../images/bg-lines-l.svg) center/contain no-repeat;
 
     @media only screen and (max-width: 500px) {
-        background: url(../images/bg-lines-s.svg) center/cover no-repeat;
+        background: url(../images/bg-lines-s.svg) center/contain no-repeat;
     }
     
     @media only screen and (max-width: 900px) {
-        background: url(../images/bg-lines-m.svg) center/cover no-repeat;
+        background: url(../images/bg-lines-m.svg) center/contain no-repeat;
     }
 }
 
@@ -60,6 +60,10 @@ strong {
     gap: 10rem;
     position: static;
     margin-top: calc(100vh - 9rem);
+
+    @media only screen and (max-width: 1000px) {
+        margin-top: calc(100vh + 6rem);
+    }
     
     h3, h5 {
         text-align: center;
@@ -68,9 +72,15 @@ strong {
     .column {
             @include column;
             gap: 6rem;
+            width: 100%;
+
+            .p1 {
+                text-align: left;
+            }
         
         .row {
             @include row;
+            width: 100%;
             gap: 6rem;
             justify-content: flex-start;
 
@@ -80,6 +90,23 @@ strong {
                 justify-content: center;
                 align-items: start;
                 gap: 4rem;
+            }
+
+            .column-text {
+                @include column;
+                gap: 0.4rem;
+                width: 100%;
+                align-items: flex-start;
+
+                .title {
+                    @include row;
+                    gap: 0.8rem;
+                    align-items: baseline;
+
+                    .p2 {
+                        color: $grey;
+                    }
+                }
             }
         }
         }
@@ -92,39 +119,53 @@ strong {
 
         .row-wrap {
             @include row-wrap;
-            gap: 4rem 10rem;
+            // gap: 4rem 10rem;
             align-items: center;
-
-            .column-text {
-            @include column;
-            gap: 0.4rem;
+            align-content: center;
+            justify-content: space-between;
             width: 100%;
-            align-items: flex-start;
+
+            @media only screen and (min-width: 1480px) and (max-width: 1800px) {
+                gap: 4rem 8rem;
+                justify-content: center;
             }
 
-            @media only screen and (max-width: 1480px) {
-                gap: 4rem 8rem;;
+            @media only screen and (min-width: 1301px) and (max-width: 1479px) {
+                gap: 4rem 5rem;
+                justify-content: center;
             }
 
-            @media only screen and (min-width: 1300px) and (max-width: 1400px) {
-                gap: 4rem 5rem;;
+            @media only screen and (min-width: 390px) and (max-width: 1299px) {
+                gap: 4rem 22rem;
+                justify-content: center;
             }
 
-            @media only screen and (max-width: 1300px) {
-                gap: 4rem 22rem;;
+            .column-small {
+            @include column;
+            gap: 1.6rem;
+            align-content: center;
+            width: 100%;
+            max-width: 36rem;
+            padding: 0.8rem 0rem 1.6rem 0rem;
+            border-radius: 1.6rem;
+            background-color: rgba($white, 0.08);
+
+                h2 {
+                    color: $grey;
+                }
+
+                .p1 {
+                    text-align: center;
+                    text-wrap: nowrap;
+                    color: $white;
+                    max-width: 60vw;
+                }
             }
-
-        .column-small {
-        @include column;
-        gap: 1.6rem;
-        width: fit-content;
-
-        .p1 {
-            text-align: center;
-            text-wrap: nowrap;
-        }
-        }
     }
+}
+
+#projects {
+    display: none;
 }
 
 #clients {
@@ -143,9 +184,17 @@ strong {
 
         img {
             height: 6rem;
+        }
 
-            @media only screen and (min-width: 1600px) {
-                height: 8rem;
+        img.clients {
+            width: 6rem;
+
+            @media only screen and (min-width: 801px) {
+                width: 40vw;
+            }
+
+            @media only screen and (max-width: 800px) {
+                width: 100vw;
             }
         }
     }
@@ -156,6 +205,101 @@ strong {
 
         img.clients {
             height: 50vh;
+        }
+
+        h5{
+            max-width: 60vw;
+
+            @media only screen and (max-width: 600px) {
+                max-width: 80vw;
+            }
+        }
+    }
+}
+
+#referrals {
+    @include column;
+    width: 100%;
+    gap: 10rem;
+
+    .column {
+        @include column;
+        width: 100%;
+        gap: 1.6rem;
+        
+        .slide {
+            display: none;
+        }
+        
+        .slide.active {
+            @include column;
+            width: 100%;
+            min-height: 30rem;
+            justify-content: flex-start;
+            gap: 2.4rem;
+
+            .row {
+                @include row;
+                width: 100%;
+                gap: 1.6rem;
+                align-items: flex-start;
+
+                .p1 {
+                    padding-top: 0.8rem;
+                    width: 100%;
+                }
+
+                a svg.linkedin {
+                    width: 4rem;
+                    height: 4rem;
+                    transition: fill 100ms ease-in-out;
+
+                    &:hover path {
+                        fill: $secondary-color;
+                    }
+                }
+
+                svg.quotes {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                .column {
+                    @include column;
+                    width: 100%;
+                    align-items: flex-start;
+                    gap: 0.8rem;
+
+                    .p1.title {
+                        height: 4rem;
+                    }
+
+                    .column {
+                        @include column;
+                        width: 100%;
+                        gap: 0.4rem;
+                        align-items: flex-start;
+                        
+                        .p2 {
+                        color: $grey;
+                    }
+                    }
+                }
+            }
+        }
+
+        .arrows {
+            @include row;
+            gap: 10rem;
+            padding: 0.8rem 0rem;
+
+            svg {
+                transition: fill 100ms ease-in-out;
+            }
+
+            svg:hover path {
+                fill: $secondary-color;
+            }
         }
     }
 }

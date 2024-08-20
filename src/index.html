@@ -66,28 +66,37 @@
             <div class="row">
                 <img src="/src/images/biography/student-cap.svg" alt="student cap">
                 <div class="column-text">
-                    <p class="p1"><strong>LAW STUDENT since 2017</strong></p>
+                    <div class="title">
+                        <p class="p1"><strong>LAW STUDENT</strong></p>
+                        <p class="p2">since 2017</p>    
+                    </div>
                     <p class="p1">As a law student at the University of Novi Sad, Faculty of Law, I developed strong critical and analytical thinking skills.<br>I excelled academically, achieving an average grade of 9.6 out of 10, passing around 20 exams, and writing several successful publications.<br>I was actively involved in various activities and societies, gaining valuable practical experience as a law practitioner in the Higher Court and Higher Prosecutor’s Office.</p>
                 </div>
             </div>
             <div class="row">
                 <img src="/src/images/biography/color-palette.svg" alt="color pallete icon">
                 <div class="column-text">
-                    <p class="p1"><strong>UX/UI DESIGNER since 2020</strong></p>
+                    <div class="title">
+                        <p class="p1"><strong>UX/UI DESIGNER</strong></p>
+                        <p class="p2">since 2020</p>
+                    </div>
                     <p class="p1">In 2020, I made a significant career switch to UX/UI design, working both in a design studio and as a freelance designer. I focused on creating user interfaces that aligned with user needs, business goals, and brand guidelines.<br>By 2022, I was revolutionizing web design in the aviation industry, collaborating with various stakeholders to translate business requirements into intuitive user experiences.<br>I crafted comprehensive design strategies and mentored junior UX/UI designers, continuously driving design improvements to enhance user engagement and platform functionality.</p>
                 </div>
             </div>
             <div class="row">
                 <img src="/src/images/biography/coding-monitor.svg" alt="desktop with code">
                 <div class="column-text">
-                    <p class="p1"><strong>SOFTWARE DEVELOPER since 2023</strong></p>
+                    <div class="title">
+                        <p class="p1"><strong>SOFTWARE DEVELOPER</strong></p>
+                        <p class="p2">since 2023</p>
+                    </div>
                     <p class="p1">In 2023, I transitioned to software development, gaining expertise across all phases of development - from concept to launch.<br>I participated in hackathons like ETHBelgrade2023 and won a prize at ETHOnline2023.<br>Now, in 2024, I am dedicated to further growing my software development skills, with a passion for combining design and
                     coding to create impactful digital solutions.</p>
                 </div>
             </div>
         </div>
         <div class="column">
-            <h5>My main tech stack</h5>
+            <h5>Main tech stack</h5>
             <div class="row-wrap-logos">
                 <img src="/src/images/biography/tech-stack/big/js.svg" alt="javascript">
                 <img src="/src/images/biography/tech-stack/big/react.svg" alt="react">
@@ -109,9 +118,10 @@
                 <img src="/src/images/biography/tech-stack/big/google.svg" alt="google">
             </div>
         </div>
+        <a class="btn-primary" href="/src/files/Resume-KatarinaMaric.pdf" download="Resume-KatarinaMaric.pdf">Download my resume</a>
         <div class="column">
             <h5>Key principles I follow</h5>
-            <p class="p1" style="text-align: center;">I believe that everything you can imagine is possible when you have clearly defined goals, strong design, thought out strategy and assemble a passionate team.</p>
+            <p class="p1" style="text-align: center; max-width: 60vw;">I believe that everything you can imagine is possible when you have clearly defined goals, strong design, thought out strategy and assemble a passionate team.</p>
             <div class="row-wrap">
                 <div class="column-small">
                     <h2 class="number">1</h2>
@@ -121,7 +131,7 @@
                 </div>
                 <div class="column-small">
                     <h2 class="number">2</h2>
-                    <p class="p1">Different projects need<br>different methods</p>
+                    <p class="p1">Each project needs<br>different method</p>
                     <img src="/src/images/biography/dot.svg" alt="dot icon">
                     <p class="p1">Flexibility is a<br>superpower</p>
                 </div>
@@ -139,10 +149,10 @@
                 </div>
             </div>
         </div>
-        <a class="btn-primary" href="/src/files/Resume-KatarinaMaric.pdf" download="Resume-KatarinaMaric.pdf">Download my resume</a>
+        
     </section>
 
-    <div class="bg-lines"></div>
+    <!-- <div class="bg-lines"></div> -->
 
     <main id="projects">
         <h3>Explore what I’ve been<br>working on recently</h3>
@@ -475,132 +485,195 @@
             <img src="/src/images/clients/logos/menzies.svg" alt="menzies">
         </div>
         <div class="column">
-            <h5>Millions have encountered my designs and code, establishing them as a driving force<br>in <strong>reshaping user experiences</strong> across various ventures</h5>
+            <h5>Millions have encountered my designs and code, establishing them as a driving force in <strong>reshaping user experiences</strong> across various ventures</h5>
             <img class="clients" src="/src/images/clients/illustration-stairs.svg" alt="girl climbing the stairs of success">
         </div>
     </section>
     
+    <div class="bg-lines"></div>
+
     <section id="referrals">
         <h3>Testimonials from colleagues</h3>
         <div class="column">
-            <!-- for mobile version show only 1 testimonial and switch testimonials on arrow click (s1 t1 -> s1 t2 -> s2 t3 -> s2 t4 -> s3 t5 -> s3 t6) -->
-            <div class="row" id="slide-1">
-                <div class="column" id="testimonial-1"> <!-- Dusan -->
-                    <div class="row"> 
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/dusan-bulatovic-236112199/ -->
+            <div class="slide active" id="slide1"> <!-- Dusan -->
+                <div class="row"> 
+                    <a href="https://www.linkedin.com/in/dusan-bulatovic-236112199/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title">Dusan Bulatovic</p>
                         <div class="column">
-                            <p class="p1">Dusan Bulatovic</p> <!-- has fixed height -->
-                            <div class="column">
-                                <p class="p2">Frontend developer</p>
-                                <p class="p2">Worked on the same team at Groschopp</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies such as HTML, CSS, JavaScript, and React. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success. </p>
+                            <p class="p2">Frontend developer</p>
+                            <p class="p2">Worked on the same team at Groschopp</p>
                         </div>
                     </div>
                 </div>
-                <div class="column" id="testimonial-2"> <!-- Stefan -->
-                    <div class="row">
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/stefan-jovasevic/ -->
-                        <div class="column">
-                            <p class="p1">Stefan Jovasevic</p>
-                            <div class="column">
-                                <p class="p2">Frontend developer</p>
-                                <p class="p2">Worked on the same team at Ink Innovation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I’d highly recommend her. </p>
-                        </div>
-                    </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies such as HTML, CSS, JavaScript, and React. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success. </p>
                 </div>
             </div>
-            <div class="row" id="slide-2">
-                <div class="column" id="testimonial--3"> <!-- Sebastian -->
-                    <div class="row">
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/ -->
+
+            <div class="slide" id="slide2"> <!-- Stefan -->
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/stefan-jovasevic/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title">Stefan Jovasevic</p>
                         <div class="column">
-                            <p class="p1">Sebastian Brenninkmeijer</p>
-                            <div class="column">
-                                <p class="p2">Art Director</p>
-                                <p class="p2">Worked on the same team at Ink Innovation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">Having managed Katarina for over a year I can say that she is a great asset for any company to have. She strives for perfection in everything she does and is always expanding her knowledge. I can say with great confidence that she is a true expert in her field with a lightning fast skill set. </p>
+                            <p class="p2">Frontend developer</p>
+                            <p class="p2">Worked on the same team at Ink Innovation</p>
                         </div>
                     </div>
                 </div>
-                <div class="column" id="testimonial-4"> <!-- Marko -->
-                    <div class="row">
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/ -->
-                        <div class="column">
-                            <p class="p1">Marko Milosavljevic</p>
-                            <div class="column">
-                                <p class="p2">Product designer</p>
-                                <p class="p2">Worked on the same team at Brom Studio</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time. </p>
-                        </div>
-                    </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I’d highly recommend her. </p>
                 </div>
             </div>
-            <div class="row" id="slide-3">
-                <div class="column" id="testimonial-5"> <!-- Mahmoud -->
-                    <div class="row">
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/imahmoudibrahim/ -->
+
+            <div class="slide" id="slide3"> <!-- Sebastian -->
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title">Sebastian Brenninkmeijer</p>
                         <div class="column">
-                            <p class="p1">Mahmoud Ibrahim</p>
-                            <div class="column">
-                                <p class="p2">Product design lead</p>
-                                <p class="p2">Cooperated at ADPList</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company. </p>
+                            <p class="p2">Art Director</p>
+                            <p class="p2">Worked on the same team at Ink Innovation</p>
                         </div>
                     </div>
                 </div>
-                <div class="column" id="testimonial-6"> <!-- Chris -->
-                    <div class="row">
-                        <!-- LinkedIn icon linked to profile https://www.linkedin.com/in/chris-cheng-hk/ -->
-                        <div class="column">
-                            <p class="p1">Chris Cheng</p>
-                            <div class="column">
-                                <p class="p2">Creative director</p>
-                                <p class="p2">Worked on the same team at Ink Innovation</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <!-- quotes icon -->
-                        <div> <!-- top and bottom padding -->
-                            <p class="p1">I had the pleasure of working with Katarina as a UX/UI designer and highly recommend her for her exceptional design skills. Katarina has the unique ability to design visually appealing and effective UX/UI for a variety of media, including apps and specific device screens. </p>
-                        </div>
-                    </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">Having managed Katarina for over a year I can say that she is a great asset for any company to have. She strives for perfection in everything she does and is always expanding her knowledge. I can say with great confidence that she is a true expert in her field with a lightning fast skill set. </p>
                 </div>
             </div>
-            <div class="row">
-                <!-- arrow left -->
-                <!-- arrow right -->
+
+            <div class="slide" id="slide4"> <!-- Marko -->
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title"">Marko Milosavljevic</p>
+                        <div class="column">
+                            <p class="p2">Product designer</p>
+                            <p class="p2">Worked on the same team at Brom Studio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time. </p>
+                </div>
+            </div>
+
+            <div class="slide" id="slide5"> <!-- Mahmoud -->
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/imahmoudibrahim/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title">Mahmoud Ibrahim</p>
+                        <div class="column">
+                            <p class="p2">Product design lead</p>
+                            <p class="p2">Cooperated at ADPList</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company. </p>
+                </div>
+            </div>
+
+            <div class="slide" id="slide6"> <!-- Chris -->
+                <div class="row">
+                    <a href="https://www.linkedin.com/in/chris-cheng-hk/" target="_blank">
+                        <svg class="linkedin" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21.5092 18.0424V17.9805C21.4963 18.0014 21.4825 18.0223 21.4688 18.0424H21.5092Z" fill="#FAFAFA" />
+                            <path
+                                d="M37.0428 0H2.95478C1.32322 0 0 1.28353 0 2.86541V37.1354C0 38.7165 1.32322 40 2.95478 40H37.0428C38.6768 40 40 38.7157 40 37.1354V2.86541C40 1.28272 38.676 0 37.0428 0ZM12.1242 33.4851H6.08275V15.4232H12.1242V33.4851ZM9.1039 12.9559H9.06343C7.03692 12.9559 5.72585 11.5686 5.72585 9.83554C5.72585 8.06385 7.07739 6.71519 9.14355 6.71519C11.2105 6.71519 12.4819 8.06385 12.5224 9.83554C12.5224 11.5686 11.2097 12.9559 9.1039 12.9559ZM33.91 33.4851H27.8685V23.82C27.8685 21.3929 26.9944 19.7362 24.8085 19.7362C23.1397 19.7362 22.1459 20.8533 21.708 21.9325C21.5486 22.3177 21.5098 22.8566 21.5098 23.397V33.4843H15.4683C15.4683 33.4843 15.5476 17.1153 15.4683 15.4224H21.5098V17.979C22.3126 16.7486 23.7483 14.9962 26.9556 14.9962C30.9301 14.9962 33.9108 17.5785 33.9108 23.1268L33.91 33.4851Z"
+                                fill="#FAFAFA" />
+                        </svg>
+                    </a>
+                    <div class="column">
+                        <p class="p1 title">Chris Cheng</p>
+                        <div class="column">
+                            <p class="p2">Creative director</p>
+                            <p class="p2">Worked on the same team at Ink Innovation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <svg class="quotes" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M18.125 11.25V25C18.1229 26.9885 17.3321 28.8949 15.926 30.301C14.5199 31.7071 12.6135 32.4979 10.625 32.5C10.2935 32.5 9.97554 32.3683 9.74112 32.1339C9.5067 31.8995 9.375 31.5815 9.375 31.25C9.375 30.9185 9.5067 30.6005 9.74112 30.3661C9.97554 30.1317 10.2935 30 10.625 30C11.9511 30 13.2229 29.4732 14.1605 28.5355C15.0982 27.5979 15.625 26.3261 15.625 25V23.75H6.25C5.58696 23.75 4.95107 23.4866 4.48223 23.0178C4.01339 22.5489 3.75 21.913 3.75 21.25V11.25C3.75 10.587 4.01339 9.95107 4.48223 9.48223C4.95107 9.01339 5.58696 8.75 6.25 8.75H15.625C16.288 8.75 16.9239 9.01339 17.3928 9.48223C17.8616 9.95107 18.125 10.587 18.125 11.25ZM33.75 8.75H24.375C23.712 8.75 23.0761 9.01339 22.6072 9.48223C22.1384 9.95107 21.875 10.587 21.875 11.25V21.25C21.875 21.913 22.1384 22.5489 22.6072 23.0178C23.0761 23.4866 23.712 23.75 24.375 23.75H33.75V25C33.75 26.3261 33.2232 27.5979 32.2855 28.5355C31.3479 29.4732 30.0761 30 28.75 30C28.4185 30 28.1005 30.1317 27.8661 30.3661C27.6317 30.6005 27.5 30.9185 27.5 31.25C27.5 31.5815 27.6317 31.8995 27.8661 32.1339C28.1005 32.3683 28.4185 32.5 28.75 32.5C30.7385 32.4979 32.6449 31.7071 34.051 30.301C35.4571 28.8949 36.2479 26.9885 36.25 25V11.25C36.25 10.587 35.9866 9.95107 35.5178 9.48223C35.0489 9.01339 34.413 8.75 33.75 8.75Z"
+                            fill="#CBCBCB" />
+                    </svg>
+                    <p class="p1">I had the pleasure of working with Katarina as a UX/UI designer and highly recommend her for her exceptional design skills. Katarina has the unique ability to design visually appealing and effective UX/UI for a variety of media, including apps and specific device screens. </p>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <svg id="caretLeft" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M25.8844 31.6158C26.0005 31.732 26.0926 31.8698 26.1555 32.0216C26.2184 32.1733 26.2507 32.336 26.2507 32.5002C26.2507 32.6645 26.2184 32.8271 26.1555 32.9788C26.0926 33.1306 26.0005 33.2684 25.8844 33.3846C25.7682 33.5007 25.6304 33.5928 25.4786 33.6557C25.3269 33.7186 25.1643 33.7509 25 33.7509C24.8358 33.7509 24.6731 33.7186 24.5214 33.6557C24.3696 33.5928 24.2318 33.5007 24.1156 33.3846L11.6156 20.8846C11.4994 20.7685 11.4072 20.6306 11.3443 20.4789C11.2814 20.3271 11.249 20.1645 11.249 20.0002C11.249 19.8359 11.2814 19.6733 11.3443 19.5215C11.4072 19.3698 11.4994 19.2319 11.6156 19.1158L24.1156 6.61583C24.3502 6.38128 24.6683 6.24951 25 6.24951C25.3317 6.24951 25.6498 6.38128 25.8844 6.61583C26.1189 6.85038 26.2507 7.1685 26.2507 7.50021C26.2507 7.83191 26.1189 8.15003 25.8844 8.38458L14.2672 20.0002L25.8844 31.6158Z"
+                        fill="#CBCBCB" />
+                </svg>
+                <svg id="caretRight" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M28.3843 20.8846L15.8843 33.3846C15.7682 33.5007 15.6303 33.5928 15.4786 33.6557C15.3268 33.7186 15.1642 33.7509 15 33.7509C14.8357 33.7509 14.6731 33.7186 14.5213 33.6557C14.3696 33.5928 14.2317 33.5007 14.1156 33.3846C13.9994 33.2684 13.9073 33.1306 13.8445 32.9788C13.7816 32.8271 13.7493 32.6645 13.7493 32.5002C13.7493 32.336 13.7816 32.1733 13.8445 32.0216C13.9073 31.8698 13.9994 31.732 14.1156 31.6158L25.7328 20.0002L14.1156 8.38458C13.881 8.15003 13.7493 7.83191 13.7493 7.50021C13.7493 7.1685 13.881 6.85038 14.1156 6.61583C14.3501 6.38128 14.6683 6.24951 15 6.24951C15.3317 6.24951 15.6498 6.38128 15.8843 6.61583L28.3843 19.1158C28.5006 19.2319 28.5928 19.3698 28.6557 19.5215C28.7186 19.6733 28.7509 19.8359 28.7509 20.0002C28.7509 20.1645 28.7186 20.3271 28.6557 20.4789C28.5928 20.6306 28.5006 20.7685 28.3843 20.8846Z"
+                        fill="#CBCBCB" />
+                </svg>
             </div>
         </div>
     </section>
