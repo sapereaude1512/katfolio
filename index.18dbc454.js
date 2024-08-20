@@ -659,6 +659,7 @@ function referralSlider() {
     // Initial call to display the first slide
     showSlide(currentSlideIndex);
 }
+referralSlider();
 
 },{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire13c7")
 
