@@ -380,6 +380,12 @@ strong {
   }
 }
 
+@media only screen and (width <= 1600px) {
+  #clients .row-wrap img {
+    height: 8rem;
+  }
+}
+
 #clients .column {
   flex-direction: column;
   justify-content: center;
@@ -509,7 +515,7 @@ strong {
 }
 
 header {
-  z-index: 1000;
+  z-index: 10000;
   width: 100svw;
   transition: top .4s ease-in;
   position: sticky;
@@ -609,6 +615,7 @@ header nav.mobile {
   justify-content: center;
   align-items: center;
   display: flex;
+  top: 0;
   overflow: hidden;
 }
 
