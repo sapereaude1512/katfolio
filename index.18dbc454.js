@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"j2YDk":[function(require,module,exports) {
+})({"8rYT3":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -659,8 +659,8 @@ function referralSlider() {
     // Initial call to display the first slide
     showSlide(currentSlideIndex);
 }
-referralSlider();
+ //referralSlider();
 
-},{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire13c7")
+},{}]},["8rYT3","1SICI"], "1SICI", "parcelRequire13c7")
 
 //# sourceMappingURL=index.18dbc454.js.map
