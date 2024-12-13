@@ -33,7 +33,7 @@ h1 {
   font-weight: 700;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   h1 {
     font-size: 5rem;
   }
@@ -43,7 +43,7 @@ h2 {
   font-size: 6rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   h2 {
     font-size: 4rem;
   }
@@ -53,7 +53,7 @@ h3 {
   font-size: 4rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   h3 {
     font-size: 3rem;
   }
@@ -63,7 +63,7 @@ h4 {
   font-size: 3rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   h4 {
     font-size: 2.4rem;
   }
@@ -73,7 +73,7 @@ h5 {
   font-size: 2.4rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   h5 {
     font-size: 1.8rem;
   }
@@ -83,7 +83,7 @@ h5 {
   font-size: 2rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   .p1 {
     font-size: 1.7rem;
   }
@@ -93,7 +93,7 @@ h5 {
   font-size: 1.6rem;
 }
 
-@media only screen and (width <= 480px) {
+@media only screen and (width <= 480px), only screen and (height <= 650px) {
   .p2 {
     font-size: 1.4rem;
   }
@@ -202,9 +202,11 @@ a.btn-primary:hover {
   font-weight: 400;
 }
 
-@media only screen and (width <= 600px) {
+@media only screen and (width <= 600px), only screen and (height <= 650px) {
   a.btn-primary {
-    width: 80svw;
+    width: 25rem;
+    font-size: 1.8rem;
+    line-height: 120%;
   }
 }
 
@@ -317,6 +319,13 @@ strong {
   position: relative;
 }
 
+@media only screen and (width <= 767px) {
+  #biography .column .row .column-text .title, #biography #projects .new-project .frame .row-wrap .column-content .row .column-text .title, #projects .new-project .frame .row-wrap #biography .column-content .row .column-text .title {
+    align-items: center;
+    width: 100%;
+  }
+}
+
 #biography .column .row .column-text .title .p2, #biography #projects .new-project .frame .row-wrap .column-content .row .column-text .title .p2, #projects .new-project .frame .row-wrap #biography .column-content .row .column-text .title .p2 {
   color: #cbcbcb;
 }
@@ -384,9 +393,13 @@ strong {
   display: flex;
 }
 
+#biography .certificates .p1 {
+  text-align: center;
+}
+
 #biography .certificates .row-wrap {
   flex-flow: wrap;
-  place-content: flex-start center;
+  place-content: center space-around;
   align-items: flex-start;
   width: 100%;
   display: flex;
@@ -400,6 +413,12 @@ strong {
   align-items: center;
   gap: 6rem;
   display: flex;
+}
+
+@media only screen and (width >= 767px) {
+  #projects {
+    height: 100vh;
+  }
 }
 
 #projects .new-project {
@@ -493,8 +512,15 @@ strong {
   position: relative;
 }
 
+@media only screen and (width <= 767px) {
+  #projects .new-project .frame .row-wrap {
+    gap: 5rem;
+  }
+}
+
 #projects .new-project .frame .row-wrap .column-content {
   flex: calc(50% - 2rem);
+  height: 100%;
 }
 
 #projects .new-project .frame .achievements {
@@ -523,7 +549,7 @@ strong {
 #projects .new-project .frame .achievements .column, #projects .new-project .frame .achievements .row-wrap .column-content, #projects .new-project .frame .row-wrap .achievements .column-content {
   flex-direction: column;
   flex: 1 0 0;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.6rem;
   display: flex;
@@ -550,6 +576,8 @@ strong {
 }
 
 #projects .new-project .arrows svg {
+  -webkit-user-select: none;
+  user-select: none;
   transition: fill .1s ease-in-out;
 }
 
@@ -726,7 +754,7 @@ strong {
   margin-left: 5.2rem;
 }
 
-@media only screen and (width >= 700px) and (width <= 1000px) {
+@media only screen and (width <= 1000px) {
   #referrals .column .slide.active.hide, #referrals #projects .new-project .frame .row-wrap .column-content .slide.active.hide, #projects .new-project .frame .row-wrap #referrals .column-content .slide.active.hide {
     display: none;
   }
@@ -743,6 +771,8 @@ strong {
 }
 
 #referrals .column .arrows svg, #referrals #projects .new-project .frame .row-wrap .column-content .arrows svg, #projects .new-project .frame .row-wrap #referrals .column-content .arrows svg {
+  -webkit-user-select: none;
+  user-select: none;
   transition: fill .1s ease-in-out;
 }
 
@@ -756,6 +786,12 @@ header {
   transition: top .4s ease-in;
   position: sticky;
   top: 0;
+}
+
+@media only screen and (width <= 767px) {
+  header {
+    margin: 0;
+  }
 }
 
 header nav.desktop {
@@ -777,7 +813,7 @@ header nav.desktop {
   }
 }
 
-@media only screen and (width <= 1000px) {
+@media only screen and (width <= 767px) {
   header nav.desktop {
     display: none;
   }
@@ -847,28 +883,27 @@ header nav.desktop .btn-nav:hover {
 }
 
 header nav.mobile {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  top: 0;
-  overflow: hidden;
+  backdrop-filter: blur(5px);
+  background: #242424;
+  border-radius: 0 0 24px 24px;
+  width: 100%;
+  height: 9rem;
+  margin: 0;
 }
 
-@media only screen and (width >= 1000px) {
+@media only screen and (width >= 767px) {
   header nav.mobile {
     display: none;
   }
 }
 
 header nav.mobile .row {
-  background-color: #060606;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 9rem;
-  padding: 0 4rem;
+  padding: 0 24px;
   display: flex;
   position: absolute;
   top: 0;
@@ -934,8 +969,8 @@ header nav.mobile #nav-mobile-links.open {
   justify-content: center;
   align-items: center;
   gap: 6rem;
-  width: calc(100svw + 4rem);
-  height: calc(100svh + 6rem);
+  width: 100%;
+  height: 100vh;
   display: flex;
   overflow: hidden;
 }
@@ -983,6 +1018,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
   align-items: center;
   width: 100svw;
   height: 100svh;
+  padding: 4rem 0 0;
   display: flex;
   position: absolute;
   top: 0;
@@ -999,17 +1035,18 @@ header nav.mobile #nav-mobile-links a .b1:active {
   color: #060606;
 }
 
-.hero .hero-text {
+.hero .hero-column {
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 4rem;
-  padding-top: 9rem;
+  height: 100%;
+  margin-top: 8rem;
   display: flex;
   position: relative;
 }
 
-.hero .hero-text .btn-primary {
+.hero .hero-column .btn-primary {
   color: #fafafa;
   text-transform: uppercase;
   text-wrap: nowrap;
@@ -1033,15 +1070,33 @@ header nav.mobile #nav-mobile-links a .b1:active {
   position: relative;
 }
 
-.hero .hero-text .btn-primary:hover {
+.hero .hero-column .btn-primary:hover {
   background-color: #0000;
   background-image: linear-gradient(90deg, #4a90e2 0%, #974a8a 100%);
   font-weight: 400;
 }
 
-@media only screen and (width <= 600px) {
-  .hero .hero-text .btn-primary {
-    width: 80svw;
+@media only screen and (width <= 600px), only screen and (height <= 650px) {
+  .hero .hero-column .btn-primary {
+    width: 25rem;
+    font-size: 1.8rem;
+    line-height: 120%;
+  }
+}
+
+.hero .hero-column .column {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  display: flex;
+}
+
+@media only screen and (height <= 620px) {
+  .hero .hero-column .column {
+    padding-top: 0;
+    padding-bottom: 5rem;
   }
 }
 
@@ -1057,15 +1112,6 @@ header nav.mobile #nav-mobile-links a .b1:active {
   .hero img {
     display: none;
   }
-}
-
-.hero div {
-  flex-direction: column;
-  align-items: center;
-  column-gap: .8rem;
-  display: flex;
-  position: absolute;
-  bottom: 2rem;
 }
 
 footer {
@@ -1171,9 +1217,11 @@ footer .column .row-wrap .btn-primary:hover {
   font-weight: 400;
 }
 
-@media only screen and (width <= 600px) {
+@media only screen and (width <= 600px), only screen and (height <= 650px) {
   footer .column .row-wrap .btn-primary {
-    width: 80svw;
+    width: 25rem;
+    font-size: 1.8rem;
+    line-height: 120%;
   }
 }
 
