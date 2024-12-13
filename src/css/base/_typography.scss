@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as *;
 
-$font-family: 'IBM Plex Mono', monospace;
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Albert Sans', sans-serif;
 $font-style: normal;
 $line-height: 120%;
 // $font-weight-thin: 100;
@@ -11,60 +12,29 @@ $font-weight-medium: 500;
 // $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-h1, h2, h3, h4, h5, p {
-    font-family: $font-family;
+h1, h2, h3, h4 {
+    font-family: $font-family-primary;
     font-style: $font-style;
     line-height: $line-height;
 }
 
+h5, p{
+    font-family: $font-family-secondary;
+    font-style: $font-style;
+    line-height: $line-height;
+}
 // sizes and weight
 
 html {
     font-size: 62.5%;
 }
 
-h1 {
-    font-weight: $font-weight-bold;
-    font-size: 8rem;
+ul {
+    font-family: $font-family-secondary;
+    font-style: $font-style;
+    line-height: $line-height;
+    margin-left: 3rem;
 
-    @media only screen and (max-width: 480px) {
-            font-size: 5rem;
-        }
-}
-
-h2 {
-    font-size: 6rem;
-
-    @media only screen and (max-width: 480px) {
-            font-size: 4rem;
-        }
-}
-
-h3 {
-    font-size: 4rem;
-
-    @media only screen and (max-width: 480px) {
-            font-size: 3rem;
-        }
-}
-
-h4 {
-    font-size: 3rem;
-
-    @media only screen and (max-width: 480px) {
-            font-size: 2.4rem;
-        }
-}
-
-h5 {
-    font-size: 2.4rem;
-
-    @media only screen and (max-width: 480px) {
-            font-size: 1.8rem;
-        }
-}
-
-.p1 {
     font-size: 2rem;
 
     @media only screen and (max-width: 480px) {
@@ -72,10 +42,60 @@ h5 {
     }
 }
 
+h1 {
+    font-weight: $font-weight-bold;
+    font-size: 8rem;
+
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 5rem;
+    }
+}
+
+h2 {
+    font-size: 6rem;
+
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 4rem;
+        }
+}
+
+h3 {
+    font-size: 4rem;
+
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 3rem;
+        }
+}
+
+h4 {
+    font-size: 3rem;
+
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 2.4rem;
+        }
+}
+
+h5 {
+    font-size: 2.4rem;
+
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 1.8rem;
+        }
+}
+
+.p1 {
+    font-size: 2rem;
+
+  
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+        font-size: 1.7rem;
+    }
+}
+
 .p2 {
     font-size: 1.6rem;
 
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
         font-size: 1.4rem;
     }
 }
@@ -98,7 +118,7 @@ h1, h2, .cta {
     color: $black;
 }
 
-.number, h3, h4, h5, .p1, .p2 {
+.number, h3, h4, h5, .p1, .p2, li{
     color: $white;
 }
 
@@ -106,4 +126,17 @@ h1, h2, .cta {
 
 h1, h2, h3, h4, h5 {
     text-align: center;
+}
+
+a {
+    color: $secondary-color;
+    text-decoration: underline; 
+
+    &:hover {
+        color: $primary-light; 
+    }
+
+    &:visited {
+        color: $primary-dark; 
+    }
 }

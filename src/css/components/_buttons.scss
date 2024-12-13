@@ -3,7 +3,7 @@
 @use '../base/typography' as *;
 
 @mixin button-text-small {
-    font-family: $font-family;
+    font-family: $font-family-secondary;
     font-style: $font-style;
     line-height: $line-height;
     font-size: 1.8rem;
@@ -23,7 +23,7 @@
 }
 
 @mixin button-text-big {
-    font-family: $font-family;
+    font-family: $font-family-secondary;
     font-style: $font-style;
     line-height: $line-height;
     font-size: 2.4rem;
@@ -82,9 +82,12 @@
         background-image: $line;
     }
 
-    @media only screen and (max-width: 600px) {
-        width: 80svw;
+    @media only screen and (max-width: 600px),only screen and (max-height: 650px) {
+        line-height: $line-height;
+        font-size: 1.8rem;
+        width: 25rem;
     }
+
 }
 
 a.btn-primary {

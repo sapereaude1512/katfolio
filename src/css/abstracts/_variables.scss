@@ -7,4 +7,6 @@ $grey:#CBCBCB;
 $black: #242424;
 $text:#060606;
 $line: linear-gradient(90deg, #4A90E2 0%, $primary-dark 100%);
-$invisible: rgba(0,0,0,0%)
+$invisible: rgba(0,0,0,0%);
+$card_background: rgba($white, 0.08);
+$mobile: 767px;

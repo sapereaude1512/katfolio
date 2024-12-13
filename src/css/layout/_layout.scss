@@ -32,6 +32,11 @@
 strong {
     @include title;
 }
+.bg-line {
+    width: 100%;
+    height: 4svh;
+    background: url(../images/bg-line.svg) center/contain no-repeat;
+}
 
 .bg-lines {
     width: 100%;
@@ -103,69 +108,246 @@ strong {
                     gap: 0.8rem;
                     align-items: baseline;
 
+                    @media only screen and (max-width: $mobile) {
+                        width: 100%;
+                        align-items: center;
+                    }
+
                     .p2 {
                         color: $grey;
                     }
                 }
             }
         }
-        }
+    }
 
-        .row-wrap-logos {
-            @include row-wrap;
-            gap: 4rem 10rem;
-            align-items: center;
+    .row-wrap-logos {
+        @include row-wrap;
+        gap: 4rem 10rem;
+        align-items: center;
+    }
+
+    .row-wrap {
+        @include row-wrap;
+        // gap: 4rem 10rem;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 4rem;
+        // justify-content: center;
+
+
+        .column-small {
+            @include column;
+            gap: 1.6rem;
+            align-content: center;
+            padding: 0.8rem 0rem 1.6rem 0rem;
+            border-radius: 1.6rem;
+            background-color: $card_background;
+            flex: 1 1 calc(25% - 4rem);
+
+            @media only screen and (min-width: 1301px) and (max-width: 1479px) {
+                flex: 1 1 calc(50% - 4rem); 
+            }
+
+            @media only screen and (min-width: 390px) and (max-width: 1299px) {
+                flex: 1 1 100%; 
+                }
+            h2 {
+                color: $grey;
+            }
+
+            .p1 {
+                text-align: center;
+                text-wrap: nowrap;
+                color: $white;
+                max-width: 60vw;
+            }
+        }
+    }
+    .certificates {
+        @include column;
+        gap: 4rem;
+        width: 100%;
+
+        .p1 {
+            text-align: center;
         }
 
         .row-wrap {
             @include row-wrap;
-            // gap: 4rem 10rem;
-            align-items: center;
-            align-content: center;
-            justify-content: space-between;
             width: 100%;
-
-            @media only screen and (min-width: 1480px) and (max-width: 1800px) {
-                gap: 4rem 8rem;
-                justify-content: center;
-            }
-
-            @media only screen and (min-width: 1301px) and (max-width: 1479px) {
-                gap: 4rem 5rem;
-                justify-content: center;
-            }
-
-            @media only screen and (min-width: 390px) and (max-width: 1299px) {
-                gap: 4rem 22rem;
-                justify-content: center;
-            }
-
-            .column-small {
-            @include column;
-            gap: 1.6rem;
+            align-items: flex-start;
+            justify-content: space-around;
             align-content: center;
-            width: 100%;
-            max-width: 36rem;
-            padding: 0.8rem 0rem 1.6rem 0rem;
-            border-radius: 1.6rem;
-            background-color: rgba($white, 0.08);
-
-                h2 {
-                    color: $grey;
-                }
-
-                .p1 {
-                    text-align: center;
-                    text-wrap: nowrap;
-                    color: $white;
-                    max-width: 60vw;
-                }
-            }
+        }
     }
 }
 
 #projects {
-    display: none;
+    @include column;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+    align-self: stretch;
+
+    @media only screen and (min-width: $mobile) {
+        height: 100vh;
+    }
+
+    .new-project {
+        @include column;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+
+        .frame{
+            display: flex;
+            padding: 4rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+            align-self: stretch;
+            border-radius: 1.6rem;
+            background: $card_background;
+            .row-wrap {
+                @include row-wrap;
+                display: flex;
+                padding: 0rem 1.6rem;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-self: stretch;
+            }
+
+            .row-stack{
+                @include row-wrap;
+                align-items: flex-end;
+                gap: 1.2rem;
+                justify-content: flex-end;
+                width: 100%;
+                img {
+                    width:30;
+                    height: 30;
+                }
+            }
+            
+            .row-left{
+                @include row-wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            .row-right{
+                @include row-wrap;
+                justify-content: flex-end;
+                align-items: center;
+                gap: .8rem;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            h4{
+                text-align: start;
+            }
+
+            .column {
+                @include column;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .8rem;
+                align-self: stretch;
+            }
+
+            .row-wrap {
+                @include row-wrap;
+                display: flex;
+                padding: 0rem 1.6rem;
+                gap:4rem;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-self: stretch;
+
+                @media only screen and (max-width: $mobile) {
+                    gap: 5rem;
+                }
+
+                .column-content {
+                    @extend .column;
+                    flex: 1 1 calc(50% - 2rem);
+                    height: 100%;
+                }
+            }
+
+            .achievements {
+                @include row-wrap;
+                display: flex;
+                padding: 1.6rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5rem;
+                align-self: stretch;
+                border-radius: 1.6rem;
+                background: $card_background;
+
+                .row-wrap {
+                    @include row-wrap;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 4rem;
+                    align-self: stretch;
+                }
+
+                .column{
+                    @include column;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content:flex-start;
+                    gap: 1.6rem;
+                    flex: 1 0 0;
+
+                    .p1{
+                        text-align: center;
+                    }
+
+                    img {
+                        width:32;
+                        height: 32;
+                    }
+                }
+            }
+        }
+
+        .arrows {
+            @include row;
+            padding: .8rem 1.6rem;
+            gap: 10rem;
+            align-self: stretch;
+
+            svg {
+                transition: fill 100ms ease-in-out;
+                user-select: none;
+            }
+
+            svg:hover path {
+                fill: $secondary-color;
+            }
+
+            svg:active path {
+                fill: $secondary-color;
+            }
+        }
+    }
+    
+
 }
 
 #clients {
@@ -227,17 +409,29 @@ strong {
         width: 100%;
         gap: 1.6rem;
         
+        .row{
+            @include row;
+            gap: 40px;
+            align-self: stretch;
+            }
+            
         .slide {
             display: none;
         }
         
         .slide.active {
             @include column;
-            width: 100%;
-            height: 30rem; // adjust with media-queries
             justify-content: flex-start;
-            gap: 2.4rem;
             transition: all .1s ease-in-out;
+            height: 440px;
+            padding: 24px 16px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+            gap: 24px;
+            flex: 1 0 0;
+            border-radius: 16px;
+            background: $card_background;
 
             @media only screen and (min-width: 700px) and (max-width: 1000px) {
                 height: 40rem;
@@ -247,7 +441,7 @@ strong {
                 height: 50rem;
             }
 
-            .row {
+            .row{
                 @include row;
                 width: 100%;
                 gap: 1.6rem;
@@ -256,16 +450,6 @@ strong {
                 .p1 {
                     padding-top: 0.8rem;
                     width: 100%;
-                }
-
-                a svg.linkedin {
-                    width: 4rem;
-                    height: 4rem;
-                    transition: fill 100ms ease-in-out;
-
-                    &:hover path {
-                        fill: $secondary-color;
-                    }
                 }
 
                 svg.quotes {
@@ -279,10 +463,6 @@ strong {
                     align-items: flex-start;
                     gap: 0.8rem;
 
-                    .p1.title {
-                        height: 4rem;
-                    }
-
                     .column {
                         @include column;
                         width: 100%;
@@ -294,6 +474,15 @@ strong {
                     }
                     }
                 }
+
+                .column.margin {
+                    margin-left: 5.2rem;
+                }
+            }
+        }
+        .slide.active.hide {
+            @media only screen and (max-width: 1000px) {
+                display: none;
             }
         }
 
@@ -304,6 +493,7 @@ strong {
 
             svg {
                 transition: fill 100ms ease-in-out;
+                user-select: none;
             }
 
             svg:hover path {

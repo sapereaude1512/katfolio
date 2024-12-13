@@ -4,7 +4,7 @@
   "description": "Personal Portfolio Website",
   "source": "./src/index.html",
   "scripts": {
-    "dev": "parcel",
+    "dev": "rd /s /q .parcel-cache && parcel",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "build": "parcel build src/index.html --public-url ./",
     "deploy": "npm run build && gh-pages -d dist"
@@ -29,4 +29,5 @@
     "gh-pages": "^6.1.1",
     "postcss-cli": "^11.0.0"
   }
+  
 }
