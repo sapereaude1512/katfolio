@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "rd /s /q .parcel-cache && parcel",
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "build": "parcel build src/index.html --public-url ./",
+    "build": "parcel build src/index.html --public-url ./ --no-optimize",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "repository": {
