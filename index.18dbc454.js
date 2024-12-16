@@ -650,8 +650,8 @@ const referrals = [
     },
     {
         title: {
-            text: "Sebastian Brenninkmeijer",
-            href: ""
+            text: "Sebastian B.",
+            href: "https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/"
         },
         about: [
             {
@@ -685,7 +685,7 @@ const referrals = [
     {
         title: {
             text: "Marko Milosavljevic",
-            href: ""
+            href: "https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/"
         },
         about: [
             {
@@ -702,7 +702,7 @@ const referrals = [
     {
         title: {
             text: "Mahmoud Ibrahim",
-            href: ""
+            href: "https://www.linkedin.com/in/imahmoudibrahim/"
         },
         about: [
             {
@@ -719,7 +719,7 @@ const referrals = [
     {
         title: {
             text: "Chris Cheng",
-            href: ""
+            href: "https://www.linkedin.com/in/chris-cheng-hk/"
         },
         about: [
             {
