@@ -663,7 +663,7 @@ const referrals = [
                 text: "Art Director"
             },
             {
-                text: "Worked on the same team at Ink Innovation"
+                text: "Worked on the same team at Ink"
             }
         ],
         quote: {
@@ -680,7 +680,7 @@ const referrals = [
                 text: "Frontend Developer"
             },
             {
-                text: "Worked on the same team at Ink Innovation"
+                text: "Worked on the same team at Ink"
             }
         ],
         quote: {
@@ -697,7 +697,7 @@ const referrals = [
                 text: "Product Designer"
             },
             {
-                text: "Worked on the same team at Brom Studio"
+                text: "Worked on the same team at Brom"
             }
         ],
         quote: {
@@ -731,7 +731,7 @@ const referrals = [
                 text: "Creative Director"
             },
             {
-                text: "Worked on the same team at Ink Innovation"
+                text: "Worked on the same team at Ink"
             }
         ],
         quote: {
