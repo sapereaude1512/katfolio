@@ -824,7 +824,7 @@ const projects = [
             text: `<a href="https://www.foodcons.de/en/maschinen-typen/fs-3600-multisystem-slice-wedging-cutter" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine.`
         },
         role: {
-            text: `I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://sormac.com/en-int/machines/slice-and-wedge-cutter-2" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In\xa0parallel with this, I\xa0developed a\xa0UI\xa0Kit with scalability in\xa0mind, which greatly impacted the speed of\xa0product development and shortened the time to\xa0market entry.`
+            text: `I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://sormac.com/en-gb/knowledge-center/sormac-stand-packed-full-of-technological-innovations" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In\xa0parallel with this, I\xa0developed a\xa0UI\xa0Kit with scalability in\xa0mind, which greatly impacted the speed of\xa0product development and shortened the time to\xa0market entry.`
         },
         achievements: [
             "Reduced 2x the training time for factory workers",
