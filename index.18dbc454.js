@@ -603,6 +603,7 @@ let navClosedBtn = document.getElementById("nav-closed");
 let navOpenedBtn = document.getElementById("nav-opened");
 let navMobileLinks = document.getElementById("nav-mobile-links");
 let navOpened = false;
+const mobileCta = document.getElementById("mobile-cta");
 function setNavState() {
     if (navOpened) {
         navClosedBtn.style.display = "none";
@@ -615,6 +616,10 @@ function setNavState() {
     }
 }
 setNavState(); // initial state
+mobileCta.addEventListener("click", ()=>{
+    navOpened = false;
+    setNavState();
+});
 navClosedBtn.onclick = function() {
     navOpened = true;
     setNavState();
