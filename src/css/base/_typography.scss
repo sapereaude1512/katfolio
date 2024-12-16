@@ -26,6 +26,7 @@ h5, p{
 // sizes and weight
 
 html {
+    touch-action: manipulation; /* Prevents double-tap zooming */
     font-size: 62.5%;
 }
 
@@ -46,8 +47,11 @@ h1 {
     font-weight: $font-weight-bold;
     font-size: 8rem;
 
-    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+    @media only screen and (max-width: 480px),only screen and (max-height: 800px) {
             font-size: 5rem;
+    }
+    @media only screen and (max-width: 280px),only screen and (max-height: $mobile) {
+            font-size: 4rem;
     }
 }
 
@@ -78,9 +82,7 @@ h4 {
 h5 {
     font-size: 2.4rem;
 
-    @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
-            font-size: 1.8rem;
-        }
+
 }
 
 .p1 {
@@ -137,6 +139,6 @@ a {
     }
 
     &:visited {
-        color: $primary-dark; 
+        color: $secondary-color; 
     }
 }

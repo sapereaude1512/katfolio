@@ -3,18 +3,22 @@
 const { info } = require('autoprefixer');
 
 let lastScrollTop = 0;
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll down - hide header
-            header.style.top = '-90px'; // Adjust based on header height
-        } else {
-            // Scroll up - show header
-            header.style.top = '0';
-        }
-        lastScrollTop = scrollTop;
-    });
+const header = document.querySelector('header');
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Check if the nav menu is open
+    if (navMobileLinks.classList.contains('open')) {
+        return;
+    }
+    if (scrollTop > lastScrollTop) {
+        // Scroll down - hide header
+        header.style.top = '-90px'; // Adjust based on header height
+    } else {
+        // Scroll up - show header
+        header.style.top = '0';
+    }
+    lastScrollTop = scrollTop;
+});
 
 // mobile nav
 
@@ -206,7 +210,7 @@ function referralSlider() {
             currentSlideIndex = (currentSlideIndex - 1 + referrals.length) % referrals.length;
             showSlide('slide1', currentSlideIndex);
 
-            const isSlide2 = document.getElementById('slide2').display === 'none';
+            const isSlide2 = document.getElementById('slide2').offsetParent === null;
             if (!isSlide2){
                 currentSlideIndex = (currentSlideIndex - 1 + referrals.length) % referrals.length;
                 showSlide('slide2', currentSlideIndex);
@@ -219,7 +223,7 @@ function referralSlider() {
             currentSlideIndex = (currentSlideIndex + 1) % referrals.length;
             showSlide('slide1', currentSlideIndex);
 
-            const isSlide2 = document.getElementById('slide2').display === 'none';
+            const isSlide2 = document.getElementById('slide2').offsetParent === null;
             if (!isSlide2){
                 currentSlideIndex = (currentSlideIndex + 1) % referrals.length;
                 showSlide('slide2', currentSlideIndex);
@@ -228,7 +232,12 @@ function referralSlider() {
         caretRight.addEventListener('dblclick', preventGetInTouch);
     }
     // Initial call to display the first slide
-    // showSlide(currentSlideIndex);
+    showSlide('slide1', currentSlideIndex);
+    const isSlide2 = document.getElementById('slide2').offsetParent === null;
+    if (!isSlide2){
+        currentSlideIndex = (currentSlideIndex + 1) % referrals.length;
+        showSlide('slide2', currentSlideIndex);
+    }
 };
 
 referralSlider();
@@ -262,8 +271,8 @@ const projects = [
  {
         title: `Mentoring juniors and<br>expanding my knowledge`,
         client: [
-            { text: "ADPList", href: "https://www.sormac.eu/en/" },
-            { text: "IxDF", href: "https://www.foodcons.de/" }
+            { text: "ADPList", href: "https://adplist.org/" },
+            { text: "IxDF", href: "http://www.interaction-design.org/" }
         ],
         timeframe: "2022-Present",
         stack: [
@@ -271,10 +280,10 @@ const projects = [
             "html5.svg", "css3.svg", "figma.svg"
         ],
         overview: {
-            text: `ADPList is a global community of mentors from 150 countries that offer 1:1 expert guidance. This knowledge-sharing platform is excellent for learning and connecting with colleagues. Interaction Design Foundation or IxDF offers a comprehensive range of online UX design courses taught by experts. I’m grateful for all industry-recognized certificates I gained. This platform is an excellent resource for advancing skills and staying updated with the latest trends.`
+            text: `ADPList is a global community of mentors from 150 countries that offer <a href="https://adplist.org/mentors/katarina-popovic" target="_blank">1:1 expert guidance</a>. This knowledge-sharing platform is excellent for learning and connecting with colleagues. Interaction Design Foundation or IxDF offers a comprehensive range of online UX design courses taught by experts. I’m grateful for all <a href="https://drive.google.com/drive/folders/15G2dxj33D1k3MTmBJ0pwayBLE8BmylzB?usp=drive_link" target="_blank">industry-recognized certificates</a> I gained. This platform is an excellent resource for advancing skills and staying updated with the latest trends.`
         },
         role: {
-            text: `As a mentor at ADPList, I enjoyed sharing my personal experiences and knowledge with mentees, while learning from their interesting insights. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the IxDF, I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an interview with the IxDF team, where I shared my journey to inspire others to keep learning.`
+            text: `As a mentor at ADPList, I enjoyed sharing my personal experiences and knowledge with mentees, while learning from their interesting insights. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the IxDF, I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an <a href="https://www.linkedin.com/posts/the-interaction-design-foundation_katarina-finished-30-ixdf-courses-while-working-activity-7023342257634246656-Gwdg?utm_source=share&utm_medium=member_desktop" target="_blank">interview with the IxDF team</a>, where I shared my journey to inspire others to keep learning.`
         },
         achievements: [
             "Provided  with 650+ minutes of mentorship",
@@ -288,7 +297,7 @@ const projects = [
 {
         title: `On-chain social<br>media marketplace`,
         client: [
-            { text: "Adora Promo", href: "https://www.sormac.eu/en/" },
+            { text: "Adora Promo", href: "https://github.com/AdoraPromo" },
         ],
         timeframe: "2023-2024",
         stack: [
@@ -314,14 +323,14 @@ const projects = [
 {
         title: `Reshaping the future<br>of aviation industry`,
         client: [
-            { text: "Ink Innovation", href: "https://www.sormac.eu/en/" },
+            { text: "Ink Innovation", href: "https://www.innovation.ink/" },
         ],
         timeframe: "2023-2024",
         stack: [
             "notion.svg", "discord.svg", "google.svg", "figma.svg"
         ],
         overview: {
-            text: `Ink Innovation is a provider of unique ecosystem of biometrics, mobile and cloud systems for the travel industry and organizations, which is handling around 57 million passengers annually, and is spread on 460 airports world-wide, with 200+ carriers set up in the system. Ink projects I contributed to were advanced cloud-hosted departure control system (Ink DCS) with 1000+ functionalities, Ink Baggage reconciliation system (Ink BRS) and Ink Self-Service devices (Kiosk, Bag Drop, Totem) that I designed from scratch, as well as Ink Health. `,
+            text: `Ink Innovation is a provider of unique ecosystem of biometrics, mobile and cloud systems for the travel industry and organizations, which is handling around 57 million passengers annually, and is spread on 460 airports world-wide, with 200+ carriers set up in the system. Ink projects I contributed to were advanced cloud-hosted departure control system (<a href="https://www.innovation.ink/ecosystem/ink-dcs" target="_blank">Ink DCS</a>) with 1000+ functionalities, Ink Baggage reconciliation system (<a href="https://dcs.aero/product/baggage-reconciliation-system-brs-ink-innovation/" target="_blank">Ink BRS</a>) and <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/" target="_blank">Ink Self-Service devices</a> (Kiosk, Bag Drop, Totem) that I designed from scratch, as well as <a href="https://www.health.ink/" target="_blank">Ink Health.</a> `,
         },
         role: {
             text: `As a digital product designer, I was engaged in 4 major projects and my role consisted of: translating business needs and requirements into intuitive user experiences, designing comprehensive UX strategies, collaborating with the international teams, participating in rebranding, developing UI kit with scalability in mind, mentoring junior designers, and providing design process to create optimal solutions for interactive designs.`
@@ -339,7 +348,7 @@ const projects = [
 {
         title: `Gamified<br>NFT App`,
         client: [
-            { text: "NFT Flipper", href: "https://www.sormac.eu/en/" },
+            { text: "NFT Flipper", href: "https://taikai.network/ethbelgrade/hackathons/hackathon-2023/projects/cliinujot00g9wn011g01mj7s/idea" },
         ],
         timeframe: "During 2023",
         stack: [
@@ -373,8 +382,7 @@ const showProject = (index) => {
     ).join(" ; ");
     document.querySelector(".row-right .p2").innerHTML = `Client: ${clientLinks}`;
 
-    document.querySelector(".row-right .p2:nth-of-type(2)").textContent = "| Time frame:";
-    document.querySelector(".row-right .p2:nth-of-type(3)").textContent = project.timeframe;
+    document.querySelector(".row-right .p2:nth-of-type(4)").textContent = project.timeframe;
 
     const stackContainer = document.querySelector(".row-stack");
     const images = stackContainer.querySelectorAll("img");

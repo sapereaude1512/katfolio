@@ -33,6 +33,9 @@ footer {
 
             .btn-primary {
                 @include btn-primary;
+                @media only screen and (max-width: 600px),only screen and (max-height: 650px) {
+                    width: 80svw;
+                }
             }
         }
     }

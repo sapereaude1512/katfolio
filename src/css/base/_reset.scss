@@ -3,6 +3,9 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none; /* Modern browsers */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* Internet Explorer */
 }
 
 *, *::before, *::after {
@@ -20,6 +23,8 @@ body {
     width: 100%;
     background-color: $black;
     overflow-x: hidden;
+    touch-action: manipulation; /* Prevents double-tap zooming */
+
     // scroll-behavior: smooth;
 }
 

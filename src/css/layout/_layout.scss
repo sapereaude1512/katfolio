@@ -1,4 +1,5 @@
 @use '../abstracts/mixins' as *;
+@use '../components/buttons' as *;
 @use '../abstracts/variables' as *;
 @use '../base/typography' as *;
 
@@ -58,6 +59,13 @@ strong {
     background: url(../images/cta-background.svg) center/cover no-repeat;
     text-align: center;
     padding: 8rem 2rem;
+
+    .btn-primary {
+        @include btn-primary;
+        @media only screen and (max-width: 600px),only screen and (max-height: 650px) {
+            width: 80svw;
+        }
+    }
 }
 
 #biography {
@@ -67,7 +75,7 @@ strong {
     margin-top: calc(100vh - 9rem);
 
     @media only screen and (max-width: 1000px) {
-        margin-top: calc(100vh + 6rem);
+        margin-top: calc(100vh + 0rem);
     }
     
     h3, h5 {
@@ -194,7 +202,7 @@ strong {
     align-self: stretch;
 
     @media only screen and (min-width: $mobile) {
-        height: 100vh;
+        min-height: 100vh;
     }
 
     .new-project {
@@ -207,13 +215,14 @@ strong {
 
         .frame{
             display: flex;
-            padding: 4rem 2rem;
+            padding: 2rem 1rem;
             flex-direction: column;
             align-items: center;
-            gap: 4rem;
+            gap: 3rem;
             align-self: stretch;
             border-radius: 1.6rem;
             background: $card_background;
+            min-height: 63vh;
             .row-wrap {
                 @include row-wrap;
                 display: flex;
@@ -282,7 +291,8 @@ strong {
                 .column-content {
                     @extend .column;
                     flex: 1 1 calc(50% - 2rem);
-                    height: 100%;
+                    min-height: 27.5vh;
+                    justify-content: flex-start;
                 }
             }
 
@@ -336,13 +346,18 @@ strong {
                 transition: fill 100ms ease-in-out;
                 user-select: none;
             }
-
-            svg:hover path {
-                fill: $secondary-color;
+            @media only screen and (min-width: $mobile) {
+                svg:hover path {
+                    fill: $secondary-color;
+                }
             }
 
             svg:active path {
                 fill: $secondary-color;
+            }
+
+            svg path{
+                fill: $white
             }
         }
     }
@@ -496,12 +511,19 @@ strong {
                 user-select: none;
             }
 
-            svg:hover path {
-                fill: $secondary-color;
+
+            @media only screen and (min-width: $mobile) {
+                svg:hover path {
+                    fill: $secondary-color;
+                }
             }
 
             svg:active path {
                 fill: $secondary-color;
+            }
+
+            svg path{
+                fill: $white
             }
         }
     }

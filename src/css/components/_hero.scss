@@ -19,7 +19,7 @@
     }
 
     h1, h5, p {
-    color: $text;
+        color: $text;
     }
     
     .hero-column{
@@ -33,17 +33,18 @@
 
         .btn-primary {
             @include btn-primary;
+            @media only screen and (max-width: 600px),only screen and (max-height: 650px) {
+                line-height: $line-height;
+                font-size: 1.8rem;
+                width: 25rem;
+            }
         }
 
         .column {
             @include column;
-            padding-top: 8rem;
+            padding-top: 10vh;
             padding-bottom: 2rem;
 
-            @media only screen and (max-height: 620px) {
-                padding-top: 0rem;
-                padding-bottom: 5rem;
-            }
         }
     }
 
@@ -59,11 +60,11 @@
         }
     }
 
-    // h5 {
-    //     @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
-    //             font-size: 5rem;
-    //     }
-    // }
+    h5 {
+        @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
+            font-size: 1.8rem;
+        }
+    }
 
     // h1 {
     //     @media only screen and (max-width: 480px),only screen and (max-height: 650px) {
