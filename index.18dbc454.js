@@ -589,7 +589,7 @@ const { info } = require("96edd3ffae3fbb2b");
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 window.addEventListener("scroll", function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    let scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, 0);
     // Check if the nav menu is open
     if (navMobileLinks.classList.contains("open")) return;
     if (scrollTop > lastScrollTop) // Scroll down - hide header
