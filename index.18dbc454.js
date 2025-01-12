@@ -593,8 +593,8 @@ window.addEventListener("scroll", function() {
     let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     // Check if the nav menu is open
     if (navMobileLinks.classList.contains("open")) return;
-    if (scrollTop >= maxScroll) return;
-    if (scrollTop > lastScrollTop) // Scroll down - hide header
+    if (scrollTop >= maxScroll) header.style.top = "-90px"; // Adjust based on header height
+    else if (scrollTop > lastScrollTop) // Scroll down - hide header
     header.style.top = "-90px"; // Adjust based on header height
     else // Scroll up - show header
     header.style.top = "0";
