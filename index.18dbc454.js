@@ -590,8 +590,10 @@ let lastScrollTop = 0;
 const header = document.querySelector("header");
 window.addEventListener("scroll", function() {
     let scrollTop = Math.max(window.pageYOffset, document.documentElement.scrollTop, 0);
+    let maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     // Check if the nav menu is open
     if (navMobileLinks.classList.contains("open")) return;
+    if (scrollTop >= maxScroll) return;
     if (scrollTop > lastScrollTop) // Scroll down - hide header
     header.style.top = "-90px"; // Adjust based on header height
     else // Scroll up - show header
