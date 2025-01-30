@@ -13,12 +13,11 @@ footer {
     border-top-right-radius: 8rem;
     min-height: 100vh;
 
-    
-
     @media only screen and (max-width: 600px) {
         width: 100svw;
         border-top-right-radius: 0rem;
     }
+
     .contact-data {
         display: flex;
         width: 70vw;
@@ -28,8 +27,10 @@ footer {
         gap: 4rem;
 
         @media only screen and (max-width: $mobile) {
+            width: 100%;
             gap: 1rem;
         }
+
         .contact-form{
             display: flex;
             flex-direction: column;
@@ -37,6 +38,9 @@ footer {
             gap: 1.2rem;
             width: 100%;
 
+            @media only screen and (max-width: $mobile) {
+                width: 80vw;
+            }
 
             .form-data {
                 display: flex;
@@ -46,15 +50,18 @@ footer {
                 @media only screen and (max-width: $mobile) {
                     gap: 0rem;
                 }
+
                 .p2{
                     padding-left: 1.8rem;
                 }
+
                 input, textarea{
                     border-radius: 2rem;
                     border: 2px solid $primary-dark;
                     background: $white;
                     gap: 1.15;
                 }
+
                 .row-wrap {
                     @include row-wrap;
                     align-items: flex-start;
@@ -86,7 +93,7 @@ footer {
                         background-color: rgba(255, 255, 255, 0.6);
                         transition: background-color .1s ease-in-out;
                         @media only screen and (max-width: $mobile) {
-                            width: 70vw;
+                            width: 80vw;
                             height: 8vh;
                         }
                     }
@@ -103,12 +110,13 @@ footer {
                         background-color: rgba(255, 255, 255, 0.6);
                         transition: background-color .1s ease-in-out;
                         @media only screen and (max-width: $mobile) {
+                            width: 80vw;
                             height: 10vh;
                         }
                     }
 
                     input:focus, textarea:focus {
-                        background-color: rgba(255, 255, 255, .85);
+                        background-color: rgba(255, 255, 255, .8);
                     }
                 }
             }

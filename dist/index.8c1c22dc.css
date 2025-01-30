@@ -1523,6 +1523,7 @@ footer .contact-data {
 @media only screen and (width <= 767px) {
   footer .contact-data {
     gap: 1rem;
+    width: 100%;
   }
 }
 
@@ -1532,6 +1533,12 @@ footer .contact-data .contact-form {
   gap: 1.2rem;
   width: 100%;
   display: flex;
+}
+
+@media only screen and (width <= 767px) {
+  footer .contact-data .contact-form {
+    width: 80vw;
+  }
 }
 
 footer .contact-data .contact-form .form-data {
@@ -1602,7 +1609,7 @@ footer .contact-data .contact-form .form-data .column input {
 
 @media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .column input {
-    width: 70vw;
+    width: 80vw;
     height: 8vh;
   }
 }
@@ -1622,12 +1629,13 @@ footer .contact-data .contact-form .form-data .column textarea {
 
 @media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .column textarea {
+    width: 80vw;
     height: 10vh;
   }
 }
 
 footer .contact-data .contact-form .form-data .column input:focus, footer .contact-data .contact-form .form-data .column textarea:focus {
-  background-color: #ffffffd9;
+  background-color: #fffc;
 }
 
 footer .contact-data .contact-form .error-in-form {
