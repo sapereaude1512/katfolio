@@ -79,13 +79,27 @@ strong {
         text-align: center;
     }
 
+    .certificates .p1 {
+        text-align: center;
+        max-width: 40vw;
+                
+        @media only screen and (max-width: 600px) {
+            max-width: 80vw;
+        }
+    }
+
     .column {
             @include column;
             gap: 6rem;
             width: 100%;
 
             .p1 {
-                text-align: left;
+                text-align: center;
+                max-width: 40vw;
+                
+                @media only screen and (max-width: 600px) {
+                    max-width: 80vw;
+                }
             }
         
         .row {
@@ -632,7 +646,7 @@ strong {
         }
 
         h5{
-            max-width: 60vw;
+            max-width: 40vw;
 
             @media only screen and (max-width: 600px) {
                 max-width: 80vw;

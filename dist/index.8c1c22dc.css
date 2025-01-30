@@ -321,6 +321,17 @@ strong {
   text-align: center;
 }
 
+#biography .certificates .p1 {
+  text-align: center;
+  max-width: 40vw;
+}
+
+@media only screen and (width <= 600px) {
+  #biography .certificates .p1 {
+    max-width: 80vw;
+  }
+}
+
 #biography .column, #biography #projects .mobile-project .content .row-wrap .column-content, #projects .mobile-project .content .row-wrap #biography .column-content, #biography #projects .desktop-project .frame .row-wrap .column-content, #projects .desktop-project .frame .row-wrap #biography .column-content {
   flex-direction: column;
   justify-content: center;
@@ -331,7 +342,14 @@ strong {
 }
 
 #biography .column .p1, #biography #projects .mobile-project .content .row-wrap .column-content .p1, #projects .mobile-project .content .row-wrap #biography .column-content .p1, #biography #projects .desktop-project .frame .row-wrap .column-content .p1, #projects .desktop-project .frame .row-wrap #biography .column-content .p1 {
-  text-align: left;
+  text-align: center;
+  max-width: 40vw;
+}
+
+@media only screen and (width <= 600px) {
+  #biography .column .p1, #biography #projects .mobile-project .content .row-wrap .column-content .p1, #projects .mobile-project .content .row-wrap #biography .column-content .p1, #biography #projects .desktop-project .frame .row-wrap .column-content .p1, #projects .desktop-project .frame .row-wrap #biography .column-content .p1 {
+    max-width: 80vw;
+  }
 }
 
 #biography .column .row, #biography #projects .mobile-project .content .row-wrap .column-content .row, #projects .mobile-project .content .row-wrap #biography .column-content .row, #biography #projects .desktop-project .frame .row-wrap .column-content .row, #projects .desktop-project .frame .row-wrap #biography .column-content .row {
@@ -950,7 +968,7 @@ strong {
 }
 
 #clients .column h5, #clients #projects .desktop-project .frame .row-wrap .column-content h5, #projects .desktop-project .frame .row-wrap #clients .column-content h5, #clients #projects .mobile-project .content .row-wrap .column-content h5, #projects .mobile-project .content .row-wrap #clients .column-content h5 {
-  max-width: 60vw;
+  max-width: 40vw;
 }
 
 @media only screen and (width <= 600px) {
@@ -1317,7 +1335,7 @@ header nav.mobile #nav-mobile-links {
   gap: 7svh;
   width: 100vw;
   height: 0;
-  transition: height 1s ease-in-out, opacity 1s ease-in-out;
+  transition: height .3s ease-in-out, opacity .3s ease-in-out;
   display: flex;
   overflow: hidden;
 }
