@@ -1268,7 +1268,7 @@ module.exports = {
                 "figma.svg"
             ],
             "overview": {
-                "text": '<a href="https://sormac.com/en-gb/machines/slice-and-wedge-cutter-fs3600" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine.'
+                "text": '<a href="https://sormac.com/en-gb/machines/slice-and-wedge-cutter-fs3600" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine. I have developed the HMI design, which not only enhances the user experience but also facilitates the continuous improvement of the software and overall capabilities. The intuitive interface enables users to easily select and adjust cutting configurations to match specific requirements. This project aims to enhance food preparation efficiency while maintaining high levels of accuracy and consistency.'
             },
             "role": {
                 "text": 'I played a key role in designing and developing the client side of the software for this machine. Our software was presented in 2024 on <a href="https://sormac.com/en-gb/knowledge-center/sormac-stand-packed-full-of-technological-innovations" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In\xa0parallel with this, I\xa0developed a\xa0UI\xa0Kit with scalability in\xa0mind, which greatly impacted the speed of\xa0product development and shortened the time to\xa0market entry.'
@@ -1393,10 +1393,10 @@ module.exports = {
                 "figma.svg"
             ],
             "overview": {
-                "text": "NFT Flipper is an NFT matchmaking gambling dApp built at ETHBelgrade2023 hackathon. It provides an innovative solution to fragmented NFT utility and limited gameplay opportunities by combining staking, randomness, and winner-takes-all mechanics. Users stake their NFTs in matches, and the smart contract autonomously selects a random winner. The winner takes possession of staked NFTs, introducing an exciting element of risk."
+                "text": 'NFT Flipper is an NFT matchmaking gambling dApp built at <a href="https://2023.ethbelgrade.rs/" target="_blank">ETHBelgrade2023 hackathon</a>. It provides an innovative solution to fragmented NFT utility and limited gameplay opportunities by combining staking, randomness, and winner-takes-all mechanics. Users stake their NFTs in matches, and the smart contract autonomously selects a random winner. The winner takes possession of staked NFTs, introducing an exciting element of risk.'
             },
             "role": {
-                "text": "As a UX/UI designer, I conducted extensive UX research, defined the target market, and established branding and a design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes while continuously driving design enhancements to boost platform functionality. I also collaborated closely with developers to align design and technical aspects."
+                "text": "As a UX/UI designer, I conducted extensive UX research, defined the target market, and established branding and a design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes while continuously driving design enhancements to boost platform functionality. Also, I collaborated closely with developers to align design and technical aspects."
             },
             "achievements": [
                 "Enhanced engagement through intuitive design",
