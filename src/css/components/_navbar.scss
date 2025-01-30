@@ -76,8 +76,6 @@ header {
             display: none;
         }
 
-        
-
         .row {
             @include row;
             border-radius: 0px 0px 24px 24px;
@@ -132,7 +130,7 @@ header {
             overflow: hidden;
             height: 0;
             opacity: 0;
-            transition: height 1000ms ease-in-out, opacity 1000ms ease-in-out;
+            transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
             background-color: $black;
             width: 100vw;
             gap: 7svh;
