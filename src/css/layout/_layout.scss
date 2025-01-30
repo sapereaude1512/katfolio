@@ -204,29 +204,7 @@ strong {
     }
 
     .fade-out {
-        animation: fadeOut 1.2s ease-in-out forwards;
-    }
-    @keyframes fadeOut {
-        0% {
-        opacity: 1;
-        transform: translateX(0); /* Original position */
-        }
-        50% {
-            opacity: 0.2;
-            transform: translateX(99vw); /* Move out to the left */
-        }
-        51% {
-            opacity: 0.2;
-            transform: translateX(-90vw); /* Instantly move to the right */
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0); /* Fade in back to the center */
-        }
-    }
-
-    .fade-in {
-        animation: fadeIn 1.2s ease-in-out;
+        animation: fadeIn 1.2s ease-in-out forwards;
     }
     @keyframes fadeIn {
         0% {
@@ -239,7 +217,7 @@ strong {
         }
         51% {
             opacity: 0.2;
-            transform: translateX(90vw); /* Instantly move to the right */
+            transform: translateX(+90vw); /* Instantly move to the right */
         }
         100% {
             opacity: 1;
@@ -247,6 +225,27 @@ strong {
         }
     }
 
+    .fade-in {
+        animation: fadeOut 1.2s ease-in-out;
+    }
+    @keyframes fadeOut {
+        0% {
+        opacity: 1;
+        transform: translateX(0); /* Original position */
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateX(+99vw); /* Move out to the left */
+        }
+        51% {
+            opacity: 0.2;
+            transform: translateX(-90vw); /* Instantly move to the right */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in back to the center */
+        }
+    }
 
     .desktop-project {
         @include column;
@@ -266,7 +265,7 @@ strong {
             align-self: stretch;
             border-radius: 1.6rem;
             background: $card_background;
-            min-height: 63vh;
+            // min-height: 50vh;
             
             .row-wrap {
                 @include row-wrap;
@@ -592,6 +591,7 @@ strong {
     
 
 }
+
 #clients {
     @include column;
     gap: 10rem;
@@ -660,11 +660,11 @@ strong {
         }
         50% {
             opacity: 0.2;
-            transform: translateX(99vw); /* Move out to the left */
+            transform: translateX(-90vw); /* Move out to the left */
         }
         51% {
             opacity: 0.2;
-            transform: translateX(-90vw); /* Instantly move to the right */
+            transform: translateX(90vw); /* Instantly move to the right */
         }
         100% {
             opacity: 1;
@@ -682,11 +682,11 @@ strong {
         }
         50% {
             opacity: 0.2;
-            transform: translateX(-99vw); /* Move out to the left */
+            transform: translateX(90vw); /* Move out to the left */
         }
         51% {
             opacity: 0.2;
-            transform: translateX(90vw); /* Instantly move to the right */
+            transform: translateX(-90vw); /* Instantly move to the right */
         }
         100% {
             opacity: 1;

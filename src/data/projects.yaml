@@ -1,11 +1,13 @@
 projects:
-  - title: "Software solution for<br> cutting machine"
+  # SORMAC
+
+  - title: "Software solution for<br>cutting machine"
     client:
       - text: "Sormac"
         href: "https://www.sormac.eu/en/"
-      - text: "Foodcons"
-        href: "https://www.foodcons.de/"
-    timeframe: "2023-2024"
+      # - text: "Foodcons"
+      #   href: "https://www.foodcons.de/"
+    timeframe: "2023-Present"
     stack:
       - "js.svg"
       - "python.svg"
@@ -15,15 +17,65 @@ projects:
       - "css3.svg"
       - "figma.svg"
     overview:
-      text: '<a href="https://www.foodcons.de/en/maschinen-typen/fs-3600-multisystem-slice-wedging-cutter" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine.'
+      text: '<a href="https://sormac.com/en-gb/machines/slice-and-wedge-cutter-fs3600" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine.'
     role:
-      text: 'I played a key role in designing and developing the client side of the software for this machine. Our software was presented this year on <a href="https://sormac.com/en-gb/knowledge-center/sormac-stand-packed-full-of-technological-innovations" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In parallel with this, I developed a UI Kit with scalability in mind, which greatly impacted the speed of product development and shortened the time to market entry.'
+      text: 'I played a key role in designing and developing the client side of the software for this machine. Our software was presented in 2024 on <a href="https://sormac.com/en-gb/knowledge-center/sormac-stand-packed-full-of-technological-innovations" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In parallel with this, I developed a UI Kit with scalability in mind, which greatly impacted the speed of product development and shortened the time to market entry.'
     achievements:
       - "Reduced 2x the training time for factory workers"
       - "Attracted attention at two major fairs in Germany"
       - "Sped up 2x total cutting time of products"
       - "Implemented feedback to improve 10+ features"
-      - "Achieved 22% reduction in development time"
+      - "Achieved 20% reduction in development time"
+
+  # INK
+
+  - title: "Reshaping the future<br>of aviation industry"
+    client:
+      - text: "Ink Innovation"
+        href: "https://www.innovation.ink/"
+    timeframe: "2023-2024"
+    stack:
+      - "notion.svg"
+      - "discord.svg"
+      - "google.svg"
+      - "figma.svg"
+    overview:
+      text: 'Ink Innovation is a provider of unique ecosystem of biometrics, mobile and cloud systems for the travel industry and organizations, which is handling around 57 million passengers annually, and is spread on 460 airports world-wide, with 200+ carriers set up in the system. Ink projects I contributed to were advanced cloud-hosted departure control system (<a href="https://www.innovation.ink/ecosystem/ink-dcs" target="_blank">Ink DCS</a>) with 1000+ functionalities, Ink Baggage reconciliation system (<a href="https://dcs.aero/product/baggage-reconciliation-system-brs-ink-innovation/" target="_blank">Ink BRS</a>) and <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/" target="_blank">Ink Self-Service devices</a> (Kiosk, Bag Drop, Totem) that I designed from scratch, as well as <a href="https://www.health.ink/" target="_blank">Ink Health.</a>'
+    role:
+      text: "As a digital product designer, I was engaged in 4 major projects and my role consisted of: translating business needs and requirements into intuitive user experiences, designing comprehensive UX strategies, collaborating with the international teams, participating in rebranding, developing UI kit with scalability in mind, mentoring junior designers, and providing design process to create optimal solutions for interactive designs."
+    achievements:
+      - "Training time for agents reduced to around 3 hours"
+      - "Facilitated collaboration with 3 new clients"
+      - "Sped up total check-in time to 2-3 minutes"
+      - "Enhanced hundreds of features in a year"
+      - "Over 15% of reduction in development time"
+
+  # ADORA
+
+  - title: "On-chain social<br>media marketplace"
+    client:
+      - text: "Adora Promo"
+        href: "https://github.com/AdoraPromo"
+    timeframe: "2023-2024"
+    stack:
+      - "webflow.svg"
+      - "atlassian.svg"
+      - "slack.svg"
+      - "discord.svg"
+      - "google.svg"
+      - "figma.svg"
+    overview:
+      text: '<a href="https://ethglobal.com/showcase/adora-promo-ia4yu" target="_blank">Adora Promo</a> is on-chain social media marketplace that uses AI to verify sponsored content. Advertisers send offers to creators with natural language requirements. Creators are paid based on the engagement their post receives. This project was a price winner at ETHOnline2023 hackathon. We tested this idea by launching a startup, however, we pivoted to focus on other opportunities.'
+    role:
+      text: "Collaborating as a frontend developer and designer included conducting comprehensive UX research, defining target market, creating a robust branding and design system. Seamless user experiences was ensured by producing wireframes, low-fidelity, and high-fidelity prototypes. I was continuously driving improvements in frontend code to enhance user engagement."
+    achievements:
+      - "Reduced twice required time for making matches"
+      - "Made collaboration with world-wide influencers"
+      - "Sped up post verification time to 30 seconds"
+      - "Implementing feedback resulted in rebranding"
+      - "Over 15% of reduction in development time"
+
+  # MENTORING
 
   - title: "Mentoring juniors and<br>expanding knowledge"
     client:
@@ -45,55 +97,13 @@ projects:
     role:
       text: 'As a mentor at ADPList, I enjoyed sharing my personal experiences and knowledge with mentees, while learning from their interesting insights. These online sessions were incredibly fulfilling, as I genuinely love helping people, especially knowing how challenging the beginning of a career can be. At the IxDF, I completed numerous courses and several master classes. My hard work paid off as I applied these new skills at work, garnering recognition. This dedication led to an <a href="https://www.linkedin.com/posts/the-interaction-design-foundation_katarina-finished-30-ixdf-courses-while-working-activity-7023342257634246656-Gwdg?utm_source=share&utm_medium=member_desktop" target="_blank">interview with the IxDF team</a>, where I shared my journey to inspire others to keep learning.'
     achievements:
-      - "Provided with 650+ minutes of mentorship"
+      - "Provided with 700+ minutes of mentorship"
       - "Made connection with 40+ mentees and mentors"
       - "Ranked in top 10 mentors in industrial design"
       - "Mentoring juniors resulted in enhanced human skills"
       - "Completed 30+ courses in less than 6 months"
 
-  - title: "On-chain social<br>media marketplace"
-    client:
-      - text: "Adora Promo"
-        href: "https://github.com/AdoraPromo"
-    timeframe: "2023-2024"
-    stack:
-      - "webflow.svg"
-      - "atlassian.svg"
-      - "slack.svg"
-      - "discord.svg"
-      - "google.svg"
-      - "figma.svg"
-    overview:
-      text: 'Adora Promo is on-chain social media marketplace that uses AI to verify sponsored content. Advertisers send offers to creators with natural language requirements. Creators are paid based on the engagement their post receives. This project was a price winner at ETHOnline2023 hackathon. We tested this idea by launching a startup, however, we pivoted to focus on other opportunities.'
-    role:
-      text: 'Collaborating as a frontend developer and designer included conducting comprehensive UX research, defining target market, creating a robust branding and design system. Seamless user experiences was ensured by producing wireframes, low-fidelity, and high-fidelity prototypes. I was continuously driving improvements in frontend code to enhance user engagement.'
-    achievements:
-      - "Reduced twice required time for making matches"
-      - "Made collaboration with world-wide influencers"
-      - "Sped up post verification time to 30 seconds"
-      - "Implementing feedback resulted in rebranding"
-      - "Over 15% of reduction in development time"
-
-  - title: "Reshaping the future<br>of aviation industry"
-    client:
-      - text: "Ink Innovation"
-        href: "https://www.innovation.ink/"
-    timeframe: "2023-2024"
-    stack:
-      - "notion.svg"
-      - "discord.svg"
-      - "google.svg"
-      - "figma.svg"
-    overview:
-      text: 'Ink Innovation is a provider of unique ecosystem of biometrics, mobile and cloud systems for the travel industry and organizations, which is handling around 57 million passengers annually, and is spread on 460 airports world-wide, with 200+ carriers set up in the system. Ink projects I contributed to were advanced cloud-hosted departure control system (<a href="https://www.innovation.ink/ecosystem/ink-dcs" target="_blank">Ink DCS</a>) with 1000+ functionalities, Ink Baggage reconciliation system (<a href="https://dcs.aero/product/baggage-reconciliation-system-brs-ink-innovation/" target="_blank">Ink BRS</a>) and <a href="https://www.airline-suppliers.com/product/self-service-ink-kiosk/" target="_blank">Ink Self-Service devices</a> (Kiosk, Bag Drop, Totem) that I designed from scratch, as well as <a href="https://www.health.ink/" target="_blank">Ink Health.</a>'
-    role:
-      text: 'As a digital product designer, I was engaged in 4 major projects and my role consisted of: translating business needs and requirements into intuitive user experiences, designing comprehensive UX strategies, collaborating with the international teams, participating in rebranding, developing UI kit with scalability in mind, mentoring junior designers, and providing design process to create optimal solutions for interactive designs.'
-    achievements:
-      - "Training time for agents reduced to around 3 hours"
-      - "Facilitated collaboration with 3 new clients"
-      - "Sped up total check-in time to 2-3 minutes"
-      - "Enhanced over 350 features in a year"
-      - "Over 15% of reduction in development time"
+  # FLIPPER
 
   - title: "Gamified<br>NFT App"
     client:
@@ -106,12 +116,12 @@ projects:
       - "google.svg"
       - "figma.svg"
     overview:
-      text: 'NFT Flipper is an NFT matchmaking gambling dApp built at ETHBelgrade2023 hackathon. It provides an innovative solution to fragmented NFT utility and limited gameplay opportunities by combining staking, randomness, and winner-takes-all mechanics. Users stake their NFTs in matches, and the smart contract autonomously selects a random winner. The winner takes possession of staked NFTs, introducing an exciting element of risk.'
+      text: "NFT Flipper is an NFT matchmaking gambling dApp built at ETHBelgrade2023 hackathon. It provides an innovative solution to fragmented NFT utility and limited gameplay opportunities by combining staking, randomness, and winner-takes-all mechanics. Users stake their NFTs in matches, and the smart contract autonomously selects a random winner. The winner takes possession of staked NFTs, introducing an exciting element of risk."
     role:
-      text: 'As a UX/UI designer, I conducted extensive UX research, defined the target market, and established branding and a design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes while continuously driving design enhancements to boost platform functionality. I also collaborated closely with developers to align design and technical aspects.'
+      text: "As a UX/UI designer, I conducted extensive UX research, defined the target market, and established branding and a design system. I ensured high-quality user experiences by creating wireframes, low-fidelity, and high-fidelity prototypes while continuously driving design enhancements to boost platform functionality. I also collaborated closely with developers to align design and technical aspects."
     achievements:
-      - "Enhanced gameplay engagement through intuitive design"
-      - "Conducted in-depth user research and applied feedback"
+      - "Enhanced engagement through intuitive design"
+      - "Conducted user research and applied feedback"
       - "Boosted platform usability and aesthetics"
       - "Reduced user onboarding time by 25%"
-      - "Delivered fully functional prototype during the hackathon"
+      - "Delivered fully functional prototype in 48 hours"

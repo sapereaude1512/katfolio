@@ -20,6 +20,7 @@ function initializeMailService(){
         errorMessage.classList.remove("success")
         errorMessage.textContent = errorMsg
         submitButton.textContent = "Send an email";
+        setTimeout(() => hideAll(), 10000);
     }
 
     const showSuccess = () => {
@@ -28,6 +29,7 @@ function initializeMailService(){
         errorMessage.classList.add("success")
         errorMessage.textContent = "Email has been successfully sent."
         submitButton.textContent = "Send an email";
+        setTimeout(() => hideAll(), 10000);
     }
 
     emailjs.init("IzMq_xMg2idAmujzL"); // Replace with your EmailJS public key

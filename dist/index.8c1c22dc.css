@@ -4,7 +4,7 @@ h1, h2, h3, h4 {
   line-height: 120%;
 }
 
-h5, p {
+h5, p, textarea, label {
   font-family: Albert Sans, sans-serif;
   font-style: normal;
   line-height: 120%;
@@ -128,8 +128,8 @@ footer .p2.email-msg {
   color: #cc292c;
 }
 
-footer .p2.p2.email-msg.success {
-  color: #4ab236;
+footer .p2.email-msg.success {
+  color: #358026;
 }
 
 .number, h3, h4, h5, .p1, .p2, li {
@@ -474,10 +474,10 @@ strong {
 }
 
 #projects .fade-out {
-  animation: 1.2s ease-in-out forwards fadeOut;
+  animation: 1.2s ease-in-out forwards fadeIn;
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
   0% {
     opacity: 1;
     transform: translateX(0);
@@ -485,7 +485,7 @@ strong {
 
   50% {
     opacity: .2;
-    transform: translateX(99vw);
+    transform: translateX(90vw);
   }
 
   51% {
@@ -500,10 +500,10 @@ strong {
 }
 
 #projects .fade-in {
-  animation: 1.2s ease-in-out fadeIn;
+  animation: 1.2s ease-in-out fadeOut;
 }
 
-@keyframes fadeIn {
+@keyframes fadeOut {
   0% {
     opacity: 1;
     transform: translateX(0);
@@ -511,7 +511,7 @@ strong {
 
   50% {
     opacity: .2;
-    transform: translateX(-99vw);
+    transform: translateX(-90vw);
   }
 
   51% {
@@ -541,7 +541,6 @@ strong {
   align-self: stretch;
   align-items: center;
   gap: 3rem;
-  min-height: 63vh;
   padding: 2rem 1rem;
   display: flex;
 }
@@ -1591,6 +1590,7 @@ footer .contact-data .contact-form .form-data .column input {
 }
 
 footer .contact-data .contact-form .form-data .column textarea {
+  resize: none;
   background-color: #fff9;
   align-self: stretch;
   align-items: flex-start;
@@ -1615,7 +1615,8 @@ footer .contact-data .contact-form .form-data .column input:focus, footer .conta
 footer .contact-data .contact-form .error-in-form {
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: .8rem;
+  height: 4rem;
   display: flex;
 }
 
@@ -1664,7 +1665,7 @@ footer .contact-data .column {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding-top: 1rem;
   padding-bottom: .8rem;
   display: flex;

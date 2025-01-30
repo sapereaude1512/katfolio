@@ -18,11 +18,12 @@ h1, h2, h3, h4 {
     line-height: $line-height;
 }
 
-h5, p{
+h5, p, textarea, label {
     font-family: $font-family-secondary;
     font-style: $font-style;
     line-height: $line-height;
 }
+
 // sizes and weight
 
 html {
@@ -122,11 +123,12 @@ h1, h2, .cta {
 .hero .p2, footer .p2 {
     color: $black;
 }
+
 footer .p2.email-msg{
     color: $red;
 }
 
-footer .p2.p2.email-msg.success{
+footer .p2.email-msg.success{
     color: $green;
 }
 
