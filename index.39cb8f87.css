@@ -232,32 +232,32 @@ strong {
 }
 
 .bg-line {
-  background: url("bg-line.3f2dcb2d.svg") center / contain no-repeat;
+  background: url("bg-line.14bade21.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 .bg-lines {
-  background: url("bg-lines-l.e8c5d345.svg") center / contain no-repeat;
+  background: url("bg-lines-l.5e03e3c0.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 @media only screen and (width <= 500px) {
   .bg-lines {
-    background: url("bg-lines-s.15bf058d.svg") center / contain no-repeat;
+    background: url("bg-lines-s.5db0fd66.svg") center / contain no-repeat;
   }
 }
 
 @media only screen and (width <= 900px) {
   .bg-lines {
-    background: url("bg-lines-m.021ceb0e.svg") center / contain no-repeat;
+    background: url("bg-lines-m.ace32fb0.svg") center / contain no-repeat;
   }
 }
 
 .call-to-action {
   text-align: center;
-  background: url("cta-background.536cd8d5.svg") center / cover no-repeat;
+  background: url("cta-background.d0ba31ac.svg") center / cover no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1367,7 +1367,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
 }
 
 .hero {
-  background: url("hero-bg.5f582d40.svg") center / cover no-repeat;
+  background: url("hero-bg.d48d37a6.svg") center / cover no-repeat;
   border-bottom-left-radius: 10rem;
   flex-direction: column;
   justify-content: center;
@@ -1474,7 +1474,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
 }
 
 footer {
-  background: url("footer-bg.2252ad92.svg") center / cover no-repeat;
+  background: url("footer-bg.5806f08c.svg") center / cover no-repeat;
   border-top-right-radius: 8rem;
   flex-direction: column;
   justify-content: center;
@@ -1747,4 +1747,4 @@ footer .site-info {
   display: flex;
   position: relative;
 }
-/*# sourceMappingURL=index.8c1c22dc.css.map */
+/*# sourceMappingURL=index.39cb8f87.css.map */
