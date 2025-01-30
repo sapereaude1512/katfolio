@@ -587,8 +587,6 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _referrals = require("./referrals/referrals");
 var _referralsDefault = parcelHelpers.interopDefault(_referrals);
-var _sendEmail = require("./email/send_email");
-var _sendEmailDefault = parcelHelpers.interopDefault(_sendEmail);
 var _projects = require("./projects/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
 // HEADER SHOW
@@ -608,18 +606,19 @@ window.addEventListener("scroll", function() {
     lastScrollTop = scrollTop;
 });
 // mobile nav
-let navBtn = document.getElementById("menuBtn");
+let navClosedBtn = document.getElementById("nav-closed");
+let navOpenedBtn = document.getElementById("nav-opened");
 let navMobileLinks = document.getElementById("nav-mobile-links");
 let navOpened = false;
 const mobileCta = document.getElementById("mobile-cta");
 function setNavState() {
     if (navOpened) {
-        navOpened = false;
-        navBtn.classList.add("open");
+        navClosedBtn.style.display = "none";
+        navOpenedBtn.style.display = "flex";
         navMobileLinks.classList.add("open");
     } else {
-        navOpened = true;
-        navBtn.classList.remove("open");
+        navClosedBtn.style.display = "flex";
+        navOpenedBtn.style.display = "none";
         navMobileLinks.classList.remove("open");
     }
 }
@@ -628,7 +627,12 @@ mobileCta.addEventListener("click", ()=>{
     navOpened = false;
     setNavState();
 });
-navBtn.onclick = function() {
+navClosedBtn.onclick = function() {
+    navOpened = true;
+    setNavState();
+};
+navOpenedBtn.onclick = function() {
+    navOpened = false;
     setNavState();
 };
 navMobileLinks.querySelectorAll("a").forEach((link)=>{
@@ -641,9 +645,8 @@ navMobileLinks.querySelectorAll("a").forEach((link)=>{
 (0, _projectsDefault.default)();
 window.addEventListener("resize", (0, _projectsDefault.default));
 (0, _referralsDefault.default)();
-(0, _sendEmailDefault.default)();
 
-},{"./referrals/referrals":"hpsI6","./email/send_email":"kiOme","./projects/projects":"f9o8O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hpsI6":[function(require,module,exports) {
+},{"./referrals/referrals":"hpsI6","./projects/projects":"f9o8O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hpsI6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const referrals = require("1b1b93a66a59139b");
@@ -855,206 +858,7 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"kiOme":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _emailjsCom = require("emailjs-com");
-var _emailjsComDefault = parcelHelpers.interopDefault(_emailjsCom);
-function initializeMailService() {
-    // Initialize EmailJS
-    const errorMessage = document.getElementById("errorMessageLbl");
-    const submitButton = document.getElementById("submitBtn");
-    const errorSvg = document.getElementById("emailErrorSvg");
-    const successSvg = document.getElementById("emailSuccessSvg");
-    const hideAll = ()=>{
-        errorSvg.style.display = "none";
-        successSvg.style.display = "none";
-        errorMessage.textContent = "  ";
-        submitButton.textContent = "Send an email";
-    };
-    const showError = (errorMsg)=>{
-        errorSvg.style.display = "flex";
-        successSvg.style.display = "none";
-        errorMessage.classList.remove("success");
-        errorMessage.textContent = errorMsg;
-        submitButton.textContent = "Send an email";
-    };
-    const showSuccess = ()=>{
-        errorSvg.style.display = "none";
-        successSvg.style.display = "flex";
-        errorMessage.classList.add("success");
-        errorMessage.textContent = "Email has been successfully sent.";
-        submitButton.textContent = "Send an email";
-    };
-    (0, _emailjsComDefault.default).init("IzMq_xMg2idAmujzL"); // Replace with your EmailJS public key
-    document.getElementById("contactForm").addEventListener("submit", async function(e) {
-        e.preventDefault(); // Prevent default form submission
-        // Collect form data
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value; //.trim();
-        // Form validation
-        if (!name || !email || !message) {
-            showError("Check the inputs and resend an email.");
-            return;
-        }
-        // Hide any previous error message
-        hideAll();
-        // Disable the button to prevent multiple submissions
-        submitButton.disabled = true;
-        submitButton.textContent = "Sending...";
-        const templateParams = {
-            to_name: "Katarina",
-            from_name: name,
-            message: message,
-            from_mail: email,
-            email: "katarinamaric1512@gmail.com"
-        };
-        (0, _emailjsComDefault.default).send("service_5n33lwg", "template_qow2oc2", templateParams).then((response)=>{
-            // console.log("Email sent successfully!", response.status, response.text);
-            showSuccess();
-        }, (error)=>{
-            // Show the error message if the email fails to send
-            showError("Something went wrong while sending your email. Please try again later.");
-            console.error("Failed to send email:", error);
-        }).finally(()=>{
-            // Re-enable the button and hide the spinner
-            submitButton.disabled = false;
-            submitButton.textContent = "Send an email";
-        });
-    });
-}
-exports.default = initializeMailService;
-
-},{"emailjs-com":"18oDj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"18oDj":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "init", ()=>(0, _init.init));
-parcelHelpers.export(exports, "send", ()=>(0, _send.send));
-parcelHelpers.export(exports, "sendForm", ()=>(0, _sendForm.sendForm));
-var _init = require("./methods/init/init");
-var _send = require("./methods/send/send");
-var _sendForm = require("./methods/sendForm/sendForm");
-exports.default = {
-    init: (0, _init.init),
-    send: (0, _send.send),
-    sendForm: (0, _sendForm.sendForm)
-};
-
-},{"./methods/init/init":"67aa8","./methods/send/send":"8d53v","./methods/sendForm/sendForm":"5YW33","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"67aa8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "init", ()=>init);
-var _store = require("../../store/store");
-const init = (userID, origin = "https://api.emailjs.com")=>{
-    (0, _store.store)._userID = userID;
-    (0, _store.store)._origin = origin;
-};
-
-},{"../../store/store":"bpIqO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bpIqO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "store", ()=>store);
-const store = {
-    _origin: "https://api.emailjs.com"
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8d53v":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "send", ()=>send);
-var _store = require("../../store/store");
-var _validateParams = require("../../utils/validateParams");
-var _sendPost = require("../../api/sendPost");
-const send = (serviceID, templateID, templatePrams, userID)=>{
-    const uID = userID || (0, _store.store)._userID;
-    (0, _validateParams.validateParams)(uID, serviceID, templateID);
-    const params = {
-        lib_version: "3.2.0",
-        user_id: uID,
-        service_id: serviceID,
-        template_id: templateID,
-        template_params: templatePrams
-    };
-    return (0, _sendPost.sendPost)("/api/v1.0/email/send", JSON.stringify(params), {
-        "Content-type": "application/json"
-    });
-};
-
-},{"../../store/store":"bpIqO","../../utils/validateParams":"l47ah","../../api/sendPost":"etqkd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"l47ah":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "validateParams", ()=>validateParams);
-const validateParams = (userID, serviceID, templateID)=>{
-    if (!userID) throw "The user ID is required. Visit https://dashboard.emailjs.com/admin/integration";
-    if (!serviceID) throw "The service ID is required. Visit https://dashboard.emailjs.com/admin";
-    if (!templateID) throw "The template ID is required. Visit https://dashboard.emailjs.com/admin/templates";
-    return true;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"etqkd":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "sendPost", ()=>sendPost);
-var _emailJSResponseStatus = require("../models/EmailJSResponseStatus");
-var _store = require("../store/store");
-const sendPost = (url, data, headers = {})=>{
-    return new Promise((resolve, reject)=>{
-        const xhr = new XMLHttpRequest();
-        xhr.addEventListener("load", ({ target })=>{
-            const responseStatus = new (0, _emailJSResponseStatus.EmailJSResponseStatus)(target);
-            if (responseStatus.status === 200 || responseStatus.text === "OK") resolve(responseStatus);
-            else reject(responseStatus);
-        });
-        xhr.addEventListener("error", ({ target })=>{
-            reject(new (0, _emailJSResponseStatus.EmailJSResponseStatus)(target));
-        });
-        xhr.open("POST", (0, _store.store)._origin + url, true);
-        Object.keys(headers).forEach((key)=>{
-            xhr.setRequestHeader(key, headers[key]);
-        });
-        xhr.send(data);
-    });
-};
-
-},{"../models/EmailJSResponseStatus":"7E7PA","../store/store":"bpIqO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7E7PA":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "EmailJSResponseStatus", ()=>EmailJSResponseStatus);
-class EmailJSResponseStatus {
-    constructor(httpResponse){
-        this.status = httpResponse.status;
-        this.text = httpResponse.responseText;
-    }
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5YW33":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "sendForm", ()=>sendForm);
-var _store = require("../../store/store");
-var _validateParams = require("../../utils/validateParams");
-var _sendPost = require("../../api/sendPost");
-const findHTMLForm = (form)=>{
-    let currentForm;
-    if (typeof form === "string") currentForm = document.querySelector(form);
-    else currentForm = form;
-    if (!currentForm || currentForm.nodeName !== "FORM") throw "The 3rd parameter is expected to be the HTML form element or the style selector of form";
-    return currentForm;
-};
-const sendForm = (serviceID, templateID, form, userID)=>{
-    const uID = userID || (0, _store.store)._userID;
-    const currentForm = findHTMLForm(form);
-    (0, _validateParams.validateParams)(uID, serviceID, templateID);
-    const formData = new FormData(currentForm);
-    formData.append("lib_version", "3.2.0");
-    formData.append("service_id", serviceID);
-    formData.append("template_id", templateID);
-    formData.append("user_id", uID);
-    return (0, _sendPost.sendPost)("/api/v1.0/email/send-form", formData);
-};
-
-},{"../../store/store":"bpIqO","../../utils/validateParams":"l47ah","../../api/sendPost":"etqkd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f9o8O":[function(require,module,exports) {
+},{}],"f9o8O":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _imageAdapter = require("./image_adapter");
@@ -1068,8 +872,8 @@ const showProjectDesktop = (index, is_left = null)=>{
     projectContainer.classList.remove("fade-out");
     projectContainer.classList.remove("fade-in");
     projectContainer.offsetWidth;
-    if (is_left === true) projectContainer.classList.add("fade-out");
-    else if (is_left === false) projectContainer.classList.add("fade-in");
+    if (is_left === false) projectContainer.classList.add("fade-out");
+    else if (is_left === true) projectContainer.classList.add("fade-in");
     setTimeout(()=>{
         document.querySelector(".row-left h4").innerHTML = project.title;
         const clientLinks = project.client.map((client)=>`<a href="${client.href}" target="_blank">${client.text}</a>`).join(" ; ");
@@ -1176,13 +980,12 @@ function showProjectMobile() {
 document.addEventListener("DOMContentLoaded", ()=>{
     const container = document.querySelector(".mobile-project");
     const allContents = container.querySelectorAll(".content");
-    const allArrows = // Close all other contents
+    // Close all other contents
     allContents.forEach((content)=>{
         content.style.opacity = "0";
         content.style.maxHeight = "0";
         content.style.padding = "0";
     });
-    container.querySelectorAll(".toggle-arrow").forEach((arrow)=>arrow.classList.remove("rotate"));
     // Handle toggling content visibility
     container.addEventListener("click", (event)=>{
         const toggleLabel = event.target.closest(".lbl-frame");
@@ -1190,34 +993,24 @@ document.addEventListener("DOMContentLoaded", ()=>{
             const currentFrame = toggleLabel.closest(".frame");
             const currentContent = currentFrame.nextElementSibling;
             const allContents = container.querySelectorAll(".content");
-            const toggleArrow = toggleLabel.querySelector(".toggle-arrow");
-            let isBefore = true;
-            let offset = 0;
             // Close all other contents
             allContents.forEach((content)=>{
                 if (content !== currentContent) {
-                    if (isBefore && content.style.maxHeight !== "0px") // currentPosition = document.documentElement.scrollTop;  
-                    offset += Math.round(content.getBoundingClientRect().top);
                     content.style.opacity = "0";
                     content.style.maxHeight = "0";
                     content.style.padding = "0";
-                } else isBefore = false;
+                }
             });
-            if (offset !== 0) {
-                const topPosition = offset + window.scrollY - 100;
-                window.scrollTo({
-                    top: topPosition,
-                    behavior: "smooth"
-                });
-            }
-            container.querySelectorAll(".toggle-arrow").forEach((arrow)=>arrow.classList.remove("rotate"));
             // Toggle the current content
+            const topPosition = toggleLabel.getBoundingClientRect().top + window.pageYOffset - 50;
+            window.scrollTo({
+                top: topPosition,
+                behavior: "smooth"
+            });
             const isOpen = currentContent.style.maxHeight !== "0px";
-            isOpen ? toggleArrow.classList.remove("rotate") : toggleArrow.classList.add("rotate");
             currentContent.style.opacity = isOpen ? "0" : "1";
             currentContent.style.maxHeight = isOpen ? "0" : "400vh";
-            currentContent.style.paddingTop = isOpen ? "0" : "2rem";
-            currentContent.style.paddingBottom = isOpen ? "0" : "4rem";
+            currentContent.style.padding = isOpen ? "0rem 1rem" : "2rem 1rem";
         }
     });
 });
