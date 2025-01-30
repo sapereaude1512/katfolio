@@ -7,7 +7,19 @@ $grey:#CBCBCB;
 $black: #242424;
 $dark-black: #060606;
 $text:#060606;
+$red: #CC292C;
+$green: #4AB236;
 $line: linear-gradient(90deg, #4A90E2 0%, $primary-dark 100%);
 $invisible: rgba(0,0,0,0%);
 $card_background: rgba($white, 0.08);
+// change limits 
 $mobile: 767px;
+// indicates mobile mode, represents width
+$hero_arrow_disappear: 650px;
+//hero arrow hight limit for disappearing 
+$font_change1_width: 500px;
+$font_change1_height: 700px; 
+//small screen limit
+$font_change2_width: 450px;
+$font_change2_height: 500px
+//mini screen limits

@@ -62,9 +62,6 @@ strong {
 
     .btn-primary {
         @include btn-primary;
-        @media only screen and (max-width: 600px),only screen and (max-height: 650px) {
-            width: 80svw;
-        }
     }
 }
 
@@ -72,7 +69,7 @@ strong {
     @include column;
     gap: 10rem;
     position: static;
-    margin-top: calc(100vh - 9rem);
+    margin-top: calc(100vh + 9rem);
 
     @media only screen and (max-width: 1000px) {
         margin-top: calc(100vh + 0rem);
@@ -115,6 +112,7 @@ strong {
                     @include row;
                     gap: 0.8rem;
                     align-items: baseline;
+                    justify-content: flex-start;
 
                     @media only screen and (max-width: $mobile) {
                         width: 100%;
@@ -205,13 +203,59 @@ strong {
         min-height: 100vh;
     }
 
-    .new-project {
+    .fade-out {
+        animation: fadeOut 1.2s ease-in-out forwards;
+    }
+    @keyframes fadeOut {
+        0% {
+        opacity: 1;
+        transform: translateX(0); /* Original position */
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateX(99vw); /* Move out to the left */
+        }
+        51% {
+            opacity: 0.2;
+            transform: translateX(-90vw); /* Instantly move to the right */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in back to the center */
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0% {
+        opacity: 1;
+        transform: translateX(0); /* Original position */
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateX(-99vw); /* Move out to the left */
+        }
+        51% {
+            opacity: 0.2;
+            transform: translateX(90vw); /* Instantly move to the right */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in back to the center */
+        }
+    }
+
+
+    .desktop-project {
         @include column;
         display: flex;
         width: 100%;
         flex-direction: column;
         align-items: flex-start;
         gap: 2rem;
+        // display: none;
 
         .frame{
             display: flex;
@@ -223,6 +267,7 @@ strong {
             border-radius: 1.6rem;
             background: $card_background;
             min-height: 63vh;
+            
             .row-wrap {
                 @include row-wrap;
                 display: flex;
@@ -299,6 +344,8 @@ strong {
             .achievements {
                 @include row-wrap;
                 display: flex;
+                margin-left: 1.6rem;
+                margin-right: 1.6rem;
                 padding: 1.6rem;
                 flex-direction: column;
                 align-items: flex-start;
@@ -361,10 +408,190 @@ strong {
             }
         }
     }
+
+
+    .mobile-project {
+        @include column;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        .frame{
+            display: flex;
+            padding: 1rem;
+            padding-top: 3remuu;
+            flex-direction: column;
+            align-items: stretch;
+            gap: 3rem;
+            align-self: stretch;
+            border-radius: 1.6rem;
+            background: $card_background;
+
+            .row-wrap {
+                @include row-wrap;
+                display: flex;
+                padding: 0rem 1.6rem;
+                justify-content: space-between;
+                align-items: center;
+                align-self: stretch;
+            }
+
+            .row-left{
+                @include row-wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            h4{
+                text-align: start;
+            }
+
+            
+        }
+
+        .content{
+            display: flex;
+            padding: 0px;//2rem 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            align-self: stretch;
+            border-radius: 1.6rem;
+            opacity: 0;
+            max-height: 0px; 
+            overflow: hidden; 
+            transition: opacity .8s ease, max-height .8s ease;
+
+            .row-wrap {
+                @include row-wrap;
+                display: flex;
+                padding: 0rem 1.6rem;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-self: stretch;
+            }
+
+            .row-stack{
+                @include row-wrap;
+                align-items: flex-end;
+                gap: 1.2rem;
+                justify-content: flex-start;
+                width: 100%;
+                img {
+                    width:30;
+                    height: 30;
+                }
+            }
+            
+            .row-left{
+                @include row-wrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: .8rem;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            .row-right{
+                @include row-wrap;
+                justify-content: flex-end;
+                align-items: center;
+                gap: .8rem;
+                flex: 1 0 0;
+                align-self: stretch;
+            }
+
+            h4{
+                text-align: start;
+            }
+
+            .column {
+                @include column;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: .8rem;
+                align-self: stretch;
+                padding: 0rem 1.6rem;
+                transition: all 0.3s ease;
+            }
+
+            .row-wrap {
+                @include row-wrap;
+                display: flex;
+                padding: 0rem 1.6rem;
+                gap:4rem;
+                justify-content: space-between;
+                align-items: flex-start;
+                align-self: stretch;
+
+                @media only screen and (max-width: $mobile) {
+                    gap: 5rem;
+                }
+
+                .column-content {
+                    @extend .column;
+                    flex: 1 1 calc(50% - 2rem);
+                    min-height: 27.5vh;
+                    justify-content: flex-start;
+                    padding:  0px;
+                }
+            }
+
+            .achievements {
+                @include row-wrap;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5rem;
+                align-self: stretch;
+
+                .row-wrap {
+                    @include row-wrap;
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 4rem;
+                    align-self: stretch;
+
+                    .column-achievements{
+                        @include column;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content:flex-start;
+                        gap: 1.6rem;
+                        flex: 1 0 0;
+
+                        .p1{
+                            text-align: center;
+                        }
+
+                        img {
+                            width:32;
+                            height: 32;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .toggle-arrow {
+            transition: transform 0.3s ease;
+            user-select: none;
+        }
+        .toggle-arrow.rotate {
+            transform: rotate(180deg);
+        }
+    }
     
 
 }
-
 #clients {
     @include column;
     gap: 10rem;
@@ -417,7 +644,55 @@ strong {
 #referrals {
     @include column;
     width: 100%;
+    min-height: 100vh;
     gap: 10rem;
+    @media only screen and (max-width: $mobile) {
+        gap: 4rem;
+    }
+
+    .fade-out {
+        animation: fadeOut 1.2s ease-in-out forwards;
+    }
+    @keyframes fadeOut {
+        0% {
+        opacity: 1;
+        transform: translateX(0); /* Original position */
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateX(99vw); /* Move out to the left */
+        }
+        51% {
+            opacity: 0.2;
+            transform: translateX(-90vw); /* Instantly move to the right */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in back to the center */
+        }
+    }
+
+    .fade-in {
+        animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0% {
+        opacity: 1;
+        transform: translateX(0); /* Original position */
+        }
+        50% {
+            opacity: 0.2;
+            transform: translateX(-99vw); /* Move out to the left */
+        }
+        51% {
+            opacity: 0.2;
+            transform: translateX(90vw); /* Instantly move to the right */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0); /* Fade in back to the center */
+        }
+    }
 
     .column {
         @include column;
@@ -438,7 +713,7 @@ strong {
             @include column;
             justify-content: flex-start;
             transition: all .1s ease-in-out;
-            height: 440px;
+            height: 38rem;
             padding: 24px 16px;
             margin-top: 2rem;
             margin-bottom: 2rem;
@@ -453,7 +728,7 @@ strong {
             }
 
             @media only screen and (max-width: 699px) {
-                height: 50rem;
+                height: 40rem;
             }
 
             .row{
@@ -510,7 +785,6 @@ strong {
                 transition: fill 100ms ease-in-out;
                 user-select: none;
             }
-
 
             @media only screen and (min-width: $mobile) {
                 svg:hover path {

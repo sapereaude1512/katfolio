@@ -23,9 +23,8 @@ body {
     width: 100%;
     background-color: $black;
     overflow-x: hidden;
-    touch-action: manipulation; /* Prevents double-tap zooming */
-
-    // scroll-behavior: smooth;
+    touch-action: manipulation;
+    overflow-x: hidden;
 }
 
 body:after {

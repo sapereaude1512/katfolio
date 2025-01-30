@@ -1,0 +1,53 @@
+- title:
+    text: "Dusan Bulatovic"
+    href: "https://www.linkedin.com/in/dusan-bulatovic-236112199/"
+  about:
+    - text: "Frontend Developer"
+    - text: "Worked on the same team at Groschopp"
+  quote:
+    text: "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
+
+- title:
+    text: "Sebastian B."
+    href: "https://www.linkedin.com/in/sebastian-brenninkmeijer-144305b8/"
+  about:
+    - text: "Art Director"
+    - text: "Worked on the same team at Ink"
+  quote:
+    text: "Having managed Katarina for over a year I can say that she is a great asset for any company to have. She strives for perfection in everything she does and is always expanding her knowledge. I can say with great confidence that she is a true expert in her field with a lightning fast skill set."
+
+- title:
+    text: "Stefan Jovasevic"
+    href: "https://www.linkedin.com/in/stefan-jovasevic/"
+  about:
+    - text: "Frontend Developer"
+    - text: "Worked on the same team at Ink"
+  quote:
+    text: "As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I’d highly recommend her."
+
+- title:
+    text: "Marko Milosavljevic"
+    href: "https://www.linkedin.com/in/marko-milosavljevi%C4%87-a73891173/"
+  about:
+    - text: "Product Designer"
+    - text: "Worked on the same team at Brom"
+  quote:
+    text: "Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time."
+
+- title:
+    text: "Mahmoud Ibrahim"
+    href: "https://www.linkedin.com/in/imahmoudibrahim/"
+  about:
+    - text: "Product Design Lead"
+    - text: "Cooperated at ADPList"
+  quote:
+    text: "Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
+
+- title:
+    text: "Chris Cheng"
+    href: "https://www.linkedin.com/in/chris-cheng-hk/"
+  about:
+    - text: "Creative Director"
+    - text: "Worked on the same team at Ink"
+  quote:
+    text: "I had the pleasure of working with Katarina as a UX/UI designer and highly recommend her for her exceptional design skills. Katarina has the unique ability to design visually appealing and effective UX/UI for a variety of media, including apps and specific device screens."

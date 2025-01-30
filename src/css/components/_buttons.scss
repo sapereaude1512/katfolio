@@ -17,9 +17,9 @@
     font-weight: $font-weight-light;
     transition: font-weight 0.6s ease-in-out;
 
-    &:hover {
-        font-weight: $font-weight-regular;
-    }
+    // &:hover {
+    //     font-weight: $font-weight-regular;
+    // }
 }
 
 @mixin button-text-big {
@@ -37,9 +37,9 @@
     font-weight: $font-weight-light;
     transition: font-weight 0.6s ease-in-out;
 
-    &:hover {
-        font-weight: $font-weight-regular;
-    }
+    // &:hover {
+    //     font-weight: $font-weight-regular;
+    // }
 }
 
 @mixin btn-nav {
@@ -78,13 +78,13 @@
     background-image: $invisible;
     transition: background-image 0.8s ease-in-out;
 
+    @media only screen and (max-width: 600px){
+        width: 80svw;
+    }
     &:hover {
         background-color: $invisible;
         background-image: $line;
     }
-
-    
-
 }
 
 a.btn-primary {

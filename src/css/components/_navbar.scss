@@ -5,13 +5,17 @@
 @use '../components/buttons' as *;
 
 header {
-    position: sticky;
+    position: fixed;
+    width:100vw;
+    height: 8vh;
     top: 0;
-    z-index: 10000;
-    margin: 0 8rem;
+    z-index: 10;
+    padding: 0 8rem;
+    box-sizing: border-box; 
     transition: top 0.4s ease-in;
+    // transition: opacity 0.4s ease-in, height 0.4s ease-in;
     @media only screen and (max-width: $mobile) {
-        margin: 0rem;
+        padding: 0rem;
     }
 
     nav.desktop {
@@ -53,6 +57,7 @@ header {
 
                 &:hover {
                     color: $white;
+                    font-weight: $font-weight-regular;
                 }
             }
         }
@@ -71,6 +76,8 @@ header {
             display: none;
         }
 
+        
+
         .row {
             @include row;
             border-radius: 0px 0px 24px 24px;
@@ -82,42 +89,62 @@ header {
             justify-content: space-between;
             position: absolute;
             top: 0;
+            z-index: 10;
             
-            .nav-mobile-menu-btn {
-                height: 5rem;
-                width: 5rem;
-                border-radius: 1.4rem;
-                border: none;
-                background-color: $white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                cursor: pointer;
-            }
-
-            #nav-opened {
-                display: none;
-            }
-
             .btn-nav {
                 @include btn-nav;
+            }
+            .menu-btn {
+                display: flex;
+                flex-direction: column; 
+                gap: 15px; 
+                transition: all 0.5s ease-out;
+
+                .btn-line {
+                    width: 34px;
+                    height: 3px;
+                    background: $white;
+                    transition: all 0.5s ease-out;
+                }
+
+                // Rotate Into X With Menu Lines
+                &.open {
+                    transform: rotate(180deg);
+
+                    .btn-line {
+                        // Line 1 - Rotate
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translate(7.5px, 5px)
+                        }
+                        // Line 3 - Rotate
+                        &:nth-child(2) {
+                            transform: rotate(-45deg) translate(7.5px, -5px);
+                        }
+                    }
+                }
             }
         }
 
         #nav-mobile-links {
-            display: none;
+            // display: none;
+            // margin-top: 9rem;
+            @include column;
             overflow: hidden;
             height: 0;
             opacity: 0;
-            transition: height 400ms ease-in-out, opacity 400ms ease-in-out;
+            transition: height 1000ms ease-in-out, opacity 1000ms ease-in-out;
+            background-color: $black;
+            width: 100vw;
+            gap: 7svh;
+            z-index: 2;
+            @media only screen and (max-height: $font_change2_height ) {
+                padding-top: 11rem;
+                padding-bottom: 2rem;
+            }
             
             &.open {
-                @include column;
-                gap: 6rem;
-                background-color: $black;
-                display: flex;
+                // display: flex;
                 height: 100vh; 
-                width: 100%;
                 opacity: 1;
                 overflow: hidden;
             }
