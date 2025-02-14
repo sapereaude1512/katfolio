@@ -89,18 +89,23 @@ strong {
     }
 
     .column {
-            @include column;
+        @include column;
             gap: 6rem;
             width: 100%;
 
-            .p1 {
-                text-align: center;
-                max-width: 40vw;
-                
-                @media only screen and (max-width: 600px) {
-                    max-width: 80vw;
-                }
+        .p1 {
+            text-align: center;
+            max-width: 40vw;
+
+            @media only screen and (max-width: 600px) {
+                max-width: 80vw;
             }
+        }
+
+        .p1.text {
+            text-align: left;
+            max-width: 100%;
+        }
         
         .row {
             @include row;

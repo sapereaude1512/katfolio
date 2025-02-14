@@ -352,6 +352,11 @@ strong {
   }
 }
 
+#biography .column .p1.text, #biography #projects .mobile-project .content .row-wrap .column-content .p1.text, #projects .mobile-project .content .row-wrap #biography .column-content .p1.text, #biography #projects .desktop-project .frame .row-wrap .column-content .p1.text, #projects .desktop-project .frame .row-wrap #biography .column-content .p1.text {
+  text-align: left;
+  max-width: 100%;
+}
+
 #biography .column .row, #biography #projects .mobile-project .content .row-wrap .column-content .row, #projects .mobile-project .content .row-wrap #biography .column-content .row, #biography #projects .desktop-project .frame .row-wrap .column-content .row, #projects .desktop-project .frame .row-wrap #biography .column-content .row {
   flex-direction: row;
   justify-content: flex-start;

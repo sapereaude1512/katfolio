@@ -735,7 +735,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
+            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. She delivers high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
         }
     },
     {
@@ -769,7 +769,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
+            "text": "As a Frontend developer, it is important to work with a good designer. I had the pleasure of working with Katarina and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
         }
     },
     {
@@ -786,7 +786,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time."
+            "text": "Katarina is outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations."
         }
     },
     {
@@ -803,7 +803,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
+            "text": "Not only is she talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
         }
     },
     {
