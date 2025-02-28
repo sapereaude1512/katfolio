@@ -591,7 +591,7 @@ var _sendEmail = require("./email/send_email");
 var _sendEmailDefault = parcelHelpers.interopDefault(_sendEmail);
 var _projects = require("./projects/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
-// show header
+// HEADER SHOW
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 window.addEventListener("scroll", function() {
@@ -637,39 +637,11 @@ navMobileLinks.querySelectorAll("a").forEach((link)=>{
         setNavState();
     };
 });
-// project view
+// 
 (0, _projectsDefault.default)();
 window.addEventListener("resize", (0, _projectsDefault.default));
 (0, _referralsDefault.default)();
 (0, _sendEmailDefault.default)();
-// section scrolling animation
-document.addEventListener("DOMContentLoaded", ()=>{
-    const sections = document.querySelectorAll("section");
-    // Function to check if section is in the viewport
-    const checkVisibility = ()=>{
-        sections.forEach((section)=>{
-            const rect = section.getBoundingClientRect();
-            // Check if section is at least partially visible
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                // If the section is in the viewport, add 'visible' class, remove 'appearing'
-                section.classList.add("visible");
-                section.classList.remove("appearing");
-            } else {
-                // If the section is not in the viewport, add 'appearing' class, remove 'visible'
-                section.classList.add("appearing");
-                section.classList.remove("visible");
-            }
-        });
-    };
-    // Throttle the scroll event
-    let timeout;
-    window.addEventListener("scroll", ()=>{
-        if (timeout) clearTimeout(timeout); // Clear the previous timeout
-        timeout = setTimeout(checkVisibility, 50); // Run the visibility check after 100ms of no scroll activity
-    });
-    // Run the check immediately on page load to ensure sections are visible as needed
-    checkVisibility();
-});
 
 },{"./referrals/referrals":"hpsI6","./email/send_email":"kiOme","./projects/projects":"f9o8O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hpsI6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -763,7 +735,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. She delivers high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
+            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
         }
     },
     {
@@ -797,7 +769,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "As a Frontend developer, it is important to work with a good designer. I had the pleasure of working with Katarina and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
+            "text": "As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
         }
     },
     {
@@ -814,7 +786,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina is outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations."
+            "text": "Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time."
         }
     },
     {
@@ -831,7 +803,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Not only is she talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
+            "text": "Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
         }
     },
     {
@@ -1363,7 +1335,7 @@ module.exports = {
             },
             "achievements": [
                 "Reduced twice required time for making matches",
-                "Made collaboration with 5+ influencers",
+                "Made collaboration with world-wide influencers",
                 "Sped up post verification time to 30 seconds",
                 "Implementing feedback resulted in rebranding",
                 "Over 15% of reduction in development time"
@@ -1399,9 +1371,9 @@ module.exports = {
             },
             "achievements": [
                 "Provided with 700+ minutes of mentorship",
-                "Made connection with 40+ mentees",
+                "Made connection with 40+ mentees and mentors",
                 "Ranked in top 10 mentors in industrial design",
-                "Mentoring juniors resulted in enhanced skills",
+                "Mentoring juniors resulted in enhanced human skills",
                 "Completed 30+ courses in less than 6 months"
             ]
         },
