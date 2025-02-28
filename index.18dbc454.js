@@ -591,7 +591,7 @@ var _sendEmail = require("./email/send_email");
 var _sendEmailDefault = parcelHelpers.interopDefault(_sendEmail);
 var _projects = require("./projects/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
-// HEADER SHOW
+// show header
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 window.addEventListener("scroll", function() {
@@ -637,11 +637,39 @@ navMobileLinks.querySelectorAll("a").forEach((link)=>{
         setNavState();
     };
 });
-// 
+// project view
 (0, _projectsDefault.default)();
 window.addEventListener("resize", (0, _projectsDefault.default));
 (0, _referralsDefault.default)();
 (0, _sendEmailDefault.default)();
+// section scrolling animation
+document.addEventListener("DOMContentLoaded", ()=>{
+    const sections = document.querySelectorAll("section");
+    // Function to check if section is in the viewport
+    const checkVisibility = ()=>{
+        sections.forEach((section)=>{
+            const rect = section.getBoundingClientRect();
+            // Check if section is at least partially visible
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                // If the section is in the viewport, add 'visible' class, remove 'appearing'
+                section.classList.add("visible");
+                section.classList.remove("appearing");
+            } else {
+                // If the section is not in the viewport, add 'appearing' class, remove 'visible'
+                section.classList.add("appearing");
+                section.classList.remove("visible");
+            }
+        });
+    };
+    // Throttle the scroll event
+    let timeout;
+    window.addEventListener("scroll", ()=>{
+        if (timeout) clearTimeout(timeout); // Clear the previous timeout
+        timeout = setTimeout(checkVisibility, 50); // Run the visibility check after 100ms of no scroll activity
+    });
+    // Run the check immediately on page load to ensure sections are visible as needed
+    checkVisibility();
+});
 
 },{"./referrals/referrals":"hpsI6","./email/send_email":"kiOme","./projects/projects":"f9o8O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hpsI6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1335,7 +1363,7 @@ module.exports = {
             },
             "achievements": [
                 "Reduced twice required time for making matches",
-                "Made collaboration with world-wide influencers",
+                "Made collaboration with 5+ influencers",
                 "Sped up post verification time to 30 seconds",
                 "Implementing feedback resulted in rebranding",
                 "Over 15% of reduction in development time"
@@ -1371,9 +1399,9 @@ module.exports = {
             },
             "achievements": [
                 "Provided with 700+ minutes of mentorship",
-                "Made connection with 40+ mentees and mentors",
+                "Made connection with 40+ mentees",
                 "Ranked in top 10 mentors in industrial design",
-                "Mentoring juniors resulted in enhanced human skills",
+                "Mentoring juniors resulted in enhanced skills",
                 "Completed 30+ courses in less than 6 months"
             ]
         },
