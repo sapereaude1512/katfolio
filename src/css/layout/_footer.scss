@@ -174,7 +174,7 @@ footer {
 
         .footer-img {
             fill: $text;
-            transition: fill 100ms ease-in-out;
+            transition: fill 10ms ease-in-out;
         
             &:hover {
                 fill: $primary-dark;

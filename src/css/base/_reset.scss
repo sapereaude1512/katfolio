@@ -3,9 +3,16 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: scroll;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
     user-select: none; /* Modern browsers */
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* Internet Explorer */
+}
+
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
 *, *::before, *::after {
@@ -37,11 +44,32 @@ body:after {
     // content: url(../../images/hero/background.svg) url(../../images/hero/panda.png);
 }
 
-section, main {
-    padding: 8rem;
+main {
+    padding: 4rem;
     max-width: 100%;
 
     @media only screen and (max-width: 600px) {
         padding: 8rem 2rem;
+    }
+}
+
+section {
+    padding: 4rem;
+    max-width: 100%;
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+
+    @media only screen and (max-width: 600px) {
+        padding: 8rem 2rem;
+    }
+
+     /* Initially set sections to be hidden */
+    &.appearing {
+        opacity: 0;
+    }
+
+  /* After adding the 'visible' class, they will fade in */
+    &.visible {
+        opacity: 1;
     }
 }

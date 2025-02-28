@@ -229,4 +229,3 @@ function initializeProjectView() {
 showProjectMobile(); // Execute this function for mobile devices
 
 export default initializeProjectView;
-

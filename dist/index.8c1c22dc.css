@@ -154,10 +154,17 @@ a:visited {
 }
 
 * {
+  scrollbar-width: none;
+  scroll-behavior: smooth;
   -webkit-user-select: none;
   user-select: none;
   margin: 0;
   padding: 0;
+  overflow: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 *, :before, :after {
@@ -181,15 +188,36 @@ body:after {
   z-index: -100;
 }
 
-section, main {
+main {
   max-width: 100%;
-  padding: 8rem;
+  padding: 4rem;
 }
 
 @media only screen and (width <= 600px) {
-  section, main {
+  main {
     padding: 8rem 2rem;
   }
+}
+
+section {
+  opacity: 1;
+  max-width: 100%;
+  padding: 4rem;
+  transition: opacity .4s ease-in-out;
+}
+
+@media only screen and (width <= 600px) {
+  section {
+    padding: 8rem 2rem;
+  }
+}
+
+section.appearing {
+  opacity: 0;
+}
+
+section.visible {
+  opacity: 1;
 }
 
 a.btn-primary {
@@ -343,7 +371,7 @@ strong {
 
 #biography .column .p1, #biography #projects .mobile-project .content .row-wrap .column-content .p1, #projects .mobile-project .content .row-wrap #biography .column-content .p1, #biography #projects .desktop-project .frame .row-wrap .column-content .p1, #projects .desktop-project .frame .row-wrap #biography .column-content .p1 {
   text-align: center;
-  max-width: 40vw;
+  max-width: 60vw;
 }
 
 @media only screen and (width <= 600px) {
@@ -496,8 +524,8 @@ strong {
   }
 }
 
-#projects .fade-out {
-  animation: 1.2s ease-in-out forwards fadeIn;
+#projects .fade-in {
+  animation: .7s ease-in-out forwards fadeOut;
 }
 
 @keyframes fadeIn {
@@ -507,12 +535,12 @@ strong {
   }
 
   50% {
-    opacity: .2;
+    opacity: 0;
     transform: translateX(99vw);
   }
 
   51% {
-    opacity: .2;
+    opacity: 0;
     transform: translateX(-99vw);
   }
 
@@ -522,8 +550,8 @@ strong {
   }
 }
 
-#projects .fade-in {
-  animation: 1.2s ease-in-out fadeOut;
+#projects .fade-out {
+  animation: .7s ease-in-out fadeIn;
 }
 
 @keyframes fadeOut {
@@ -533,12 +561,12 @@ strong {
   }
 
   50% {
-    opacity: .2;
+    opacity: 0;
     transform: translateX(-99vw);
   }
 
   51% {
-    opacity: .2;
+    opacity: 0;
     transform: translateX(99vw);
   }
 
@@ -648,7 +676,7 @@ strong {
 #projects .desktop-project .frame .row-wrap .column-content {
   flex: calc(50% - 2rem);
   justify-content: flex-start;
-  min-height: 27.5vh;
+  min-height: 30vh;
 }
 
 #projects .desktop-project .frame .achievements {
@@ -999,11 +1027,11 @@ strong {
 }
 
 #referrals .fade-out {
-  animation: 1.2s ease-in-out forwards fadeOut;
+  animation: .7s ease-in-out forwards fadeOut;
 }
 
 #referrals .fade-in {
-  animation: 1.2s ease-in-out fadeIn;
+  animation: .7s ease-in-out fadeIn;
 }
 
 #referrals .column, #referrals #projects .desktop-project .frame .row-wrap .column-content, #projects .desktop-project .frame .row-wrap #referrals .column-content, #referrals #projects .mobile-project .content .row-wrap .column-content, #projects .mobile-project .content .row-wrap #referrals .column-content {
@@ -1763,7 +1791,7 @@ footer .row {
 
 footer .row .footer-img {
   fill: #060606;
-  transition: fill .1s ease-in-out;
+  transition: fill 10ms ease-in-out;
 }
 
 footer .row .footer-img:hover {

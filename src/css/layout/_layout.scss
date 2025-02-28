@@ -95,7 +95,7 @@ strong {
 
         .p1 {
             text-align: center;
-            max-width: 40vw;
+            max-width: 60vw;
 
             @media only screen and (max-width: 600px) {
                 max-width: 80vw;
@@ -222,20 +222,21 @@ strong {
         min-height: 100vh;
     }
 
-    .fade-out {
-        animation: fadeIn 1.2s ease-in-out forwards;
+    .fade-in {
+        animation: fadeOut 700ms ease-in-out forwards;
     }
+
     @keyframes fadeIn {
         0% {
         opacity: 1;
         transform: translateX(0); /* Original position */
         }
         50% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(-99vw); /* Move out to the left */
         }
         51% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(99vw); /* Instantly move to the right */
         }
         100% {
@@ -244,20 +245,21 @@ strong {
         }
     }
 
-    .fade-in {
-        animation: fadeOut 1.2s ease-in-out;
+    .fade-out {
+        animation: fadeIn 700ms ease-in-out;
     }
+
     @keyframes fadeOut {
         0% {
         opacity: 1;
         transform: translateX(0); /* Original position */
         }
         50% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(99vw); /* Move out to the left */
         }
         51% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(-99vw); /* Instantly move to the right */
         }
         100% {
@@ -275,7 +277,7 @@ strong {
         gap: 2rem;
         // display: none;
 
-        .frame{
+        .frame {
             display: flex;
             padding: 2rem 1rem;
             flex-direction: column;
@@ -295,7 +297,7 @@ strong {
                 align-self: stretch;
             }
 
-            .row-stack{
+            .row-stack {
                 @include row-wrap;
                 align-items: flex-end;
                 gap: 1.2rem;
@@ -307,7 +309,7 @@ strong {
                 }
             }
             
-            .row-left{
+            .row-left {
                 @include row-wrap;
                 justify-content: flex-start;
                 align-items: center;
@@ -316,7 +318,7 @@ strong {
                 align-self: stretch;
             }
 
-            .row-right{
+            .row-right {
                 @include row-wrap;
                 justify-content: flex-end;
                 align-items: center;
@@ -325,7 +327,7 @@ strong {
                 align-self: stretch;
             }
 
-            h4{
+            h4 {
                 text-align: start;
             }
 
@@ -354,7 +356,7 @@ strong {
                 .column-content {
                     @extend .column;
                     flex: 1 1 calc(50% - 2rem);
-                    min-height: 27.5vh;
+                    min-height: 30vh;
                     justify-content: flex-start;
                 }
             }
@@ -663,24 +665,26 @@ strong {
     width: 100%;
     min-height: 100vh;
     gap: 10rem;
+
     @media only screen and (max-width: $mobile) {
         gap: 4rem;
     }
 
     .fade-out {
-        animation: fadeOut 1.2s ease-in-out forwards;
+        animation: fadeOut 700ms ease-in-out forwards;
     }
+
     @keyframes fadeOut {
         0% {
         opacity: 1;
         transform: translateX(0); /* Original position */
         }
         50% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(-99vw); /* Move out to the left */
         }
         51% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(99vw); /* Instantly move to the right */
         }
         100% {
@@ -690,7 +694,7 @@ strong {
     }
 
     .fade-in {
-        animation: fadeIn 1.2s ease-in-out;
+        animation: fadeIn 700ms ease-in-out;
     }
     @keyframes fadeIn {
         0% {
@@ -698,11 +702,11 @@ strong {
         transform: translateX(0); /* Original position */
         }
         50% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(99vw); /* Move out to the left */
         }
         51% {
-            opacity: 0.2;
+            opacity: 0;
             transform: translateX(-99vw); /* Instantly move to the right */
         }
         100% {
