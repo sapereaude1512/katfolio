@@ -73,39 +73,3 @@ window.addEventListener('resize', initializeProjectView);
 referralSlider(); 
 
 initializeMailService();
-
-// section scrolling animation
-
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-
-    // Function to check if section is in the viewport
-    const checkVisibility = () => {
-    sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-
-        // Check if section is at least partially visible
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-        // If the section is in the viewport, add 'visible' class, remove 'appearing'
-        section.classList.add('visible');
-        section.classList.remove('appearing');
-        } else {
-        // If the section is not in the viewport, add 'appearing' class, remove 'visible'
-        section.classList.add('appearing');
-        section.classList.remove('visible');
-        }
-    });
-    };
-
-    // Throttle the scroll event
-    let timeout;
-    window.addEventListener('scroll', () => {
-    if (timeout) {
-      clearTimeout(timeout); // Clear the previous timeout
-    }
-    timeout = setTimeout(checkVisibility, 50); // Run the visibility check after 100ms of no scroll activity
-    });
-
-  // Run the check immediately on page load to ensure sections are visible as needed
-    checkVisibility();
-});

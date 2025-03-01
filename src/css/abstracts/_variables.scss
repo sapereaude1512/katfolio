@@ -12,8 +12,9 @@ $green: #358026;
 $line: linear-gradient(90deg, #4A90E2 0%, $primary-dark 100%);
 $invisible: rgba(0,0,0,0%);
 $card_background: rgba($white, 0.08);
+
 // change limits 
-$mobile: 767px;
+$mobile: 780px;
 // indicates mobile mode, represents width
 $hero_arrow_disappear: 650px;
 //hero arrow hight limit for disappearing 

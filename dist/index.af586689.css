@@ -1,18 +1,34 @@
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4 {
   font-family: Montserrat, sans-serif;
   font-style: normal;
   line-height: 120%;
 }
 
-p, textarea, label {
+h5, p, textarea, label {
   font-family: Albert Sans, sans-serif;
   font-style: normal;
   line-height: 120%;
 }
 
 html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
   font-size: 62.5%;
   overflow-x: hidden;
+}
+
+ul {
+  margin-left: 3rem;
+  font-family: Albert Sans, sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 120%;
+}
+
+@media only screen and (width <= 480px) {
+  ul {
+    font-size: 1.7rem;
+  }
 }
 
 h1 {
@@ -20,7 +36,7 @@ h1 {
   font-weight: 700;
 }
 
-@media only screen and (width <= 800px), only screen and (height <= 700px) {
+@media only screen and (width <= 767px), only screen and (height <= 700px) {
   h1 {
     font-size: calc(1rem + 3vw + 2.5vh);
   }
@@ -58,7 +74,7 @@ h4 {
 
 @media only screen and (width <= 500px), only screen and (height <= 700px) {
   h4 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 
@@ -72,13 +88,13 @@ h5 {
   }
 }
 
-.p1, li {
+.p1 {
   font-size: 2rem;
 }
 
 @media only screen and (width <= 500px), only screen and (height <= 700px) {
-  .p1, li {
-    font-size: 1.6rem;
+  .p1 {
+    font-size: 1.7rem;
   }
 }
 
@@ -138,13 +154,13 @@ a:visited {
 }
 
 * {
-  touch-action: manipulation;
   scrollbar-width: none;
   scroll-behavior: smooth;
   -webkit-user-select: none;
   user-select: none;
   margin: 0;
   padding: 0;
+  overflow: scroll;
 }
 
 ::-webkit-scrollbar {
@@ -172,15 +188,36 @@ body:after {
   z-index: -100;
 }
 
-section {
+main {
   max-width: 100%;
-  padding: 8rem;
+  padding: 4rem;
+}
+
+@media only screen and (width <= 600px) {
+  main {
+    padding: 8rem 2rem;
+  }
+}
+
+section {
+  opacity: 1;
+  max-width: 100%;
+  padding: 4rem;
+  transition: opacity .4s ease-in-out;
 }
 
 @media only screen and (width <= 600px) {
   section {
-    padding: 8rem 4rem;
+    padding: 8rem 2rem;
   }
+}
+
+section.appearing {
+  opacity: 0;
+}
+
+section.visible {
+  opacity: 1;
 }
 
 a.btn-primary {
@@ -196,7 +233,7 @@ a.btn-primary {
   align-content: center;
   width: 36rem;
   height: 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -223,32 +260,32 @@ strong {
 }
 
 .bg-line {
-  background: url("bg-line.3f2dcb2d.svg") center / contain no-repeat;
+  background: url("bg-line.14bade21.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 .bg-lines {
-  background: url("bg-lines-l.e8c5d345.svg") center / contain no-repeat;
+  background: url("bg-lines-l.5e03e3c0.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 @media only screen and (width <= 500px) {
   .bg-lines {
-    background: url("bg-lines-s.15bf058d.svg") center / contain no-repeat;
+    background: url("bg-lines-s.5db0fd66.svg") center / contain no-repeat;
   }
 }
 
 @media only screen and (width <= 900px) {
   .bg-lines {
-    background: url("bg-lines-m.021ceb0e.svg") center / contain no-repeat;
+    background: url("bg-lines-m.ace32fb0.svg") center / contain no-repeat;
   }
 }
 
 .call-to-action {
   text-align: center;
-  background: url("cta-background.536cd8d5.svg") center / cover no-repeat;
+  background: url("cta-background.d0ba31ac.svg") center / cover no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -270,7 +307,7 @@ strong {
   align-content: center;
   width: 36rem;
   height: 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -314,7 +351,7 @@ strong {
 
 #biography .certificates .p1 {
   text-align: center;
-  max-width: 60vw;
+  max-width: 40vw;
 }
 
 @media only screen and (width <= 600px) {
@@ -385,7 +422,7 @@ strong {
   position: relative;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   #biography .column .row .column-text .title, #biography #projects .mobile-project .content .row-wrap .column-content .row .column-text .title, #projects .mobile-project .content .row-wrap #biography .column-content .row .column-text .title, #biography #projects .desktop-project .frame .row-wrap .column-content .row .column-text .title, #projects .desktop-project .frame .row-wrap #biography .column-content .row .column-text .title {
     align-items: center;
     width: 100%;
@@ -394,25 +431,6 @@ strong {
 
 #biography .column .row .column-text .title .p2, #biography #projects .mobile-project .content .row-wrap .column-content .row .column-text .title .p2, #projects .mobile-project .content .row-wrap #biography .column-content .row .column-text .title .p2, #biography #projects .desktop-project .frame .row-wrap .column-content .row .column-text .title .p2, #projects .desktop-project .frame .row-wrap #biography .column-content .row .column-text .title .p2 {
   color: #cbcbcb;
-}
-
-#biography .column .row .column-text ul, #biography #projects .mobile-project .content .row-wrap .column-content .row .column-text ul, #projects .mobile-project .content .row-wrap #biography .column-content .row .column-text ul, #biography #projects .desktop-project .frame .row-wrap .column-content .row .column-text ul, #projects .desktop-project .frame .row-wrap #biography .column-content .row .column-text ul {
-  margin-left: 2rem;
-  font-family: Albert Sans, sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  line-height: 120%;
-  list-style: disc;
-}
-
-@media only screen and (width <= 480px) {
-  #biography .column .row .column-text ul, #biography #projects .mobile-project .content .row-wrap .column-content .row .column-text ul, #projects .mobile-project .content .row-wrap #biography .column-content .row .column-text ul, #biography #projects .desktop-project .frame .row-wrap .column-content .row .column-text ul, #projects .desktop-project .frame .row-wrap #biography .column-content .row .column-text ul {
-    font-size: 1.6rem;
-  }
-}
-
-#biography .column .row .column-text ul li, #biography #projects .mobile-project .content .row-wrap .column-content .row .column-text ul li, #projects .mobile-project .content .row-wrap #biography .column-content .row .column-text ul li, #biography #projects .desktop-project .frame .row-wrap .column-content .row .column-text ul li, #projects .desktop-project .frame .row-wrap #biography .column-content .row .column-text ul li {
-  display: list-item;
 }
 
 #biography .row-wrap-logos {
@@ -500,7 +518,7 @@ strong {
   display: flex;
 }
 
-@media only screen and (width >= 780px) {
+@media only screen and (width >= 767px) {
   #projects {
     min-height: 100vh;
   }
@@ -625,7 +643,7 @@ strong {
   position: relative;
 }
 
-#projects .desktop-project .frame h5 {
+#projects .desktop-project .frame h4 {
   text-align: start;
 }
 
@@ -649,7 +667,7 @@ strong {
   position: relative;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   #projects .desktop-project .frame .row-wrap {
     gap: 5rem;
   }
@@ -721,7 +739,7 @@ strong {
   transition: fill .1s ease-in-out;
 }
 
-@media only screen and (width >= 780px) {
+@media only screen and (width >= 767px) {
   #projects .desktop-project .arrows svg:hover path {
     fill: #71b7fb;
   }
@@ -777,7 +795,7 @@ strong {
   position: relative;
 }
 
-#projects .mobile-project .frame h5 {
+#projects .mobile-project .frame h4 {
   text-align: start;
 }
 
@@ -868,7 +886,7 @@ strong {
   position: relative;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   #projects .mobile-project .content .row-wrap {
     gap: 5rem;
   }
@@ -983,7 +1001,7 @@ strong {
 }
 
 #clients .column h5, #clients #projects .desktop-project .frame .row-wrap .column-content h5, #projects .desktop-project .frame .row-wrap #clients .column-content h5, #clients #projects .mobile-project .content .row-wrap .column-content h5, #projects .mobile-project .content .row-wrap #clients .column-content h5 {
-  max-width: 60vw;
+  max-width: 40vw;
 }
 
 @media only screen and (width <= 600px) {
@@ -1002,7 +1020,7 @@ strong {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   #referrals {
     gap: 4rem;
   }
@@ -1135,7 +1153,7 @@ strong {
   transition: fill .1s ease-in-out;
 }
 
-@media only screen and (width >= 780px) {
+@media only screen and (width >= 767px) {
   #referrals .column .arrows svg:hover path, #referrals #projects .desktop-project .frame .row-wrap .column-content .arrows svg:hover path, #projects .desktop-project .frame .row-wrap #referrals .column-content .arrows svg:hover path, #referrals #projects .mobile-project .content .row-wrap .column-content .arrows svg:hover path, #projects .mobile-project .content .row-wrap #referrals .column-content .arrows svg:hover path {
     fill: #71b7fb;
   }
@@ -1160,7 +1178,7 @@ header {
   top: 0;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   header {
     padding: 0;
   }
@@ -1185,7 +1203,7 @@ header nav.desktop {
   }
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   header nav.desktop {
     display: none;
   }
@@ -1211,7 +1229,7 @@ header nav.desktop a .b2 {
   align-content: center;
   width: 100%;
   height: 100%;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
@@ -1239,7 +1257,7 @@ header nav.desktop .btn-nav {
   min-width: 14%;
   height: 5.5rem;
   padding: 0 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
@@ -1263,7 +1281,7 @@ header nav.mobile {
   display: flex;
 }
 
-@media only screen and (width >= 780px) {
+@media only screen and (width >= 767px) {
   header nav.mobile {
     display: none;
   }
@@ -1299,7 +1317,7 @@ header nav.mobile .row .btn-nav {
   min-width: 14%;
   height: 5.5rem;
   padding: 0 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 300;
@@ -1386,7 +1404,7 @@ header nav.mobile #nav-mobile-links a .b1 {
   align-content: center;
   width: 100%;
   height: 100%;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -1400,7 +1418,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
 }
 
 .hero {
-  background: url("hero-bg.5f582d40.svg") center / cover no-repeat;
+  background: url("hero-bg.d48d37a6.svg") center / cover no-repeat;
   border-bottom-left-radius: 10rem;
   flex-direction: column;
   justify-content: center;
@@ -1455,7 +1473,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
   align-content: center;
   width: 36rem;
   height: 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -1507,7 +1525,7 @@ header nav.mobile #nav-mobile-links a .b1:active {
 }
 
 footer {
-  background: url("footer-bg.2252ad92.svg") center / cover no-repeat;
+  background: url("footer-bg.5806f08c.svg") center / cover no-repeat;
   border-top-right-radius: 8rem;
   flex-direction: column;
   justify-content: center;
@@ -1535,7 +1553,7 @@ footer .contact-data {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data {
     gap: 1rem;
     width: 100%;
@@ -1550,7 +1568,7 @@ footer .contact-data .contact-form {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form {
     width: 80vw;
   }
@@ -1563,7 +1581,7 @@ footer .contact-data .contact-form .form-data {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data {
     gap: 0;
   }
@@ -1589,7 +1607,7 @@ footer .contact-data .contact-form .form-data .row-wrap {
   position: relative;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .row-wrap {
     gap: 0;
   }
@@ -1604,7 +1622,7 @@ footer .contact-data .contact-form .form-data .column {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .column {
     gap: .2rem;
   }
@@ -1622,7 +1640,7 @@ footer .contact-data .contact-form .form-data .column input {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .column input {
     width: 80vw;
     height: 8vh;
@@ -1642,7 +1660,7 @@ footer .contact-data .contact-form .form-data .column textarea {
   display: flex;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .contact-data .contact-form .form-data .column textarea {
     width: 80vw;
     height: 10vh;
@@ -1680,7 +1698,7 @@ footer .contact-data .contact-form .btn-primary {
   align-content: center;
   width: 36rem;
   height: 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -1734,7 +1752,7 @@ footer .contact-data .column .row-wrap .btn-primary {
   align-content: center;
   width: 36rem;
   height: 6rem;
-  font-family: Montserrat, sans-serif;
+  font-family: Albert Sans, sans-serif;
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 300;
@@ -1765,7 +1783,7 @@ footer .row {
   position: relative;
 }
 
-@media only screen and (width <= 780px) {
+@media only screen and (width <= 767px) {
   footer .row {
     gap: 2.5rem;
   }
@@ -1788,4 +1806,4 @@ footer .site-info {
   display: flex;
   position: relative;
 }
-/*# sourceMappingURL=index.8c1c22dc.css.map */
+/*# sourceMappingURL=index.af586689.css.map */

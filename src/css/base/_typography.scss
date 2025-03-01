@@ -12,13 +12,13 @@ $font-weight-medium: 500;
 // $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-family: $font-family-primary;
     font-style: $font-style;
     line-height: $line-height;
 }
 
-h5, p, textarea, label {
+p, textarea, label {
     font-family: $font-family-secondary;
     font-style: $font-style;
     line-height: $line-height;
@@ -27,30 +27,15 @@ h5, p, textarea, label {
 // sizes and weight
 
 html {
-    scroll-behavior: smooth;
-    touch-action: manipulation; /* Prevents double-tap zooming */
     font-size: 62.5%;
     overflow-x: hidden;
-}
-
-ul {
-    font-family: $font-family-secondary;
-    font-style: $font-style;
-    line-height: $line-height;
-    margin-left: 3rem;
-
-    font-size: 2rem;
-
-    @media only screen and (max-width: 480px) {
-        font-size: 1.7rem;
-    }
 }
 
 h1 {
     font-weight: $font-weight-bold;
     font-size: 8rem;
 
-    @media only screen and (max-width: $mobile),only screen and (max-height: $font_change1_height) {
+    @media only screen and (max-width: 800px),only screen and (max-height: $font_change1_height) {
             font-size: calc(1rem + 3vw + 2.5vh);
     }
     @media only screen and (max-width: $font_change2_width),only screen and (max-height: $font_change2_height) {
@@ -78,7 +63,7 @@ h4 {
     font-size: 3rem;
 
     @media only screen and (max-width: $font_change1_width),only screen and (max-height: $font_change1_height) {
-            font-size: 1.9rem;
+            font-size: 1.8rem;
         }
 }
 
@@ -90,11 +75,11 @@ h5 {
 
 }
 
-.p1 {
+.p1, li {
     font-size: 2rem;
 
     @media only screen and (max-width: $font_change1_width),only screen and (max-height: $font_change1_height) {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 }
 

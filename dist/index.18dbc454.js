@@ -642,34 +642,6 @@ navMobileLinks.querySelectorAll("a").forEach((link)=>{
 window.addEventListener("resize", (0, _projectsDefault.default));
 (0, _referralsDefault.default)();
 (0, _sendEmailDefault.default)();
-// section scrolling animation
-document.addEventListener("DOMContentLoaded", ()=>{
-    const sections = document.querySelectorAll("section");
-    // Function to check if section is in the viewport
-    const checkVisibility = ()=>{
-        sections.forEach((section)=>{
-            const rect = section.getBoundingClientRect();
-            // Check if section is at least partially visible
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                // If the section is in the viewport, add 'visible' class, remove 'appearing'
-                section.classList.add("visible");
-                section.classList.remove("appearing");
-            } else {
-                // If the section is not in the viewport, add 'appearing' class, remove 'visible'
-                section.classList.add("appearing");
-                section.classList.remove("visible");
-            }
-        });
-    };
-    // Throttle the scroll event
-    let timeout;
-    window.addEventListener("scroll", ()=>{
-        if (timeout) clearTimeout(timeout); // Clear the previous timeout
-        timeout = setTimeout(checkVisibility, 50); // Run the visibility check after 100ms of no scroll activity
-    });
-    // Run the check immediately on page load to ensure sections are visible as needed
-    checkVisibility();
-});
 
 },{"./referrals/referrals":"hpsI6","./email/send_email":"kiOme","./projects/projects":"f9o8O","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"hpsI6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -1101,7 +1073,7 @@ const showProjectDesktop = (index, is_left = null)=>{
     if (is_left === true) projectContainer.classList.add("fade-out");
     else if (is_left === false) projectContainer.classList.add("fade-in");
     setTimeout(()=>{
-        document.querySelector(".row-left h4").innerHTML = project.title;
+        document.querySelector(".row-left h5").innerHTML = project.title;
         const clientLinks = project.client.map((client)=>`<a href="${client.href}" target="_blank">${client.text}</a>`).join(" ; ");
         document.querySelector(".row-right .p2").innerHTML = `Client: ${clientLinks}`;
         document.querySelector(".row-right .p2:nth-of-type(4)").textContent = project.timeframe;
@@ -1145,7 +1117,7 @@ function showProjectMobile() {
                 <label class="lbl-frame" for="toggle-content-${project.title}">
                     <div class="row-wrap">
                         <div class="row-left">
-                            <h4>${project.title}</h4>
+                            <h5>${project.title}</h5>
                         </div>
                         <svg class="toggle-arrow" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.1156 14.9154C32.2317 14.7993 32.3696 14.7072 32.5213 14.6443C32.6731 14.5815 32.8357 14.5491 33 14.5491C33.1642 14.5491 33.3268 14.5815 33.4786 14.6443C33.6303 14.7072 33.7682 14.7993 33.8843 14.9154C34.0005 15.0316 34.0926 15.1694 34.1555 15.3212C34.2183 15.4729 34.2507 15.6356 34.2507 15.7998C34.2507 15.964 34.2183 16.1267 34.1555 16.2784C34.0926 16.4302 34.0005 16.568 33.8843 16.6842L21.3843 29.1842C21.2682 29.3004 21.1304 29.3926 20.9786 29.4555C20.8269 29.5184 20.6642 29.5508 20.5 29.5508C20.3357 29.5508 20.173 29.5184 20.0213 29.4555C19.8695 29.3926 19.7317 29.3004 19.6156 29.1842L7.11559 16.6842C6.88104 16.4496 6.74927 16.1315 6.74927 15.7998C6.74927 15.4681 6.88104 15.15 7.11559 14.9154C7.35014 14.6809 7.66826 14.5491 7.99996 14.5491C8.33167 14.5491 8.64979 14.6809 8.88434 14.9154L20.5 26.5326L32.1156 14.9154Z" fill="#CBCBCB"/>

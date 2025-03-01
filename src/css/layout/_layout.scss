@@ -81,7 +81,7 @@ strong {
 
     .certificates .p1 {
         text-align: center;
-        max-width: 40vw;
+        max-width: 60vw;
                 
         @media only screen and (max-width: 600px) {
             max-width: 80vw;
@@ -142,6 +142,24 @@ strong {
                         color: $grey;
                     }
                 }
+
+                ul {
+                    list-style: disc;
+                    font-family: $font-family-secondary;
+                    font-style: $font-style;
+                    line-height: $line-height;
+                    margin-left: 2rem;
+                    font-size: 2rem;
+
+                    @media only screen and (max-width: 480px) {
+                        font-size: 1.6rem;
+                    }
+                    
+                    li {
+                        display: list-item;
+                    }
+                }
+
             }
         }
     }
@@ -327,7 +345,7 @@ strong {
                 align-self: stretch;
             }
 
-            h4 {
+            h5 {
                 text-align: start;
             }
 
@@ -466,7 +484,7 @@ strong {
                 align-self: stretch;
             }
 
-            h4{
+            h5{
                 text-align: start;
             }
 
@@ -651,7 +669,7 @@ strong {
         }
 
         h5{
-            max-width: 40vw;
+            max-width: 60vw;
 
             @media only screen and (max-width: 600px) {
                 max-width: 80vw;
