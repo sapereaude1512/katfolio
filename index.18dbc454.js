@@ -591,7 +591,7 @@ var _sendEmail = require("./email/send_email");
 var _sendEmailDefault = parcelHelpers.interopDefault(_sendEmail);
 var _projects = require("./projects/projects");
 var _projectsDefault = parcelHelpers.interopDefault(_projects);
-// HEADER SHOW
+// show header
 let lastScrollTop = 0;
 const header = document.querySelector("header");
 window.addEventListener("scroll", function() {
@@ -637,7 +637,7 @@ navMobileLinks.querySelectorAll("a").forEach((link)=>{
         setNavState();
     };
 });
-// 
+// project view
 (0, _projectsDefault.default)();
 window.addEventListener("resize", (0, _projectsDefault.default));
 (0, _referralsDefault.default)();
@@ -735,7 +735,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. Her ability to quickly learn and apply these skills has allowed her to deliver high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
+            "text": "Katarina has showcased remarkable talent, displaying a strong grasp of front-end technologies. She delivers high-quality interfaces that meet and exceed expectations. Her proactive approach and eagerness to collaborate have greatly contributed to our team's success."
         }
     },
     {
@@ -769,7 +769,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "As a Frontend developer, it is very important to work with a good designer. I had the pleasure of working with Katarina on a few projects and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
+            "text": "As a Frontend developer, it is important to work with a good designer. I had the pleasure of working with Katarina and I am impressed with her professionalism and dedication. Also, her communication skills and working ethics are amazing. I\u2019d highly recommend her."
         }
     },
     {
@@ -786,7 +786,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Katarina is simply outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations. Her fast researching skills doubled down my time."
+            "text": "Katarina is outstanding person, always cheerful and ready to help. During time we worked together (she was a manager on few projects I worked at) her efforts and energy were off the charts. Her ability to look things through various perspectives served as a catalyst in many situations."
         }
     },
     {
@@ -803,7 +803,7 @@ module.exports = [
             }
         ],
         "quote": {
-            "text": "Not only is she exceptionally talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with unwavering persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
+            "text": "Not only is she talented and ambitious but her delightful personality makes her a pleasure to work with. Her skills are unmatched, and she approaches challenges with persistence and diligence. Her dedication and hard work make her an invaluable asset to any company."
         }
     },
     {
@@ -1073,7 +1073,7 @@ const showProjectDesktop = (index, is_left = null)=>{
     if (is_left === true) projectContainer.classList.add("fade-out");
     else if (is_left === false) projectContainer.classList.add("fade-in");
     setTimeout(()=>{
-        document.querySelector(".row-left h4").innerHTML = project.title;
+        document.querySelector(".row-left h5").innerHTML = project.title;
         const clientLinks = project.client.map((client)=>`<a href="${client.href}" target="_blank">${client.text}</a>`).join(" ; ");
         document.querySelector(".row-right .p2").innerHTML = `Client: ${clientLinks}`;
         document.querySelector(".row-right .p2:nth-of-type(4)").textContent = project.timeframe;
@@ -1117,7 +1117,7 @@ function showProjectMobile() {
                 <label class="lbl-frame" for="toggle-content-${project.title}">
                     <div class="row-wrap">
                         <div class="row-left">
-                            <h4>${project.title}</h4>
+                            <h5>${project.title}</h5>
                         </div>
                         <svg class="toggle-arrow" width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.1156 14.9154C32.2317 14.7993 32.3696 14.7072 32.5213 14.6443C32.6731 14.5815 32.8357 14.5491 33 14.5491C33.1642 14.5491 33.3268 14.5815 33.4786 14.6443C33.6303 14.7072 33.7682 14.7993 33.8843 14.9154C34.0005 15.0316 34.0926 15.1694 34.1555 15.3212C34.2183 15.4729 34.2507 15.6356 34.2507 15.7998C34.2507 15.964 34.2183 16.1267 34.1555 16.2784C34.0926 16.4302 34.0005 16.568 33.8843 16.6842L21.3843 29.1842C21.2682 29.3004 21.1304 29.3926 20.9786 29.4555C20.8269 29.5184 20.6642 29.5508 20.5 29.5508C20.3357 29.5508 20.173 29.5184 20.0213 29.4555C19.8695 29.3926 19.7317 29.3004 19.6156 29.1842L7.11559 16.6842C6.88104 16.4496 6.74927 16.1315 6.74927 15.7998C6.74927 15.4681 6.88104 15.15 7.11559 14.9154C7.35014 14.6809 7.66826 14.5491 7.99996 14.5491C8.33167 14.5491 8.64979 14.6809 8.88434 14.9154L20.5 26.5326L32.1156 14.9154Z" fill="#CBCBCB"/>
@@ -1335,7 +1335,7 @@ module.exports = {
             },
             "achievements": [
                 "Reduced twice required time for making matches",
-                "Made collaboration with world-wide influencers",
+                "Made collaboration with 5+ influencers",
                 "Sped up post verification time to 30 seconds",
                 "Implementing feedback resulted in rebranding",
                 "Over 15% of reduction in development time"
@@ -1371,9 +1371,9 @@ module.exports = {
             },
             "achievements": [
                 "Provided with 700+ minutes of mentorship",
-                "Made connection with 40+ mentees and mentors",
+                "Made connection with 40+ mentees",
                 "Ranked in top 10 mentors in industrial design",
-                "Mentoring juniors resulted in enhanced human skills",
+                "Mentoring juniors resulted in enhanced skills",
                 "Completed 30+ courses in less than 6 months"
             ]
         },
