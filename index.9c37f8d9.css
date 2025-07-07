@@ -223,26 +223,26 @@ strong {
 }
 
 .bg-line {
-  background: url("bg-line.3f2dcb2d.svg") center / contain no-repeat;
+  background: url("bg-line.14bade21.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 .bg-lines {
-  background: url("bg-lines-l.e8c5d345.svg") center / contain no-repeat;
+  background: url("bg-lines-l.5e03e3c0.svg") center / contain no-repeat;
   width: 100%;
   height: 4svh;
 }
 
 @media only screen and (width <= 500px) {
   .bg-lines {
-    background: url("bg-lines-s.15bf058d.svg") center / contain no-repeat;
+    background: url("bg-lines-s.5db0fd66.svg") center / contain no-repeat;
   }
 }
 
 @media only screen and (width <= 900px) {
   .bg-lines {
-    background: url("bg-lines-m.021ceb0e.svg") center / contain no-repeat;
+    background: url("bg-lines-m.ace32fb0.svg") center / contain no-repeat;
   }
 }
 
@@ -1793,4 +1793,4 @@ footer .site-info {
   display: flex;
   position: relative;
 }
-/*# sourceMappingURL=index.8c1c22dc.css.map */
+/*# sourceMappingURL=index.9c37f8d9.css.map */

@@ -1271,11 +1271,11 @@ module.exports = {
                 "text": '<a href="https://sormac.com/en-gb/machines/slice-and-wedge-cutter-fs3600" target="_blank">FS-3600</a> machine allows precise cutting of fruits and vegetables into wedges, slices, or sticks, depending on the desired size. The software, implemented on a Raspberry Pi, facilitates the seamless operation of the machine. I have developed the HMI design, which not only enhances the user experience but also facilitates the continuous improvement of the software and overall capabilities. The intuitive interface enables users to easily select and adjust cutting configurations to match specific requirements. This project aims to enhance food preparation efficiency while maintaining high levels of accuracy and consistency.'
             },
             "role": {
-                "text": 'I played a key role in designing and developing the client side of the software for this machine. Our software was presented in 2024 on <a href="https://sormac.com/en-gb/knowledge-center/sormac-stand-packed-full-of-technological-innovations" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In\xa0parallel with this, I\xa0developed a\xa0UI\xa0Kit with scalability in\xa0mind, which greatly impacted the speed of\xa0product development and shortened the time to\xa0market entry.'
+                "text": 'I played a key role in designing and developing the client side of the software for this machine. Our software was presented in 2024 on <a href="https://youtu.be/OrGx-mS3buA?si=eO8AiMGt0jUPSjKd" target="_blank">fair in Berlin</a> and <a href="https://www.anugafoodtec.com/exhibitor/foodcons_gmbh_-_co/" target="_blank">fair in Cologne</a>. It gained a great amount of positive feedback. In\xa0parallel with this, I\xa0developed a\xa0UI\xa0Kit with scalability in\xa0mind, which greatly impacted the speed of\xa0product development and shortened the time to\xa0market entry.'
             },
             "achievements": [
                 "Reduced 2x the training time for factory workers",
-                "Attracted attention at two major fairs in Germany",
+                "Attracted attention at major fairs in Germany",
                 "Sped up 2x total cutting time of products",
                 "Implemented feedback to improve 10+ features",
                 "Achieved 20% reduction in development time"
